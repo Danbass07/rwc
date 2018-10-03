@@ -50,6 +50,7 @@ body {
     background-color: silver;
     margin-top: 50%;
     border-radius: 50% 50% 50% 50%;
+    opacity: 1;
    
     
    
@@ -62,3 +63,17 @@ body {
     padding: 15px 15px 15px 15px;
     background-color: black;
 }
+.notactive {
+    opacity: 0;
+}
+.active{
+    animation-name: animated;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    position:relative;
+}
+    @keyframes animated {
+        0%   {left:-150px; top:0px; opacity:0;}
+    
+        100% {left:0px; top:0px; opacity:1;}
+    }
