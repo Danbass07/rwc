@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+ 
+}
+.App {
+    background-image: url('../../Img/img1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+.Title1 {
+    
+    margin: auto;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.Title2 {
+    
+    margin: auto;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.Title3 {
+    
+  
+    padding: 0;
+    margin-bottom: 100px;
+}
+.MainContainer {
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  
+}
+.Cell {
+    
+  
+    
+}
+.Photo {
+    
+    height: 120px;
+    width: 120px;
+    background-color: silver;
+    margin-top: 50%;
+    border-radius: 50% 50% 50% 50%;
+   
+    
+   
+}
+.Text {
+   
+    width: 340px;
+    margin-bottom: 80px;
+    border: 1px solid white; 
+    padding: 15px 15px 15px 15px;
+    background-color: black;
+}
