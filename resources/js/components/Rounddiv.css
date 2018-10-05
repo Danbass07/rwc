@@ -1,0 +1,48 @@
+.Photo {
+    
+    height: 120px;
+    width: 120px;
+    background-color: silver;
+    margin-top: 50%;
+    border-radius: 50% 50% 50% 50%;
+    opacity: 1;
+   
+    
+   
+}
+.notactive  {
+    position:relative;
+    left: -500px;
+    
+}
+.right {
+    position:relative;
+    left: 500px;
+}
+.Photo.active{
+    animation-name: animated;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+    left: 0;
+    
+}
+.Photo.active.left{
+    animation-name: animatedleft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+    left: 0;
+    
+}
+
+    @keyframes animated {
+        0%   {left:-500px; top:0px;}
+    
+        100% {left:0px; top:0px;}
+    }
+    @keyframes animatedleft {
+        0%   {left:500px; top:0px;}
+    
+        100% {left:0px; top:0px;}
+    }

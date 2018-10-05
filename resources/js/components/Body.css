@@ -4,7 +4,8 @@ body {
  
 }
 .App {
-    background-image: url('../../Img/img1.jpg');
+    /* background-image: url('../../Img/img1.jpg'); */
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -43,17 +44,7 @@ body {
   
     
 }
-.Photo {
-    
-    height: 120px;
-    width: 120px;
-    background-color: silver;
-    margin-top: 50%;
-    border-radius: 50% 50% 50% 50%;
-   
-    
-   
-}
+
 .Text {
    
     width: 340px;
