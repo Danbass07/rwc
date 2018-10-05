@@ -20,5 +20,11 @@
         "popper.js": "^1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
+<<<<<<< HEAD
+=======
+    },
+    "dependencies": {
+        "npm": "^6.4.1"
+>>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
     }
 }

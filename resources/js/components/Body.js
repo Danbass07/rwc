@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Rounddiv from './Rounddiv';
+<<<<<<< HEAD
+=======
+import Navigation from './Navigation';
+>>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
 import './Body.css';
 
 export default class Body extends Component {
@@ -13,24 +17,42 @@ export default class Body extends Component {
        
      
     }
+<<<<<<< HEAD
    
     render() {
       
         return (
             <div className="App" >
+=======
+
+    render() {
+      
+        return (
+            
+            <div className="App" >
+            <Navigation />
+>>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
                 <h1 className="Title1">Lorem Ipsum</h1>
                 
                 <h2 className="Title2">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h2>
                 <h3 className="Title3">"Nie ma nikogo, kto lubiłby ból dla samego bólu, szukał go tylko po to, by go poczuć, po prostu dlatego, że to ból..."</h3>
                 <div className="MainContainer">
                     <div className="Cell">
+<<<<<<< HEAD
                         <Rounddiv min={140} max={420} />
+=======
+                        <Rounddiv min={140} max={420} side={'left'} />
+>>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
                     </div>
                     <div className="Cell">
                         <div className="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt pulvinar nulla vel maximus. Integer ex arcu, tempor nec eros sed, pulvinar aliquam tortor. Cras volutpat, nulla laoreet consequat scelerisque, eros purus lobortis dui, vitae sodales lorem augue eleifend metus. Donec ut ex volutpat, imperdiet nunc at, elementum magna. Vestibulum tempus neque id odio tincidunt malesuada. Integer sit amet elit pharetra, consectetur quam et, molestie dolor. Aenean ligula libero, commodo ut eros sed, venenatis posuere lorem.</div>
                     </div>
                     <div className="Cell">
+<<<<<<< HEAD
                          <Rounddiv min={140} max={420}/>
+=======
+                         <Rounddiv min={140} max={420} side={'right'}/>
+>>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
                     </div>
                     <div className="Cell">
                     <Rounddiv min={420} max={600}/>
