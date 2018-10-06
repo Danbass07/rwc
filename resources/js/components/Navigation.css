@@ -1,6 +1,6 @@
 .hidden {
     animation-name: hidden; 
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: 1;
     position:relative;
     top: -300px; 
@@ -8,13 +8,73 @@
     @keyframes hidden {
         0%   {left:0px; top:0px; opacity:1;}
        
-        20% {left:0px; top:-10px; opacity:1;}
+       
         60% {left:0px; top:-30px; opacity:1;}
         100% {left:0px; top:-300px; opacity:1;}
     }
+.show {
+    animation-name: show; 
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    position:relative;
+}   
 
 .TopBar {
-    height:140px;
+    display: flex;
+    flex-direction: row; 
+    flex-basis: 33%;
+    flex-wrap: wrap;
     width: 100%;
-    background-color: gray;
-}
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(to bottom,
+     #131313 0%,#1c1c1c 9%,#111111 40%,
+     #2c2c2c 69%,#474747 87%,#666666 96%,
+     #666666 96%,#666666 97%,#666666 98%,
+     #595959 100%,#4c4c4c 100%);
+    
+    }
+     
+
+     @keyframes show {
+       
+        0% {left:0px; top:-300px; opacity:1;}
+       
+        60% {left:0px; top:-30px; opacity:1;}
+       
+        100%   {left:0px; top:0px; opacity:1;}
+    }
+    .Logo {
+        
+        height: 100px;
+        width: 100px;
+        background-image: url('../../Img/Whelp.png');
+        background-repeat: no-repeat;
+        margin:auto auto;
+        background-size: auto;
+    }
+    .Header {
+        font-size: 3em;
+        font-family: 'Fahkwang', sans-serif;
+        margin: auto auto;
+    }
+    .ShortHeader {
+        font-size: 3em;
+        font-family: 'Fahkwang', sans-serif;
+        margin: auto auto;
+        display: none;
+    }
+    @media only screen and (max-width: 1120px) {
+        .Header {
+            display: none;
+        }
+        .ShortHeader {
+            display: inline-block;
+        }
+    }
+    @media only screen and (max-width: 650px) {
+       
+        .ShortHeader {
+            display: none;
+        }
+    }

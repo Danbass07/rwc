@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Rounddiv from './Rounddiv';
-<<<<<<< HEAD
-=======
 import Navigation from './Navigation';
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
 import './Body.css';
 
 export default class Body extends Component {
@@ -17,13 +14,6 @@ export default class Body extends Component {
        
      
     }
-<<<<<<< HEAD
-   
-    render() {
-      
-        return (
-            <div className="App" >
-=======
 
     render() {
       
@@ -31,47 +21,54 @@ export default class Body extends Component {
             
             <div className="App" >
             <Navigation />
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
-                <h1 className="Title1">Lorem Ipsum</h1>
-                
-                <h2 className="Title2">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h2>
-                <h3 className="Title3">"Nie ma nikogo, kto lubiłby ból dla samego bólu, szukał go tylko po to, by go poczuć, po prostu dlatego, że to ból..."</h3>
+               
+                <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 <div className="MainContainer">
                     <div className="Cell">
-<<<<<<< HEAD
-                        <Rounddiv min={140} max={420} />
-=======
-                        <Rounddiv min={140} max={420} side={'left'} />
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
+                        <Rounddiv min={1} max={250} side={'left'} />
                     </div>
                     <div className="Cell">
-                        <div className="Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt pulvinar nulla vel maximus. Integer ex arcu, tempor nec eros sed, pulvinar aliquam tortor. Cras volutpat, nulla laoreet consequat scelerisque, eros purus lobortis dui, vitae sodales lorem augue eleifend metus. Donec ut ex volutpat, imperdiet nunc at, elementum magna. Vestibulum tempus neque id odio tincidunt malesuada. Integer sit amet elit pharetra, consectetur quam et, molestie dolor. Aenean ligula libero, commodo ut eros sed, venenatis posuere lorem.</div>
+                        <div className="Text">
+                                On our first night in our new venue of Sutton Village Hall we had plenty
+                                of members and non-members alike come down to show support for the club after 
+                                a difficult period at our previous venue, which we are all glad is now at an end.
+                                The new venue has excellent lighting, plenty of secure storage for the club's
+                                property, abundant space for the club's needs, and kitchen facilities that 
+                                were put to good use by all.  Everybody enjoyed the night, the atmosphere was
+                                very positive, as now that the club has returned to a smaller setting people 
+                                can much more easily chat with those around them and enjoy other people's 
+                                games as well as their own, and we are looking forward to many more meetings 
+                                at the village hall.  On the night, a wide variety of games were played, most  
+                                prominently Guild Ball, but also Warhammer 40,000, Middle-Earth Strategy Battle Game,
+                                Warhammer: Age of Sigmar, and also the new Fallout: Wasteland Warfare.  
+                                Our Age of Sigmar Firestorm campaign and Guild Ball Escalation League were continued,
+                                as members also prepared for the upcoming Middle-Earth campaign by trying out the 
+                                new rules and army lists.
+                            </div>
                     </div>
                     <div className="Cell">
-<<<<<<< HEAD
-                         <Rounddiv min={140} max={420}/>
-=======
-                         <Rounddiv min={140} max={420} side={'right'}/>
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
+                         <Rounddiv min={1} max={250} side={'right'}/>
                     </div>
                     <div className="Cell">
-                    <Rounddiv min={420} max={600}/>
+                    <Rounddiv min={450} max={700} side={'left'}/>
                     </div>
                     <div className="Cell">
-                        <div className="Text">Sed quis luctus lacus, eget dictum sapien. Pellentesque tincidunt nunc et nulla dapibus, nec elementum tortor rutrum. Phasellus pulvinar viverra aliquam. Integer sit amet orci nulla. Vivamus condimentum aliquam nisi. Aliquam erat volutpat. Aenean ac velit nec nibh semper lobortis. Praesent tincidunt nisi lacus, id accumsan lacus rutrum non. Vestibulum non lectus et mauris scelerisque porttitor et ac enim. Ut non finibus quam. Quisque sollicitudin feugiat ex commodo suscipit. Donec semper mattis leo, in faucibus urna convallis eu. Aenean efficitur tincidunt sem sit amet auctor. Phasellus rhoncus ornare dolor sit amet convallis. Curabitur vitae justo lobortis, ultrices risus ac, posuere libero.</div>
+                        <div className="Text">
+                            For anyone wishing to come down to the club, our new details
+                            are that we meet every Tuesday evening from 7pm until 11pm at 
+                            Sutton-cum-Lound Village Hall, which is located on Town Street in Sutton, 
+                            and the postcode to find the hall is DN22 8PT.  As some members had issues
+                            with google maps inputting the wrong postcode when taking the details 
+                            straight from Facebook on mobile devices, please make sure that the right
+                            postcode is in your sat-navs when setting off.  The club now offers 
+                            refreshments and snacks, and our charges are now £2 per person, per night.  
+                            We hope to see you very soon!
+                           </div>
                     </div>
                     <div className="Cell">
-                    <Rounddiv min={420} max={600}/>
+                    <Rounddiv min={20} max={50} side={'right'}/>
                     </div>  
-                    <div className="Cell">
-                    <Rounddiv min={650} max={900}/>
-                    </div>
-                    <div className="Cell">
-                        <div className="Text">In ut leo ac risus malesuada porta non eget lorem. Ut malesuada imperdiet lorem, ac sodales neque egestas et. Aenean semper tincidunt est a tempus. Morbi vel lorem in ante eleifend laoreet et sed sapien. Sed lacinia enim ipsum, a lobortis arcu tincidunt quis. In lectus magna, ornare nec tincidunt sit amet, tempor egestas dui. Donec a molestie nisi. Aliquam aliquet condimentum urna ac varius. Proin interdum, elit quis varius gravida, lectus nisi accumsan lacus, bibendum accumsan arcu felis vitae ante. Etiam interdum tellus sed nunc tincidunt, vel mattis felis ultrices. Sed sit amet felis blandit, mollis eros id, sodales lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
-                    </div>
-                    <div className="Cell">
-                    <Rounddiv min={650} max={900}/>
-                    </div>
+                    
                    
                 </div>
             </div>

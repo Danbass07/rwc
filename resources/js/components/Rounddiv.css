@@ -1,8 +1,9 @@
 .Photo {
     
-    height: 120px;
-    width: 120px;
+    height: 250px;
+    width: 250px;
     background-color: silver;
+    margin: 5% auto ;
     margin-top: 50%;
     border-radius: 50% 50% 50% 50%;
     opacity: 1;
@@ -37,12 +38,12 @@
 }
 
     @keyframes animated {
-        0%   {left:-500px; top:0px;}
+        0%   {left:500px; top:0px;}
     
         100% {left:0px; top:0px;}
     }
     @keyframes animatedleft {
-        0%   {left:500px; top:0px;}
+        0%   {left:-500px; top:0px;}
     
         100% {left:0px; top:0px;}
     }

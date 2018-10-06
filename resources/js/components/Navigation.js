@@ -5,7 +5,7 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
-            class: '',
+            class: 'show',
         }
         this.handleScroll = this.handleScroll.bind(this);
      
@@ -19,7 +19,7 @@ export default class Body extends Component {
             class: className,
         })     
     } else if (currentScrollPosition < 10)   {
-            const className = '';
+            const className = 'show';
             this.setState({
                 class: className,
             })
@@ -39,7 +39,16 @@ export default class Body extends Component {
         return (
           
                     <div >
-                        <div className={"TopBar " + this.state.class}>Top Bar</div>
+                        <div className={"TopBar " + this.state.class}>
+                        <div className="Logo"></div>
+                        <div className="Logo"></div>
+                        
+                        <div className="Header">Retford Wyrven Gaming Club</div>
+                        <div className="ShortHeader">R W G C</div>
+                       
+                        <div className="Logo"></div>
+                        <div className="Logo"></div>
+                        </div>
                     </div>
                     
                    

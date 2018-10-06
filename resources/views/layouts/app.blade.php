@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang:500i|Roboto+Slab" rel="stylesheet">
 
 </head>
 <body>

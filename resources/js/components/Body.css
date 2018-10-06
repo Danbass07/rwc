@@ -4,12 +4,8 @@ body {
  
 }
 .App {
-<<<<<<< HEAD
-    background-image: url('../../Img/img1.jpg');
-=======
     /* background-image: url('../../Img/img1.jpg'); */
     background-color: black;
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -32,15 +28,22 @@ body {
 }
 .Title3 {
     
-  
+    font-size: 2em;
     padding: 0;
+    margin-top: 80px;
+    margin-left: 25%;
+    margin-right: 10%;
     margin-bottom: 100px;
 }
 .MainContainer {
     
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
   
 }
 .Cell {
@@ -48,44 +51,27 @@ body {
   
     
 }
-<<<<<<< HEAD
-.Photo {
-    
-    height: 120px;
-    width: 120px;
-    background-color: silver;
-    margin-top: 50%;
-    border-radius: 50% 50% 50% 50%;
-    opacity: 1;
-   
-    
-   
-}
-=======
-
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
 .Text {
-   
-    width: 340px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
     margin-bottom: 80px;
     border: 1px solid white; 
-    padding: 15px 15px 15px 15px;
+    border-radius: 10% 15% 10% 15%;
+    padding: 25px 25px 25px 25px;
     background-color: black;
+    text-align: center;
 }
-<<<<<<< HEAD
-.notactive {
-    opacity: 0;
-}
-.active{
-    animation-name: animated;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
-    position:relative;
-}
-    @keyframes animated {
-        0%   {left:-150px; top:0px; opacity:0;}
+
+@media only screen and (max-width: 1120px) {
+    .MainContainer {
     
-        100% {left:0px; top:0px; opacity:1;}
+        display: inline-block;
     }
-=======
->>>>>>> 6164a050c836dc43e7f76d4d26bcb3bb805e1d53
+}
+@media only screen and (max-width: 650px) {
+   
+  
+}
