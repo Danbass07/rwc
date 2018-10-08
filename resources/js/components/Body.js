@@ -69,7 +69,7 @@ export default class Body extends Component {
                          <Rounddiv image={"logo.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'right'}/>
                     </div>
                     <div className="Cell">
-                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={620} max={1500} side={'left'}/>
+                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={220} max={1500} side={'left'}/>
                     </div>
                     <div className="Cell">
                         <div className="Text">
@@ -85,7 +85,7 @@ export default class Body extends Component {
                            </div>
                     </div>
                     <div className="Cell">
-                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={620} max={1500} side={'right'}/>
+                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={220} max={1500} side={'right'}/>
                     </div>  
                     
                    
