@@ -44,7 +44,7 @@ export default class Body extends Component {
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 <div className="MainContainer">
                     <div className="Cell">
-                        <Rounddiv image={"Whelp.png"}position={this.state.currentScrollPosition} min={155} max={650} side={'left'} />
+                        <Rounddiv image={"hunters.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'left'} />
                     </div>
                     <div className="Cell">
                         <div className="Text">
@@ -66,7 +66,7 @@ export default class Body extends Component {
                             </div>
                     </div>
                     <div className="Cell">
-                         <Rounddiv image={"logo.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'right'}/>
+                         <Rounddiv image={"sisters.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'right'}/>
                     </div>
                     <div className="Cell">
                     <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={320} max={1500} side={'left'}/>

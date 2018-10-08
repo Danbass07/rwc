@@ -57647,7 +57647,7 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'Cell' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rounddiv__["a" /* default */], { image: "Whelp.png", position: this.state.currentScrollPosition, min: 155, max: 650, side: 'left' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rounddiv__["a" /* default */], { image: "hunters.jpg", position: this.state.currentScrollPosition, min: 155, max: 650, side: 'left' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -57661,7 +57661,7 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'Cell' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rounddiv__["a" /* default */], { image: "logo.jpg", position: this.state.currentScrollPosition, min: 155, max: 650, side: 'right' })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Rounddiv__["a" /* default */], { image: "sisters.jpg", position: this.state.currentScrollPosition, min: 155, max: 650, side: 'right' })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
