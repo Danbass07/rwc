@@ -43,7 +43,7 @@ export default class Body extends Component {
     render() {
       const style = {
         
-         backgroundImage: "url(http://localhost:8000/images/"+this.props.image+")",
+         backgroundImage: "url(http://malek.ovh/rwc/resources/Img/"+this.props.image+")",
        
       }
         return (
