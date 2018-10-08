@@ -2,7 +2,9 @@
     
     height: 250px;
     width: 250px;
-    background-color: silver;
+    
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 5% auto ;
     margin-top: 50%;
     border-radius: 50% 50% 50% 50%;
@@ -11,13 +13,19 @@
     
    
 }
-.notactive  {
+.notactive.left  {
     position:relative;
+    animation-name: animatedleftout;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
     left: -500px;
     
 }
-.right {
+.notactive.right {
     position:relative;
+    animation-name: animatedout;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
     left: 500px;
 }
 .Photo.active{
@@ -39,11 +47,38 @@
 
     @keyframes animated {
         0%   {left:500px; top:0px;}
-    
         100% {left:0px; top:0px;}
     }
     @keyframes animatedleft {
         0%   {left:-500px; top:0px;}
-    
         100% {left:0px; top:0px;}
+    }
+    @keyframes animatedout {
+        0% {left:0px; top:0px;}
+        100%   {left:500px; top:0px;}
+    }
+    @keyframes animatedleftout {
+        0% {left:0px; top:0px;}
+        100%   {left:-500px; top:0px;}
+    
+        
+    }
+    @media only screen and (max-width: 1120px) {
+        .notactive  {
+            left: 0px;
+            margin: 10px auto;
+        }
+        .right {
+             left: 0px;
+        }
+        .Photo.active{
+            
+            margin: 10px auto;
+            
+        }
+        .Photo.active.left{
+            
+            margin: 10px auto;
+            
+        }
     }

@@ -8,12 +8,31 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
-            opacity: '1',
-            class: '',
+           
+            currentScrollPosition: 0,
         }
        
+        this.handleScroll = this.handleScroll.bind(this);
      
     }
+    handleScroll()  {
+     
+    let currentScrollPosition=$(window).scrollTop();
+    
+        this.setState({
+            currentScrollPosition: currentScrollPosition,
+        })
+    }
+   
+   
+ 
+
+    
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+     
+    
 
     render() {
       
@@ -25,7 +44,7 @@ export default class Body extends Component {
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 <div className="MainContainer">
                     <div className="Cell">
-                        <Rounddiv min={1} max={250} side={'left'} />
+                        <Rounddiv image={"Whelp.png"}position={this.state.currentScrollPosition} min={155} max={650} side={'left'} />
                     </div>
                     <div className="Cell">
                         <div className="Text">
@@ -47,10 +66,10 @@ export default class Body extends Component {
                             </div>
                     </div>
                     <div className="Cell">
-                         <Rounddiv min={1} max={250} side={'right'}/>
+                         <Rounddiv image={"logo.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'right'}/>
                     </div>
                     <div className="Cell">
-                    <Rounddiv min={450} max={700} side={'left'}/>
+                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={690} max={1500} side={'left'}/>
                     </div>
                     <div className="Cell">
                         <div className="Text">
@@ -66,7 +85,7 @@ export default class Body extends Component {
                            </div>
                     </div>
                     <div className="Cell">
-                    <Rounddiv min={20} max={50} side={'right'}/>
+                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={690} max={1500} side={'right'}/>
                     </div>  
                     
                    

@@ -5,7 +5,6 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
-            opacity: '1',
             class: 'notactive',
         }
         this.handleScroll = this.handleScroll.bind(this);
@@ -21,7 +20,7 @@ export default class Body extends Component {
         })
     
        
-    } else if ( currentScrollPosition > this.props.max){
+    } else if ( currentScrollPosition < this.props.min || currentScrollPosition > this.props.max){
         
         const className = 'notactive';
         this.setState({
@@ -29,7 +28,7 @@ export default class Body extends Component {
         })
     }
    
-    {console.log(currentScrollPosition)}
+  
 
     
 }
@@ -42,11 +41,15 @@ export default class Body extends Component {
         window.addEventListener('scroll', this.handleScroll);
     }
     render() {
-      
+      const style = {
+        
+         backgroundImage: "url(http://localhost:8000/images/"+this.props.image+")",
+       
+      }
         return (
           
                     <div className="Cell">
-                        <div className={"Photo "+ this.state.class + " " + this.props.side} ></div>
+                        <div style={style} className={"Photo "+ this.state.class + " " + this.props.side} ></div>
                     </div>
                     
                    
