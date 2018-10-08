@@ -13,20 +13,26 @@
     
    
 }
-.notactive.left  {
+.notactive {
     position:relative;
-    animation-name: animatedleftout;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    
+    margin: 30% auto ;
+
+}
+
+
+.notactive.left  {
+    animation-name: animatedleftout;
     left: -500px;
+    
     
 }
 .notactive.right {
-    position:relative;
     animation-name: animatedout;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
     left: 500px;
+   
 }
 .Photo.active{
     animation-name: animated;
@@ -34,32 +40,30 @@
     animation-iteration-count: 1;
     position:relative;
     left: 0;
-    
-}
-.Photo.active.left{
-    animation-name: animatedleft;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    position:relative;
-    left: 0;
+    margin: 30% auto ;
     
 }
 
+.Photo.active.left{
+    animation-name: animatedleft;
+  
+}
+
     @keyframes animated {
-        0%   {left:500px; top:0px;}
-        100% {left:0px; top:0px;}
+        0%   {left:500px; top:0px;opacity: 0;}
+        100% {left:0px; top:0px;opacity: 1;}
     }
     @keyframes animatedleft {
-        0%   {left:-500px; top:0px;}
-        100% {left:0px; top:0px;}
+        0%   {left:-500px; top:0px; opacity: 0;}
+        100% {left:0px; top:0px; opacity: 1;}
     }
     @keyframes animatedout {
-        0% {left:0px; top:0px;}
-        100%   {left:500px; top:0px;}
+        0% {left:0px; top:0px; opacity: 1;}
+        100%   {left:500px; top:0px; opacity: 0;}
     }
     @keyframes animatedleftout {
-        0% {left:0px; top:0px;}
-        100%   {left:-500px; top:0px;}
+        0% {left:0px; top:0px; opacity: 1;}
+        100%   {left:-500px; top:0px; opacity: 0;}
     
         
     }
