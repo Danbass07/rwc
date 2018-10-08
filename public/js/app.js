@@ -58039,46 +58039,19 @@ if(false) {
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(58);
 exports = module.exports = __webpack_require__(3)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: linear-gradient(to bottom,\r\n     #131313 0%,#1c1c1c 9%,#111111 40%,\r\n     #2c2c2c 69%,#474747 87%,#666666 96%,\r\n     #666666 96%,#666666 97%,#666666 98%,\r\n     #595959 100%,#4c4c4c 100%);\r\n    \r\n    }\r\n     \r\n\r\n     @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url(" + escape(__webpack_require__(59)) + ");\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
+exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: linear-gradient(to bottom,\r\n     #131313 0%,#1c1c1c 9%,#111111 40%,\r\n     #2c2c2c 69%,#474747 87%,#666666 96%,\r\n     #666666 96%,#666666 97%,#666666 98%,\r\n     #595959 100%,#4c4c4c 100%);\r\n    \r\n    }\r\n     \r\n\r\n     @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url('http://localhost:8000/images/');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
 
 // exports
 
 
 /***/ }),
-/* 58 */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
-}
-
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/Whelp.png?ad773a54b6587e9948c56a6eb58eeb2f";
-
-/***/ }),
+/* 58 */,
+/* 59 */,
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
