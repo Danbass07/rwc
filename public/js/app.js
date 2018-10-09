@@ -57578,9 +57578,10 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Rounddiv__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navigation__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Body_css__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Body_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__BackgroundPicture__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Navigation__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Body_css__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Body_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57588,6 +57589,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -57605,7 +57607,8 @@ var Body = function (_Component) {
 
         _this.state = {
 
-            currentScrollPosition: 0
+            currentScrollPosition: 0,
+            opacity: 0
         };
 
         _this.handleScroll = _this.handleScroll.bind(_this);
@@ -57618,9 +57621,17 @@ var Body = function (_Component) {
         value: function handleScroll() {
 
             var currentScrollPosition = $(window).scrollTop();
-
+            var opacity = void 0;
+            if (currentScrollPosition * 0.005 < 1) {
+                opacity = currentScrollPosition * 0.005;
+                //  console.log('getting more '+opacity)
+            } else {
+                opacity = 1 + (1 - currentScrollPosition * 0.005);
+                // console.log('getting less '+opacity)
+            }
             this.setState({
-                currentScrollPosition: currentScrollPosition
+                currentScrollPosition: currentScrollPosition,
+                opacity: opacity
             });
         }
     }, {
@@ -57631,11 +57642,13 @@ var Body = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-
+            var style = {
+                opacity: this.state.opacity
+            };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'App' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Navigation__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h3',
                     { className: 'Title3' },
@@ -57644,7 +57657,8 @@ var Body = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'MainContainer' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'backgroundOne' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { style: style, className: 'backgroundOne' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__BackgroundPicture__["a" /* default */], { image: "hunters.jpg", position: this.state.currentScrollPosition }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'Cell' },
@@ -58090,7 +58104,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 100%;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.backgroundOne {\r\n    height: 500px;\r\n    width:700px;\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position:absolute;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 650px) {\r\n   \r\n  \r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 100%;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.backgroundOne {\r\n    height: 500px;\r\n    width:700px;\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position:fixed;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 650px) {\r\n   \r\n  \r\n}\r\n@keyframes fadeout {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}", ""]);
 
 // exports
 
@@ -58100,6 +58114,88 @@ exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 61 */,
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Body_css__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Body_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var BackgroundPicture = function (_Component) {
+    _inherits(BackgroundPicture, _Component);
+
+    function BackgroundPicture(props) {
+        _classCallCheck(this, BackgroundPicture);
+
+        var _this = _possibleConstructorReturn(this, (BackgroundPicture.__proto__ || Object.getPrototypeOf(BackgroundPicture)).call(this, props));
+
+        _this.state = {
+            opacity: '0',
+            height: '300px',
+            width: '400px'
+
+        };
+        _this.handleScroll = _this.handleScroll.bind(_this);
+
+        return _this;
+    }
+
+    _createClass(BackgroundPicture, [{
+        key: 'handleScroll',
+        value: function handleScroll() {
+            var currentScrollPosition = $(window).scrollTop();
+            var opacity = void 0;
+            if (currentScrollPosition * 0.005 < 1) {
+                opacity = currentScrollPosition * 0.0005;
+                console.log('getting more ' + opacity);
+            } else if (currentScrollPosition * 0.005 > 10) {
+                opacity = 1 + (1 - currentScrollPosition * 0.005);
+                console.log('getting less ' + opacity);
+            }
+            this.setState({
+                opacity: opacity
+            });
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            window.addEventListener('scroll', this.handleScroll);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            // console.log(this.props.position);
+            var style = {
+                opacity: this.state.opacity,
+                backgroundImage: "url(http://malek.ovh/rwc/resources/Img/" + this.props.image + ")",
+                zIndex: '-2',
+                left: '40%',
+                bottom: '20%'
+
+            };
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { style: style, className: 'backgroundOne' });
+        }
+    }]);
+
+    return BackgroundPicture;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (BackgroundPicture);
 
 /***/ })
 /******/ ]);

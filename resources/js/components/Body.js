@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Rounddiv from './Rounddiv';
+import BackgroundPicture from './BackgroundPicture';
 import Navigation from './Navigation';
 import './Body.css';
 
@@ -10,6 +11,7 @@ export default class Body extends Component {
         this.state = {
            
             currentScrollPosition: 0,
+            opacity: 0,
         }
        
         this.handleScroll = this.handleScroll.bind(this);
@@ -18,11 +20,21 @@ export default class Body extends Component {
     handleScroll()  {
      
     let currentScrollPosition=$(window).scrollTop();
-    
-        this.setState({
-            currentScrollPosition: currentScrollPosition,
-        })
+    let opacity
+    if (currentScrollPosition* 0.005 < 1) {
+         opacity = currentScrollPosition * 0.005;
+        //  console.log('getting more '+opacity)
+    } else {
+        opacity =1+ ( 1 - (currentScrollPosition *  0.005));
+        // console.log('getting less '+opacity)
     }
+            this.setState({
+                currentScrollPosition: currentScrollPosition,
+                opacity: opacity,
+            })
+        
+    }
+    
    
    
  
@@ -35,7 +47,9 @@ export default class Body extends Component {
     
 
     render() {
-      
+      const style = {
+          opacity: this.state.opacity,
+      }
         return (
             
             <div className="App" >
@@ -43,7 +57,8 @@ export default class Body extends Component {
             
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 <div className="MainContainer">
-                <div className="backgroundOne"></div>
+                <div style={style} className="backgroundOne"></div>
+                <BackgroundPicture image={"hunters.jpg"} position={this.state.currentScrollPosition}/>
                     <div className="Cell">
                         <Rounddiv image={"hunters.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'left'} />
                     </div>
