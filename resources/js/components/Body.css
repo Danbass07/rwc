@@ -45,6 +45,8 @@ body {
     grid-row-gap: 20px;
     justify-items: stretch;
     align-items: stretch;
+    position:relative;
+    z-index: 1;
   
 }
 .Cell {
@@ -58,6 +60,7 @@ body {
     font-size: 1.2em;
     font-family: 'Roboto Slab', serif;
     width: 100%;
+    opacity: 0.7;
     margin-bottom: 80px;
     border: 1px solid white; 
     border-radius: 10% 15% 10% 15%;
@@ -68,6 +71,9 @@ body {
 .backgroundOne {
     height: 500px;
     width:700px;
+    background-size: cover;
+    border-radius: 20% 20% 20% 20%;
+    z-index: -1;
     position:absolute;
     background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');
 }
