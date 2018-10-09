@@ -40,7 +40,7 @@ export default class Body extends Component {
             
             <div className="App" >
             <Navigation />
-               
+               <div className="backgroundOne"></div>
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 <div className="MainContainer">
                     <div className="Cell">

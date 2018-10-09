@@ -65,7 +65,12 @@ body {
     background-color: black;
     text-align: center;
 }
-
+.backgroundOne {
+    height: 500px;
+    width:700px;
+    position:absolute;
+    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');
+}
 @media only screen and (max-width: 1120px) {
     .MainContainer {
     

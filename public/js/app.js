@@ -14384,7 +14384,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(17);
-module.exports = __webpack_require__(62);
+module.exports = __webpack_require__(60);
 
 
 /***/ }),
@@ -57579,7 +57579,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Rounddiv__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navigation__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Body_css__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Body_css__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Body_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -57636,6 +57636,7 @@ var Body = function (_Component) {
                 'div',
                 { className: 'App' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'backgroundOne' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h3',
                     { className: 'Title3' },
@@ -57812,7 +57813,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    \r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    margin: 5% auto ;\r\n    margin-top: 50%;\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    margin: 30% auto ;\r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n    margin: 30% auto ;\r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10px auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n    }", ""]);
+exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    \r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 94%;\r\n    margin: 5% auto ;\r\n    margin-top: 50%;\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    margin: 30% auto ;\r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n    margin: 30% auto ;\r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10px auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58050,15 +58051,13 @@ exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animat
 
 
 /***/ }),
-/* 58 */,
-/* 59 */,
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(61);
+var content = __webpack_require__(59);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -58083,7 +58082,7 @@ if(false) {
 }
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -58091,13 +58090,13 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 100%;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 650px) {\r\n   \r\n  \r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 100%;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.backgroundOne {\r\n    height: 500px;\r\n    width:700px;\r\n    position:absolute;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 650px) {\r\n   \r\n  \r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
