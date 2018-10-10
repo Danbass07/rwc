@@ -17,20 +17,34 @@ export default class BackgroundPicture extends Component {
     }
    
     handleScroll()  {
+        var previousScrollPosition;
+        let positionToShowUp = 80;
+        let positionToDisappear = 150;
+        let changeRate = (positionToDisappear - positionToShowUp) * 0.01;
+        //let changeRate = 0.005;
         let currentScrollPosition=$(window).scrollTop();
         let opacity;
-        if (currentScrollPosition* 0.005 < 1)  {
-            opacity = currentScrollPosition * 0.0005;
-             console.log('getting more '+opacity)
-       } else if ( currentScrollPosition * 0.005 > 10){
-        opacity =1+ ( 1 - (currentScrollPosition *  0.005));
-            console.log('getting less '+opacity)
+        
+        if (currentScrollPosition  < positionToShowUp )  {
+             opacity = (currentScrollPosition.toFixed(2) - Math.floor(currentScrollPosition.toFixed(2))) / changeRate;
+            // opacity = currentScrollPosition * changeRate;
+            previousScrollPosition = currentScrollPosition;
+       } else if ( currentScrollPosition  >= positionToDisappear){
+        opacity = 1 - (currentScrollPosition.toFixed(2) - Math.floor(currentScrollPosition.toFixed(2)));
+        previousScrollPosition = currentScrollPosition;
        }
+    //    if (previousScrollPosition.toFixed(2) < currentScrollPosition.toFixed(2) ) { console.log('going down')}
+        console.log('handle scroll scroll position '+ currentScrollPosition.toFixed(2));
+    //    console.log('handle scroll changeRate '+ changeRate);
+        console.log('handle scroll opacity '+ opacity);
+    //    console.log('now should be showing up '+(currentScrollPosition* changeRate < positionToShowUp));
+    //    console.log('now should disappear '+ ( currentScrollPosition * changeRate >= positionToDisappear));
+    console.log('handle scroll previous scroll position '+ previousScrollPosition.toFixed(2));
                this.setState({
                     opacity: opacity,
                })
             }        
-        
+     
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
