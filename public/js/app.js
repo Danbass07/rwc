@@ -58000,7 +58000,7 @@ var BackgroundPicture = function (_Component) {
     _createClass(BackgroundPicture, [{
         key: 'handleScroll',
         value: function handleScroll() {
-            var previousScrollPosition;
+
             var positionToShowUp = 80;
             var positionToDisappear = 150;
             var changeRate = (positionToDisappear - positionToShowUp) * 0.01;
@@ -58011,10 +58011,8 @@ var BackgroundPicture = function (_Component) {
             if (currentScrollPosition < positionToShowUp) {
                 opacity = (currentScrollPosition.toFixed(2) - Math.floor(currentScrollPosition.toFixed(2))) / changeRate;
                 // opacity = currentScrollPosition * changeRate;
-                previousScrollPosition = currentScrollPosition;
             } else if (currentScrollPosition >= positionToDisappear) {
                 opacity = 1 - (currentScrollPosition.toFixed(2) - Math.floor(currentScrollPosition.toFixed(2)));
-                previousScrollPosition = currentScrollPosition;
             }
             //    if (previousScrollPosition.toFixed(2) < currentScrollPosition.toFixed(2) ) { console.log('going down')}
             console.log('handle scroll scroll position ' + currentScrollPosition.toFixed(2));
@@ -58022,7 +58020,7 @@ var BackgroundPicture = function (_Component) {
             console.log('handle scroll opacity ' + opacity);
             //    console.log('now should be showing up '+(currentScrollPosition* changeRate < positionToShowUp));
             //    console.log('now should disappear '+ ( currentScrollPosition * changeRate >= positionToDisappear));
-            console.log('handle scroll previous scroll position ' + previousScrollPosition.toFixed(2));
+
             this.setState({
                 opacity: opacity
             });
