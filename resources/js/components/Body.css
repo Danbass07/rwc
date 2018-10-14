@@ -68,15 +68,7 @@ body {
     background-color: black;
     text-align: center;
 }
-.backgroundOne {
-    height: 500px;
-    width:700px;
-    background-size: cover;
-    border-radius: 20% 20% 20% 20%;
-    z-index: -1;
-    position:fixed;
-    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');
-}
+
 @media only screen and (max-width: 1120px) {
     .MainContainer {
     
@@ -86,12 +78,4 @@ body {
 @media only screen and (max-width: 650px) {
    
   
-}
-@keyframes fadeout {
-       
-    0% { opacity:1;}
-   
-    60% { opacity:0.5;}
-   
-    100%   { opacity:0;}
 }

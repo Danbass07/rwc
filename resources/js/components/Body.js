@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Rounddiv from './Rounddiv';
 import BackgroundPicture from './BackgroundPicture';
 import Navigation from './Navigation';
@@ -9,37 +8,21 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
-           
             currentScrollPosition: 0,
-            opacity: 0,
         }
        
         this.handleScroll = this.handleScroll.bind(this);
      
     }
+
     handleScroll()  {
      
     let currentScrollPosition=$(window).scrollTop();
-    let opacity
-    if (currentScrollPosition* 0.005 < 1) {
-         opacity = currentScrollPosition * 0.005;
-        //  console.log('getting more '+opacity)
-    } else {
-        opacity =1+ ( 1 - (currentScrollPosition *  0.005));
-        // console.log('getting less '+opacity)
+    this.setState({
+        currentScrollPosition: currentScrollPosition,
+      });
     }
-            this.setState({
-                currentScrollPosition: currentScrollPosition,
-                opacity: opacity,
-            })
         
-    }
-    
-   
-   
- 
-
-    
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
@@ -47,21 +30,33 @@ export default class Body extends Component {
     
 
     render() {
-      const style = {
-          opacity: this.state.opacity,
-      }
+    
         return (
             
             <div className="App" >
             <Navigation />
             
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
-                <div className="MainContainer">
-                <div style={style} className="backgroundOne"></div>
-                <BackgroundPicture image={"hunters.jpg"} position={this.state.currentScrollPosition}/>
+
+                <div className="MainContainer"> 
+{/* set of background elements showing and fading in certain points realeted to scroll position */}
+                    <BackgroundPicture 
+                        min={155} max={650} 
+                        position={this.state.currentScrollPosition} 
+                        image={"hunters.jpg"}
+                    />
+                    
+{/* content of a page  */}
                     <div className="Cell">
-                        <Rounddiv image={"hunters.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'left'} />
+{/* row nr 1 */}
+                        <Rounddiv
+                         min={155} max={650} 
+                         image={"hunters.jpg"}  
+                         side={'left'} 
+                         />
+
                     </div>
+
                     <div className="Cell">
                         <div className="Text">
                                 On our first night in our new venue of Sutton Village Hall we had plenty
@@ -81,12 +76,31 @@ export default class Body extends Component {
                                 new rules and army lists.
                             </div>
                     </div>
+
                     <div className="Cell">
-                         <Rounddiv image={"sisters.jpg"}position={this.state.currentScrollPosition} min={155} max={650} side={'right'}/>
+
+                         <Rounddiv 
+                         min={155}
+                         max={650}
+                         image={"sisters.jpg"}
+                         position={this.state.currentScrollPosition}  
+                         side={'right'}
+                         />
+
                     </div>
+{/* row nr 2 */}
                     <div className="Cell">
-                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={320} max={1500} side={'left'}/>
+
+                        <Rounddiv
+                        min={320} 
+                        max={1500}  
+                        image={"logo.jpg"} 
+                        position={this.state.currentScrollPosition} 
+                        side={'left'}
+                        />
+
                     </div>
+
                     <div className="Cell">
                         <div className="Text">
                             For anyone wishing to come down to the club, our new details
@@ -100,13 +114,23 @@ export default class Body extends Component {
                             We hope to see you very soon!
                            </div>
                     </div>
+
                     <div className="Cell">
-                    <Rounddiv image={"logo.jpg"} position={this.state.currentScrollPosition} min={320} max={1500} side={'right'}/>
+                        <Rounddiv 
+                        min={320} 
+                        max={1500} 
+                        image={"logo.jpg"} 
+                        position={this.state.currentScrollPosition}
+                        side={'right'}
+                        />
                     </div>  
                     
                    
-                </div>
-            </div>
+                </div>  {/* end of content */}
+               
+
+            </div> // end of App
+           
         );
     }
 }

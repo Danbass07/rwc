@@ -1,0 +1,18 @@
+.backgroundOne {
+    height: 500px;
+    width:700px;
+    background-size: cover;
+    border-radius: 20% 20% 20% 20%;
+    z-index: -1;
+    position:fixed;
+    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');
+}
+
+@keyframes fadeout {
+       
+    0% { opacity:1;}
+   
+    60% { opacity:0.5;}
+   
+    100%   { opacity:0;}
+}
