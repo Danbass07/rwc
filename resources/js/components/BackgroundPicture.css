@@ -1,6 +1,4 @@
 .backgroundOne {
-    height: 500px;
-    width:700px;
     background-size: cover;
     border-radius: 20% 20% 20% 20%;
     z-index: -1;

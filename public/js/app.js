@@ -57615,7 +57615,7 @@ var Body = function (_Component) {
         key: 'handleScroll',
         value: function handleScroll() {
 
-            var currentScrollPosition = $(window).scrollTop();
+            var currentScrollPosition = Math.round($(window).scrollTop());
             this.setState({
                 currentScrollPosition: currentScrollPosition
             });
@@ -57642,9 +57642,32 @@ var Body = function (_Component) {
                     'div',
                     { className: 'MainContainer' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                        min: 155, max: 650,
+                        min: 40, max: 750,
                         position: this.state.currentScrollPosition,
-                        image: "hunters.jpg"
+                        image: "venue.jpg",
+                        left: '35%',
+                        bottom: '40%',
+                        width: '700px',
+                        height: '500px'
+
+                    }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                        min: 455, max: 1150,
+                        position: this.state.currentScrollPosition,
+                        image: "merry_christmas__heretic.png",
+                        left: '10%',
+                        bottom: '0%',
+                        width: '400px',
+                        height: '900px'
+                    }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                        min: 355, max: 1350,
+                        position: this.state.currentScrollPosition,
+                        image: "goblin.png",
+                        left: '30%',
+                        bottom: '0%',
+                        width: '800px',
+                        height: '600px'
                     }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -57678,13 +57701,17 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'Cell' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
-                            min: 320,
-                            max: 1500,
-                            image: "logo.jpg",
-                            position: this.state.currentScrollPosition,
-                            side: 'left'
-                        })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { target: '_blank', href: 'https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
+                                min: 320,
+                                max: 1500,
+                                image: "risethebanner.jpg",
+                                position: this.state.currentScrollPosition,
+                                side: 'left'
+                            })
+                        )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -57701,7 +57728,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             min: 320,
                             max: 1500,
-                            image: "logo.jpg",
+                            image: "sisters.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
                         })
@@ -57982,8 +58009,9 @@ var BackgroundPicture = function (_Component) {
     _createClass(BackgroundPicture, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var changeRate = (this.props.max - this.props.min) / 2;
-            var peakpoint = this.props.max - changeRate;
+            var fullRange = this.props.max - this.props.min;
+            var peakpoint = this.props.max - fullRange / 2;
+            var changeRate = fullRange / 2 * 0.0001;
             this.setState({
                 changeRate: changeRate,
                 peakpoint: peakpoint
@@ -57993,23 +58021,82 @@ var BackgroundPicture = function (_Component) {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps) {
             if (this.props.position !== prevProps.position) {
-                console.log(this.state.peakpoint);
-                console.log(this.state.changeRate);
-                console.log(this.state.opacity);
+                var opacity = this.state.opacity;
+                console.log('min' + this.props.min);
+                console.log('max' + this.props.max);
+                console.log('change' + this.state.changeRate);
+                console.log('peak' + this.state.peakpoint);
+                console.log('position' + this.props.position);
+                console.log('opacity' + this.state.opacity);
 
-                if (this.props.position > prevProps.position) {
-                    //going down
+                if (this.props.position > this.props.min && this.props.position < this.props.max) {
+                    console.log('in range');
+                    if (this.props.position > prevProps.position) {
+                        //going down
+                        console.log('down');
 
+                        // 1 component has to appear at min with min opacity
+                        if (this.props.position == this.props.min) {
+                            opacity = 0.01;
+                            console.log('min visibility' + opacity);
+                        }
 
-                    var opacity = +this.state.opacity + 0.02;
+                        // 2 need to increase at certain amount before peakpoint
+                        if (this.props.position < this.state.peakpoint) {
+                            opacity = +this.state.opacity + +this.state.changeRate;
+                            console.log('rise ' + opacity); // 3 need to increase at certain amount after peakpoint
+                        } else if (this.props.position > this.state.peakpoint) {
+                            opacity = +this.state.opacity - +this.state.changeRate;
+                            console.log('decrease ' + opacity);
+                        }
+                        //4 must be fully visible at peakpoint
+                        if (this.props.position === this.state.peakpoint) {
+                            opacity = 1;
+                            console.log(this.state.peakpoint);
+                            console.log('peak visibility' + this.state.opacity);
+                        }
+                        //5 need to dissapear at max point
+                        if (this.props.position === this.props.max) {
+                            opacity = 0;
+                            console.log('max visibility' + this.state.opacity);
+                        }
+                    } else {
+                        // going up
+                        console.log('up');
+                        //1 component has to appear at max with min opacity
+                        if (this.props.position === this.props.max) {
+                            opacity = 0.01;
+                            console.log('min visibility' + opacity);
+                        }
+                        // 2 need to increase at certain amount after peak point
+                        if (this.props.position > this.state.peakpoint && this.props.position < this.props.max) {
+                            opacity = +this.state.opacity + +this.state.changeRate;
+                            console.log('rise ' + opacity);
+                            // 3 need to decrease at certain amount before peak point
+                        } else if (this.props.position < this.state.peakpoint && this.props.position > this.props.min) {
+                            opacity = +this.state.opacity - +this.state.changeRate;
+                            console.log('decrease ' + opacity);
+                        }
+                        // 4 must be fully visible at peakpoint  
+                        if (this.props.position === this.state.peakpoint) {
+                            opacity = 1;
+                            console.log(this.state.peakpoint);
+                            console.log('peak visibility' + this.state.opacity);
+                        }
+                        // 5 component has to disappear at min with min opacity
+                        if (this.props.position === this.props.min) {
+                            opacity = 0;
+                            console.log('max visibility' + this.state.opacity);
+                        }
+                    }
+
                     this.setState({
                         opacity: opacity
                     });
                 } else {
-                    // going up
-                    var _opacity = +this.state.opacity - 0.03;
+                    opacity = 0;
                     this.setState({
-                        opacity: _opacity
+                        opacity: opacity
                     });
                 }
             }
@@ -58024,13 +58111,16 @@ var BackgroundPicture = function (_Component) {
 
                 backgroundImage: "url(http://malek.ovh/rwc/resources/Img/" + this.props.image + ")",
                 zIndex: '-2',
-                left: '40%',
-                bottom: '20%',
-                height: '300px',
-                width: '400px',
+                left: this.props.left,
+                bottom: this.props.bottom,
+                height: this.props.height,
+                width: this.props.width,
                 opacity: this.state.opacity
 
             };
+            if (style.opacity > 0.7) {
+                style.opacity = 1;
+            }
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { style: style, className: 'backgroundOne' });
         }
@@ -58081,7 +58171,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".backgroundOne {\r\n    height: 500px;\r\n    width:700px;\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position:fixed;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n\r\n@keyframes fadeout {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}", ""]);
+exports.push([module.i, ".backgroundOne {\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position:fixed;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n\r\n@keyframes fadeout {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}", ""]);
 
 // exports
 

@@ -17,8 +17,9 @@ export default class BackgroundPicture extends Component {
     } // constructor finish
    
     componentDidMount(){
-        let changeRate = (this.props.max - this.props.min) / 2
-        let peakpoint = this.props.max - changeRate
+        let fullRange = (this.props.max - this.props.min); 
+        let peakpoint = this.props.max - (fullRange / 2);
+        let changeRate = (fullRange / 2) * 0.0001;
         this.setState({
             changeRate: changeRate,
             peakpoint: peakpoint,
@@ -27,24 +28,93 @@ export default class BackgroundPicture extends Component {
          
     componentDidUpdate(prevProps) {
         if (this.props.position !== prevProps.position) {
-            console.log(this.state.peakpoint);
-            console.log(this.state.changeRate);
-            console.log(this.state.opacity);
-
+            let opacity = this.state.opacity;
+            console.log('min'+this.props.min);
+            console.log('max'+this.props.max);
+            console.log('change'+this.state.changeRate);
+            console.log('peak'+this.state.peakpoint);
+            console.log('position'+this.props.position);
+            console.log('opacity'+this.state.opacity);
+          
+         if (this.props.position > this.props.min && this.props.position < this.props.max) {
+             console.log('in range')
             if (this.props.position > prevProps.position) { //going down
+                console.log('down');   
                 
+
+            // 1 component has to appear at min with min opacity
+            if (this.props.position == this.props.min) {
+                opacity = 0.01;
+                console.log('min visibility'+ opacity);
+               
+            }
+
+            // 2 need to increase at certain amount before peakpoint
+            if (this.props.position < this.state.peakpoint) {
+                opacity = +this.state.opacity + +this.state.changeRate;
+                console.log('rise '+ opacity);           // 3 need to increase at certain amount after peakpoint
+                } else if (this.props.position > this.state.peakpoint ) {  
+                opacity = +this.state.opacity - +this.state.changeRate;
+                console.log('decrease ' + opacity);
+            }
+            //4 must be fully visible at peakpoint
+            if (this.props.position === this.state.peakpoint){  
+                opacity = 1;
+                console.log(this.state.peakpoint);
+                console.log('peak visibility'+this.state.opacity);
+            }
+            //5 need to dissapear at max point
+            if (this.props.position === this.props.max) {
+                opacity = 0;
+                console.log('max visibility'+this.state.opacity);
+            }
+
                 
-                let opacity = +this.state.opacity + 0.02;
+               
+               
+            } else {                                        // going up
+                console.log('up');  
+                //1 component has to appear at max with min opacity
+                if (this.props.position === this.props.max) {
+                    opacity = 0.01;
+                    console.log('min visibility'+ opacity);
+                   
+                }
+                // 2 need to increase at certain amount after peak point
+                if (this.props.position > this.state.peakpoint && this.props.position < this.props.max ) {
+                    opacity = +this.state.opacity + +this.state.changeRate;
+                    console.log('rise '+ opacity); 
+                // 3 need to decrease at certain amount before peak point
+                     
+                } else if (this.props.position < this.state.peakpoint && this.props.position > this.props.min) {  
+                opacity = +this.state.opacity - +this.state.changeRate;
+                console.log('decrease ' + opacity);
+            }
+                // 4 must be fully visible at peakpoint  
+                if (this.props.position === this.state.peakpoint){  
+                    opacity = 1;
+                    console.log(this.state.peakpoint);
+                    console.log('peak visibility'+this.state.opacity);
+                }
+                // 5 component has to disappear at min with min opacity
+                if (this.props.position === this.props.min) {
+                    opacity = 0;
+                    console.log('max visibility'+this.state.opacity);
+                }
+
+               
+            }
+            
+            this.setState({
+                opacity: opacity,
+            });
+        } else {
+                opacity =0;
                 this.setState({
                     opacity: opacity,
                 });
-               
-            } else {                                        // going up
-                let opacity = +this.state.opacity - 0.03;
-                this.setState({
-                    opacity: opacity,
-                }); }
             }
+        }
 
     }   // componentDidUpdate finish
         
@@ -52,19 +122,22 @@ export default class BackgroundPicture extends Component {
     
    
     render() {
-
+       
       const style = { 
         
          backgroundImage: "url(http://malek.ovh/rwc/resources/Img/"+this.props.image+")",
          zIndex: '-2',
-         left: '40%',
-         bottom:'20%',
-         height: '300px',
-         width: '400px',
+         left: this.props.left,
+         bottom: this.props.bottom,
+         height: this.props.height,
+         width: this.props.width,
          opacity: this.state.opacity,
        
         
       }
+      if (style.opacity > 0.7 ) {
+        style.opacity = 1;
+    }
     
 
       return (

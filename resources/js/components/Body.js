@@ -15,9 +15,10 @@ export default class Body extends Component {
      
     }
 
+
     handleScroll()  {
      
-    let currentScrollPosition=$(window).scrollTop();
+    let currentScrollPosition=Math.round($(window).scrollTop());
     this.setState({
         currentScrollPosition: currentScrollPosition,
       });
@@ -41,9 +42,32 @@ export default class Body extends Component {
                 <div className="MainContainer"> 
 {/* set of background elements showing and fading in certain points realeted to scroll position */}
                     <BackgroundPicture 
-                        min={155} max={650} 
+                        min={40} max={750} 
                         position={this.state.currentScrollPosition} 
-                        image={"hunters.jpg"}
+                        image={"venue.jpg"}
+                        left='35%'
+                        bottom='40%'
+                        width='700px'
+                        height='500px'
+                        
+                    />
+                    <BackgroundPicture 
+                        min={455} max={1150} 
+                        position={this.state.currentScrollPosition} 
+                        image={"merry_christmas__heretic.png"}
+                        left='10%'
+                        bottom='0%'
+                        width='400px'
+                        height='900px'
+                    />
+                       <BackgroundPicture 
+                        min={355} max={1350} 
+                        position={this.state.currentScrollPosition} 
+                        image={"goblin.png"}
+                        left='30%'
+                        bottom='0%'
+                        width='800px'
+                        height='600px'
                     />
                     
 {/* content of a page  */}
@@ -90,15 +114,17 @@ export default class Body extends Component {
                     </div>
 {/* row nr 2 */}
                     <div className="Cell">
-
+                    <a target="_blank" href="https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw">
+                        
                         <Rounddiv
                         min={320} 
                         max={1500}  
-                        image={"logo.jpg"} 
+                        image={"risethebanner.jpg"} 
                         position={this.state.currentScrollPosition} 
                         side={'left'}
-                        />
-
+                        >
+                        </Rounddiv>
+                    </a>
                     </div>
 
                     <div className="Cell">
@@ -119,7 +145,7 @@ export default class Body extends Component {
                         <Rounddiv 
                         min={320} 
                         max={1500} 
-                        image={"logo.jpg"} 
+                        image={"sisters.jpg"} 
                         position={this.state.currentScrollPosition}
                         side={'right'}
                         />
