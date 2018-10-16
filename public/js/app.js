@@ -57649,6 +57649,40 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
                             min: 10, max: 1750,
                             scrollPosition: this.state.currentScrollPosition,
+                            image: "hunters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "hunters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+                        })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'column1' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
                             image: "sisters.jpg",
                             left: '0px',
                             bottom: '0px'
@@ -57676,7 +57710,7 @@ var Body = function (_Component) {
                             'div',
                             { className: 'column1' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57684,7 +57718,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57692,7 +57726,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57700,7 +57734,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57711,7 +57745,7 @@ var Body = function (_Component) {
                             'div',
                             { className: 'column2' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57719,7 +57753,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57727,7 +57761,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -57735,7 +57769,7 @@ var Body = function (_Component) {
 
                             }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 1300, max: 2600,
+                                min: 1300, max: 3500,
                                 scrollPosition: this.state.currentScrollPosition,
                                 image: "hunters.jpg",
                                 left: '0px',
@@ -58265,7 +58299,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".backgroundOne {\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position: relative;\r\n    margin-bottom: 3px;\r\n   \r\n   \r\n}\r\n\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
+exports.push([module.i, ".backgroundOne {\r\n    background-size: contain ;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position: relative;\r\n    margin-bottom: 10%;\r\n   \r\n   \r\n}\r\n\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
 
 // exports
 
@@ -58447,7 +58481,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    grid-template-rows: 1fr 1fr;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    \r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 10px;\r\n    width: 100%;\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
 
 // exports
 

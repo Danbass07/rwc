@@ -1,9 +1,9 @@
 .backgroundOne {
-    background-size: cover;
+    background-size: contain ;
     border-radius: 20% 20% 20% 20%;
     z-index: -1;
     position: relative;
-    margin-bottom: 3px;
+    margin-bottom: 10%;
    
    
 }

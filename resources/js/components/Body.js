@@ -51,6 +51,45 @@ export default class Body extends Component {
                       <BackgroundPicture 
                         min={10} max={1750} 
                         scrollPosition={this.state.currentScrollPosition} 
+                        image={"hunters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'} 
+                                          
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}                 
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"hunters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}                  
+                    />
+                    
+
+ 
+                </div>
+                <div className="column1">
+                    <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}
+
+                                          
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
                         image={"sisters.jpg"}
                         left={'0px'}
                         bottom={'0px'} 
@@ -83,7 +122,7 @@ export default class Body extends Component {
                 <div className="BackgroundGrid">
                     <div className="column1">
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -92,7 +131,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -101,7 +140,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -110,7 +149,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -121,7 +160,7 @@ export default class Body extends Component {
                         </div>  
                         <div className="column2">
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -130,7 +169,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -139,7 +178,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
@@ -148,7 +187,7 @@ export default class Body extends Component {
                         />
 
                         <BackgroundPicture 
-                            min={1300} max={2600} 
+                            min={1300} max={3500} 
                             scrollPosition={this.state.currentScrollPosition} 
                             image={"hunters.jpg"}
                             left={'0px'}
