@@ -57632,6 +57632,118 @@ var Body = function (_Component) {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'App' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'BackgroundGrid' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'column1' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 10, max: 1750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px'
+                        })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'BackgroundGrid' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'column1' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+                            })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'column2' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+
+                            }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                                min: 1300, max: 2600,
+                                scrollPosition: this.state.currentScrollPosition,
+                                image: "hunters.jpg",
+                                left: '0px',
+                                bottom: '0px'
+                            })
+                        )
+                    )
+                ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h3',
@@ -57641,34 +57753,6 @@ var Body = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'MainContainer' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                        min: 40, max: 750,
-                        position: this.state.currentScrollPosition,
-                        image: "venue.jpg",
-                        left: '35%',
-                        bottom: '40%',
-                        width: '700px',
-                        height: '500px'
-
-                    }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                        min: 455, max: 1150,
-                        position: this.state.currentScrollPosition,
-                        image: "merry_christmas__heretic.png",
-                        left: '10%',
-                        bottom: '0%',
-                        width: '400px',
-                        height: '900px'
-                    }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                        min: 355, max: 1350,
-                        position: this.state.currentScrollPosition,
-                        image: "goblin.png",
-                        left: '30%',
-                        bottom: '0%',
-                        width: '800px',
-                        height: '600px'
-                    }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'Cell' },
@@ -58011,7 +58095,7 @@ var BackgroundPicture = function (_Component) {
         value: function componentDidMount() {
             var fullRange = this.props.max - this.props.min;
             var peakpoint = this.props.max - fullRange / 2;
-            var changeRate = fullRange / 2 * 0.0001;
+            var changeRate = fullRange / 2 * 0.00003;
             this.setState({
                 changeRate: changeRate,
                 peakpoint: peakpoint
@@ -58020,43 +58104,48 @@ var BackgroundPicture = function (_Component) {
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps) {
-            if (this.props.position !== prevProps.position) {
+            if (this.props.scrollPosition !== prevProps.scrollPosition) {
                 var opacity = this.state.opacity;
                 console.log('min' + this.props.min);
                 console.log('max' + this.props.max);
                 console.log('change' + this.state.changeRate);
                 console.log('peak' + this.state.peakpoint);
-                console.log('position' + this.props.position);
+                console.log('scrollposition' + this.props.scrollPosition);
                 console.log('opacity' + this.state.opacity);
 
-                if (this.props.position > this.props.min && this.props.position < this.props.max) {
+                if (this.props.scrollPosition > this.props.min && this.props.scrollPosition < this.props.max) {
                     console.log('in range');
-                    if (this.props.position > prevProps.position) {
+                    if (this.props.scrollPosition > prevProps.scrollPosition) {
                         //going down
                         console.log('down');
 
                         // 1 component has to appear at min with min opacity
-                        if (this.props.position == this.props.min) {
+                        if (this.props.scrollPosition === this.props.min) {
                             opacity = 0.01;
                             console.log('min visibility' + opacity);
                         }
 
                         // 2 need to increase at certain amount before peakpoint
-                        if (this.props.position < this.state.peakpoint) {
+                        if (this.props.scrollPosition < this.state.peakpoint) {
+
                             opacity = +this.state.opacity + +this.state.changeRate;
-                            console.log('rise ' + opacity); // 3 need to increase at certain amount after peakpoint
-                        } else if (this.props.position > this.state.peakpoint) {
-                            opacity = +this.state.opacity - +this.state.changeRate;
-                            console.log('decrease ' + opacity);
+
+                            console.log('rise ' + opacity);
                         }
+                        // 3 need to decrease at certain amount after peakpoint
+                        else if (this.props.scrollPosition > this.state.peakpoint) {
+
+                                opacity = +this.state.opacity - +this.state.changeRate;
+                                console.log('decrease ' + opacity);
+                            }
                         //4 must be fully visible at peakpoint
-                        if (this.props.position === this.state.peakpoint) {
+                        if (this.props.scrollPosition === this.state.peakpoint) {
                             opacity = 1;
                             console.log(this.state.peakpoint);
                             console.log('peak visibility' + this.state.opacity);
                         }
                         //5 need to dissapear at max point
-                        if (this.props.position === this.props.max) {
+                        if (this.props.scrollPosition === this.props.max) {
                             opacity = 0;
                             console.log('max visibility' + this.state.opacity);
                         }
@@ -58064,27 +58153,28 @@ var BackgroundPicture = function (_Component) {
                         // going up
                         console.log('up');
                         //1 component has to appear at max with min opacity
-                        if (this.props.position === this.props.max) {
+                        if (this.props.scrollPosition === this.props.max) {
                             opacity = 0.01;
                             console.log('min visibility' + opacity);
                         }
                         // 2 need to increase at certain amount after peak point
-                        if (this.props.position > this.state.peakpoint && this.props.position < this.props.max) {
+                        if (this.props.scrollPosition > this.state.peakpoint && this.props.scrollPosition < this.props.max) {
                             opacity = +this.state.opacity + +this.state.changeRate;
                             console.log('rise ' + opacity);
-                            // 3 need to decrease at certain amount before peak point
-                        } else if (this.props.position < this.state.peakpoint && this.props.position > this.props.min) {
-                            opacity = +this.state.opacity - +this.state.changeRate;
-                            console.log('decrease ' + opacity);
                         }
+                        // 3 need to decrease at certain amount before peak point
+                        else if (this.props.scrollPosition < this.state.peakpoint && this.props.scrollPosition > this.props.min) {
+                                opacity = +this.state.opacity - +this.state.changeRate;
+                                console.log('decrease ' + opacity);
+                            }
                         // 4 must be fully visible at peakpoint  
-                        if (this.props.position === this.state.peakpoint) {
+                        if (this.props.scrollPosition === this.state.peakpoint) {
                             opacity = 1;
                             console.log(this.state.peakpoint);
                             console.log('peak visibility' + this.state.opacity);
                         }
                         // 5 component has to disappear at min with min opacity
-                        if (this.props.position === this.props.min) {
+                        if (this.props.scrollPosition === this.props.min) {
                             opacity = 0;
                             console.log('max visibility' + this.state.opacity);
                         }
@@ -58094,6 +58184,7 @@ var BackgroundPicture = function (_Component) {
                         opacity: opacity
                     });
                 } else {
+                    console.log('Not in range');
                     opacity = 0;
                     this.setState({
                         opacity: opacity
@@ -58113,12 +58204,15 @@ var BackgroundPicture = function (_Component) {
                 zIndex: '-2',
                 left: this.props.left,
                 bottom: this.props.bottom,
-                height: this.props.height,
-                width: this.props.width,
-                opacity: this.state.opacity
+                width: '170px',
+                height: '160px',
+                opacity: this.state.opacity,
+                boxSizing: 'border-box',
+                marginLeft: '0px'
 
             };
-            if (style.opacity > 0.7) {
+
+            if (style.opacity > 0.6) {
                 style.opacity = 1;
             }
 
@@ -58171,7 +58265,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".backgroundOne {\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position:fixed;\r\n    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n}\r\n\r\n@keyframes fadeout {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}", ""]);
+exports.push([module.i, ".backgroundOne {\r\n    background-size: cover;\r\n    border-radius: 20% 20% 20% 20%;\r\n    z-index: -1;\r\n    position: relative;\r\n    margin-bottom: 3px;\r\n   \r\n   \r\n}\r\n\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
 
 // exports
 
@@ -58353,7 +58447,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 100%;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 650px) {\r\n   \r\n  \r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    grid-template-rows: 1fr 1fr;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    \r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
 
 // exports
 

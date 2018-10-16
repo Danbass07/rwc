@@ -2,15 +2,28 @@
     background-size: cover;
     border-radius: 20% 20% 20% 20%;
     z-index: -1;
-    position:fixed;
-    background-image:url('http://malek.ovh/rwc/resources/Img/venue.jpg');
+    position: relative;
+    margin-bottom: 3px;
+   
+   
 }
 
-@keyframes fadeout {
+
+@keyframes transition {
        
     0% { opacity:1;}
    
     60% { opacity:0.5;}
    
     100%   { opacity:0;}
+}
+
+@media only screen and (max-width: 1120px) {
+   
+}
+@media only screen and (max-width: 900px) {
+ 
+}
+@media only screen and (max-width: 380px) {
+
 }

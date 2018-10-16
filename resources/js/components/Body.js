@@ -35,40 +35,137 @@ export default class Body extends Component {
         return (
             
             <div className="App" >
+
+                <div className="BackgroundGrid">
+                <div className="column1">
+                    <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}
+
+                                          
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'} 
+                                          
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}                 
+                    />
+
+                      <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"sisters.jpg"}
+                        left={'0px'}
+                        bottom={'0px'}                  
+                    />
+                    
+
+ 
+                </div>
+
+
+                {/*   2nd layer */}
+                    
+                <div className="BackgroundGrid">
+                    <div className="column1">
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'}
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'} 
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'} 
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'}              
+                        />
+
+
+                        </div>  
+                        <div className="column2">
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'}
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'} 
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'} 
+                                        
+                        />
+
+                        <BackgroundPicture 
+                            min={1300} max={2600} 
+                            scrollPosition={this.state.currentScrollPosition} 
+                            image={"hunters.jpg"}
+                            left={'0px'}
+                            bottom={'0px'}              
+                        />
+
+
+                        </div>  
+                    </div>
+                 </div> 
             <Navigation />
+          
             
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
 
                 <div className="MainContainer"> 
 {/* set of background elements showing and fading in certain points realeted to scroll position */}
-                    <BackgroundPicture 
-                        min={40} max={750} 
-                        position={this.state.currentScrollPosition} 
-                        image={"venue.jpg"}
-                        left='35%'
-                        bottom='40%'
-                        width='700px'
-                        height='500px'
-                        
-                    />
-                    <BackgroundPicture 
-                        min={455} max={1150} 
-                        position={this.state.currentScrollPosition} 
-                        image={"merry_christmas__heretic.png"}
-                        left='10%'
-                        bottom='0%'
-                        width='400px'
-                        height='900px'
-                    />
-                       <BackgroundPicture 
-                        min={355} max={1350} 
-                        position={this.state.currentScrollPosition} 
-                        image={"goblin.png"}
-                        left='30%'
-                        bottom='0%'
-                        width='800px'
-                        height='600px'
-                    />
                     
 {/* content of a page  */}
                     <div className="Cell">
