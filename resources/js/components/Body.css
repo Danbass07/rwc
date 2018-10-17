@@ -28,13 +28,14 @@ body {
     margin-bottom: 10px;
 }
 .Title3 {
-    
+    position: relative;
     font-size: 2em;
     padding: 0;
     margin-top: 80px;
     margin-left: 25%;
     margin-right: 10%;
     margin-bottom: 100px;
+    z-index: 2;
 }
 .MainContainer {
     overflow: hidden;
@@ -49,11 +50,7 @@ body {
     z-index: 1;
   
 }
-.Cell {
-    
-  
-    
-}
+
 .Text {
     box-sizing: border-box;
     text-align: center;
@@ -89,7 +86,36 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.welcome {
+   
+    height: 500px;
+    width: 100%;
+    opacity: 0;
+}
+.floatingDiv {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8em;
+    text-align: center;
+    opacity: 0.5;
+    width: 4500px;
+    height: 180px;
+    margin-top: 1100px;
+    padding-top: 20px;
+    border: 1px solid white;
+    border-radius: 10% 15% 10% 15%;
+    position: absolute;
+    background-color: black;
+    z-index: 99;
+    animation-name: animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
+}
 @media only screen and (max-width: 1120px) {
+    .welcome {
+        display: none;
+    }
     .MainContainer {
     
         display: inline-block;
@@ -100,4 +126,9 @@ body {
 }
 @media only screen and (max-width: 380px) {
  
+}
+
+@keyframes animation {
+    0%   {left:2000px; }
+    100% {left:-4500px; }
 }

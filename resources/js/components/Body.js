@@ -9,13 +9,33 @@ export default class Body extends Component {
         super(props);
         this.state = {
             currentScrollPosition: 0,
+            textOpacity: 0.6,
+            boxShadow: '',
         }
        
         this.handleScroll = this.handleScroll.bind(this);
-     
+        this.textClickHandler = this.textClickHandler.bind(this);     
     }
 
+    textClickHandler(){
+        let opacity = this.state.textOpacity;
+        let boxShadow = this.state.boxShadow;
+        if (opacity === 0.6) {
+            
+            opacity = 1;
+            boxShadow = '0px 3px 60px 14px rgba(255,255,255,1)';
+            
+        } else { 
+            opacity = 0.6;
+            boxShadow = '';
 
+        }
+        this.setState({
+            textOpacity: opacity,
+            boxShadow: boxShadow,
+        })
+
+    }
     handleScroll()  {
      
     let currentScrollPosition=Math.round($(window).scrollTop());
@@ -31,6 +51,10 @@ export default class Body extends Component {
     
 
     render() {
+        const textStyle = {
+            opacity: this.state.textOpacity,
+            boxShadow: this.state.boxShadow,
+        }
     
         return (
             
@@ -219,7 +243,7 @@ export default class Body extends Component {
                     </div>
 
                     <div className="Cell">
-                        <div className="Text">
+                        <div className="Text" style ={textStyle} onClick={this.textClickHandler}>
                                 On our first night in our new venue of Sutton Village Hall we had plenty
                                 of members and non-members alike come down to show support for the club after 
                                 a difficult period at our previous venue, which we are all glad is now at an end.
@@ -250,7 +274,10 @@ export default class Body extends Component {
                          />
 
                     </div>
-{/* row nr 2 */}
+{/* row nr 2 */}<div className="welcome"> </div>
+<div className="middle"></div>
+<div className="welcome"> </div>
+<div className="floatingDiv"> WELCOME NEW MEMBERS visit us every Tuesday -- DN22 8PT -- SUTTON </div>
                     <div className="Cell">
                     <a target="_blank" href="https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw">
                         
@@ -267,7 +294,7 @@ export default class Body extends Component {
                     </div>
 
                     <div className="Cell">
-                        <div className="Text">
+                        <div className="Text" style ={textStyle} onClick={this.textClickHandler}>
                             For anyone wishing to come down to the club, our new details
                             are that we meet every Tuesday evening from 7pm until 11pm at 
                             Sutton-cum-Lound Village Hall, which is located on Town Street in Sutton, 
@@ -284,7 +311,7 @@ export default class Body extends Component {
                     
                         <Rounddiv 
                             scrollPosition={this.state.currentScrollPosition}
-                            min={1500} 
+                            min={1250} 
                             max={2500} 
                             image={"sisters.jpg"} 
                             position={this.state.currentScrollPosition}

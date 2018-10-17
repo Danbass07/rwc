@@ -138,7 +138,7 @@ export default class BackgroundPicture extends Component {
       const style = { 
         
         backgroundImage: "url(http://malek.ovh/rwc/resources/Img/"+this.props.image+")",
-        zIndex: '-2',
+        zIndex: '-999',
         left: this.props.left,
         bottom: this.props.bottom,
         width: '170px',

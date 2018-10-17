@@ -57603,15 +57603,35 @@ var Body = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
 
         _this.state = {
-            currentScrollPosition: 0
+            currentScrollPosition: 0,
+            textOpacity: 0.6,
+            boxShadow: ''
         };
 
         _this.handleScroll = _this.handleScroll.bind(_this);
-
+        _this.textClickHandler = _this.textClickHandler.bind(_this);
         return _this;
     }
 
     _createClass(Body, [{
+        key: 'textClickHandler',
+        value: function textClickHandler() {
+            var opacity = this.state.textOpacity;
+            var boxShadow = this.state.boxShadow;
+            if (opacity === 0.6) {
+
+                opacity = 1;
+                boxShadow = '0px 3px 60px 14px rgba(255,255,255,1)';
+            } else {
+                opacity = 0.6;
+                boxShadow = '';
+            }
+            this.setState({
+                textOpacity: opacity,
+                boxShadow: boxShadow
+            });
+        }
+    }, {
         key: 'handleScroll',
         value: function handleScroll() {
 
@@ -57628,6 +57648,10 @@ var Body = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var textStyle = {
+                opacity: this.state.textOpacity,
+                boxShadow: this.state.boxShadow
+            };
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -57802,7 +57826,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'Text' },
+                            { className: 'Text', style: textStyle, onClick: this.textClickHandler },
                             'On our first night in our new venue of Sutton Village Hall we had plenty of members and non-members alike come down to show support for the club after a difficult period at our previous venue, which we are all glad is now at an end. The new venue has excellent lighting, plenty of secure storage for the club\'s property, abundant space for the club\'s needs, and kitchen facilities that were put to good use by all.  Everybody enjoyed the night, the atmosphere was very positive, as now that the club has returned to a smaller setting people can much more easily chat with those around them and enjoy other people\'s games as well as their own, and we are looking forward to many more meetings at the village hall.  On the night, a wide variety of games were played, most prominently Guild Ball, but also Warhammer 40,000, Middle-Earth Strategy Battle Game, Warhammer: Age of Sigmar, and also the new Fallout: Wasteland Warfare. Our Age of Sigmar Firestorm campaign and Guild Ball Escalation League were continued, as members also prepared for the upcoming Middle-Earth campaign by trying out the new rules and army lists.'
                         )
                     ),
@@ -57817,6 +57841,22 @@ var Body = function (_Component) {
                             position: this.state.currentScrollPosition,
                             side: 'right'
                         })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'welcome' },
+                        ' '
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'middle' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'welcome' },
+                        ' '
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'floatingDiv' },
+                        ' WELCOME NEW MEMBERS visit us every Tuesday -- DN22 8PT -- SUTTON '
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -57839,7 +57879,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
-                            { className: 'Text' },
+                            { className: 'Text', style: textStyle, onClick: this.textClickHandler },
                             'For anyone wishing to come down to the club, our new details are that we meet every Tuesday evening from 7pm until 11pm at Sutton-cum-Lound Village Hall, which is located on Town Street in Sutton, and the postcode to find the hall is DN22 8PT.  As some members had issues with google maps inputting the wrong postcode when taking the details straight from Facebook on mobile devices, please make sure that the right postcode is in your sat-navs when setting off.  The club now offers refreshments and snacks, and our charges are now \xA32 per person, per night. We hope to see you very soon!'
                         )
                     ),
@@ -57848,7 +57888,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 1500,
+                            min: 1250,
                             max: 2500,
                             image: "sisters.jpg",
                             position: this.state.currentScrollPosition,
@@ -58237,7 +58277,7 @@ var BackgroundPicture = function (_Component) {
             var style = {
 
                 backgroundImage: "url(http://malek.ovh/rwc/resources/Img/" + this.props.image + ")",
-                zIndex: '-2',
+                zIndex: '-999',
                 left: this.props.left,
                 bottom: this.props.bottom,
                 width: '170px',
@@ -58483,7 +58523,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 10px;\r\n    width: 100%;\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 10px;\r\n    width: 100%;\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
 
 // exports
 
