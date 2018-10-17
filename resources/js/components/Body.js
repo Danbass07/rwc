@@ -210,9 +210,10 @@ export default class Body extends Component {
                     <div className="Cell">
 {/* row nr 1 */}
                         <Rounddiv
-                         min={155} max={650} 
-                         image={"hunters.jpg"}  
-                         side={'left'} 
+                            scrollPosition={this.state.currentScrollPosition}
+                            min={155} max={650} 
+                            image={"hunters.jpg"}  
+                            side={'left'} 
                          />
 
                     </div>
@@ -240,11 +241,12 @@ export default class Body extends Component {
                     <div className="Cell">
 
                          <Rounddiv 
-                         min={155}
-                         max={650}
-                         image={"sisters.jpg"}
-                         position={this.state.currentScrollPosition}  
-                         side={'right'}
+                            scrollPosition={this.state.currentScrollPosition}
+                            min={155}
+                            max={650}
+                            image={"sisters.jpg"}
+                            position={this.state.currentScrollPosition}  
+                            side={'right'}
                          />
 
                     </div>
@@ -253,11 +255,12 @@ export default class Body extends Component {
                     <a target="_blank" href="https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw">
                         
                         <Rounddiv
-                        min={320} 
-                        max={1500}  
-                        image={"risethebanner.jpg"} 
-                        position={this.state.currentScrollPosition} 
-                        side={'left'}
+                            scrollPosition={this.state.currentScrollPosition}
+                            min={320} 
+                            max={1500}  
+                            image={"risethebanner.jpg"} 
+                            position={this.state.currentScrollPosition} 
+                            side={'left'}
                         >
                         </Rounddiv>
                     </a>
@@ -278,12 +281,14 @@ export default class Body extends Component {
                     </div>
 
                     <div className="Cell">
+                    
                         <Rounddiv 
-                        min={320} 
-                        max={1500} 
-                        image={"sisters.jpg"} 
-                        position={this.state.currentScrollPosition}
-                        side={'right'}
+                            scrollPosition={this.state.currentScrollPosition}
+                            min={320} 
+                            max={1500} 
+                            image={"sisters.jpg"} 
+                            position={this.state.currentScrollPosition}
+                            side={'right'}
                         />
                     </div>  
                     

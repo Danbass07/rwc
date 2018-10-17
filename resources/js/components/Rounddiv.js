@@ -7,38 +7,29 @@ export default class Body extends Component {
         this.state = {
             class: 'notactive',
         }
-        this.handleScroll = this.handleScroll.bind(this);
-     
-    }
-    handleScroll()  {
-     
-    let currentScrollPosition=$(window).scrollTop();
-    if (currentScrollPosition > this.props.min && currentScrollPosition < this.props.max)  {
-         const className = 'active';
-        this.setState({
-            class: className,
-        })
-    
-       
-    } else if ( currentScrollPosition < this.props.min || currentScrollPosition > this.props.max){
         
-        const className = 'notactive';
-        this.setState({
-            class: className,
-        })
+     
     }
-   
-  
 
     
-}
-           
-        
-       
-        
-    
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
+    componentDidUpdate(prevProps) {
+        if (this.props.scrollPosition !== prevProps.scrollPosition) {
+
+                if (this.props.scrollPosition > this.props.min && this.props.scrollPosition < this.props.max)  {
+                    const className = 'active';
+                this.setState({
+                    class: className,
+                })
+            
+                
+            } else if ( this.props.scrollPosition < this.props.min || this.props.scrollPosition > this.props.max){
+                
+                const className = 'notactive';
+                this.setState({
+                    class: className,
+                })
+            }
+        }
     }
     render() {
       const style = {

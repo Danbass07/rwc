@@ -57791,6 +57791,7 @@ var Body = function (_Component) {
                         'div',
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
+                            scrollPosition: this.state.currentScrollPosition,
                             min: 155, max: 650,
                             image: "hunters.jpg",
                             side: 'left'
@@ -57809,6 +57810,7 @@ var Body = function (_Component) {
                         'div',
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
+                            scrollPosition: this.state.currentScrollPosition,
                             min: 155,
                             max: 650,
                             image: "sisters.jpg",
@@ -57823,6 +57825,7 @@ var Body = function (_Component) {
                             'a',
                             { target: '_blank', href: 'https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
+                                scrollPosition: this.state.currentScrollPosition,
                                 min: 320,
                                 max: 1500,
                                 image: "risethebanner.jpg",
@@ -57844,6 +57847,7 @@ var Body = function (_Component) {
                         'div',
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
+                            scrollPosition: this.state.currentScrollPosition,
                             min: 320,
                             max: 1500,
                             image: "sisters.jpg",
@@ -57895,33 +57899,28 @@ var Body = function (_Component) {
         _this.state = {
             class: 'notactive'
         };
-        _this.handleScroll = _this.handleScroll.bind(_this);
 
         return _this;
     }
 
     _createClass(Body, [{
-        key: 'handleScroll',
-        value: function handleScroll() {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            if (this.props.scrollPosition !== prevProps.scrollPosition) {
 
-            var currentScrollPosition = $(window).scrollTop();
-            if (currentScrollPosition > this.props.min && currentScrollPosition < this.props.max) {
-                var className = 'active';
-                this.setState({
-                    class: className
-                });
-            } else if (currentScrollPosition < this.props.min || currentScrollPosition > this.props.max) {
+                if (this.props.scrollPosition > this.props.min && this.props.scrollPosition < this.props.max) {
+                    var className = 'active';
+                    this.setState({
+                        class: className
+                    });
+                } else if (this.props.scrollPosition < this.props.min || this.props.scrollPosition > this.props.max) {
 
-                var _className = 'notactive';
-                this.setState({
-                    class: _className
-                });
+                    var _className = 'notactive';
+                    this.setState({
+                        class: _className
+                    });
+                }
             }
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            window.addEventListener('scroll', this.handleScroll);
         }
     }, {
         key: 'render',
@@ -58140,23 +58139,24 @@ var BackgroundPicture = function (_Component) {
         value: function componentDidUpdate(prevProps) {
             if (this.props.scrollPosition !== prevProps.scrollPosition) {
                 var opacity = this.state.opacity;
-                console.log('min' + this.props.min);
-                console.log('max' + this.props.max);
-                console.log('change' + this.state.changeRate);
-                console.log('peak' + this.state.peakpoint);
-                console.log('scrollposition' + this.props.scrollPosition);
-                console.log('opacity' + this.state.opacity);
+                // console.log('min'+this.props.min);
+                // console.log('max'+this.props.max);
+                // console.log('change'+this.state.changeRate);
+                // console.log('peak'+this.state.peakpoint);
+                // console.log('scrollposition'+this.props.scrollPosition);
+                // console.log('opacity'+this.state.opacity);
 
                 if (this.props.scrollPosition > this.props.min && this.props.scrollPosition < this.props.max) {
-                    console.log('in range');
+                    //console.log('in range')
                     if (this.props.scrollPosition > prevProps.scrollPosition) {
                         //going down
-                        console.log('down');
+                        // console.log('down');   
+
 
                         // 1 component has to appear at min with min opacity
                         if (this.props.scrollPosition === this.props.min) {
                             opacity = 0.01;
-                            console.log('min visibility' + opacity);
+                            // console.log('min visibility'+ opacity);
                         }
 
                         // 2 need to increase at certain amount before peakpoint
@@ -58164,24 +58164,25 @@ var BackgroundPicture = function (_Component) {
 
                             opacity = +this.state.opacity + +this.state.changeRate;
 
-                            console.log('rise ' + opacity);
+                            // console.log('rise '+ opacity);           
+
                         }
                         // 3 need to decrease at certain amount after peakpoint
                         else if (this.props.scrollPosition > this.state.peakpoint) {
 
                                 opacity = +this.state.opacity - +this.state.changeRate;
-                                console.log('decrease ' + opacity);
+                                // console.log('decrease ' + opacity);
                             }
                         //4 must be fully visible at peakpoint
                         if (this.props.scrollPosition === this.state.peakpoint) {
                             opacity = 1;
-                            console.log(this.state.peakpoint);
-                            console.log('peak visibility' + this.state.opacity);
+                            // console.log(this.state.peakpoint);
+                            // console.log('peak visibility'+this.state.opacity);
                         }
                         //5 need to dissapear at max point
                         if (this.props.scrollPosition === this.props.max) {
                             opacity = 0;
-                            console.log('max visibility' + this.state.opacity);
+                            //console.log('max visibility'+this.state.opacity);
                         }
                     } else {
                         // going up
@@ -58189,28 +58190,29 @@ var BackgroundPicture = function (_Component) {
                         //1 component has to appear at max with min opacity
                         if (this.props.scrollPosition === this.props.max) {
                             opacity = 0.01;
-                            console.log('min visibility' + opacity);
+                            // console.log('min visibility'+ opacity);
                         }
                         // 2 need to increase at certain amount after peak point
                         if (this.props.scrollPosition > this.state.peakpoint && this.props.scrollPosition < this.props.max) {
                             opacity = +this.state.opacity + +this.state.changeRate;
-                            console.log('rise ' + opacity);
+                            // console.log('rise '+ opacity); 
+
                         }
                         // 3 need to decrease at certain amount before peak point
                         else if (this.props.scrollPosition < this.state.peakpoint && this.props.scrollPosition > this.props.min) {
                                 opacity = +this.state.opacity - +this.state.changeRate;
-                                console.log('decrease ' + opacity);
+                                //  console.log('decrease ' + opacity);
                             }
                         // 4 must be fully visible at peakpoint  
                         if (this.props.scrollPosition === this.state.peakpoint) {
                             opacity = 1;
-                            console.log(this.state.peakpoint);
-                            console.log('peak visibility' + this.state.opacity);
+                            // console.log(this.state.peakpoint);
+                            // console.log('peak visibility'+this.state.opacity);
                         }
                         // 5 component has to disappear at min with min opacity
                         if (this.props.scrollPosition === this.props.min) {
                             opacity = 0;
-                            console.log('max visibility' + this.state.opacity);
+                            //  console.log('max visibility'+this.state.opacity);
                         }
                     }
 
@@ -58218,7 +58220,7 @@ var BackgroundPicture = function (_Component) {
                         opacity: opacity
                     });
                 } else {
-                    console.log('Not in range');
+                    // console.log('Not in range')
                     opacity = 0;
                     this.setState({
                         opacity: opacity
@@ -58481,7 +58483,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 10px;\r\n    width: 100%;\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    \r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n.Cell {\r\n    \r\n  \r\n    \r\n}\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 10px;\r\n    width: 100%;\r\n    position: fixed;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr ;\r\n    justify-items: space-between;\r\n    align-items: stretch;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n", ""]);
 
 // exports
 
