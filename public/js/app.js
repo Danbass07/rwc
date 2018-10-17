@@ -57792,7 +57792,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 155, max: 650,
+                            min: 155, max: 1250,
                             image: "hunters.jpg",
                             side: 'left'
                         })
@@ -57812,7 +57812,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
                             min: 155,
-                            max: 650,
+                            max: 1250,
                             image: "sisters.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
@@ -57826,8 +57826,8 @@ var Body = function (_Component) {
                             { target: '_blank', href: 'https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                                 scrollPosition: this.state.currentScrollPosition,
-                                min: 320,
-                                max: 1500,
+                                min: 1250,
+                                max: 2500,
                                 image: "risethebanner.jpg",
                                 position: this.state.currentScrollPosition,
                                 side: 'left'
@@ -57848,8 +57848,8 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 320,
-                            max: 1500,
+                            min: 1500,
+                            max: 2500,
                             image: "sisters.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'

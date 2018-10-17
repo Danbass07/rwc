@@ -211,7 +211,7 @@ export default class Body extends Component {
 {/* row nr 1 */}
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
-                            min={155} max={650} 
+                            min={155} max={1250} 
                             image={"hunters.jpg"}  
                             side={'left'} 
                          />
@@ -243,7 +243,7 @@ export default class Body extends Component {
                          <Rounddiv 
                             scrollPosition={this.state.currentScrollPosition}
                             min={155}
-                            max={650}
+                            max={1250}
                             image={"sisters.jpg"}
                             position={this.state.currentScrollPosition}  
                             side={'right'}
@@ -256,8 +256,8 @@ export default class Body extends Component {
                         
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
-                            min={320} 
-                            max={1500}  
+                            min={1250} 
+                            max={2500}  
                             image={"risethebanner.jpg"} 
                             position={this.state.currentScrollPosition} 
                             side={'left'}
@@ -284,8 +284,8 @@ export default class Body extends Component {
                     
                         <Rounddiv 
                             scrollPosition={this.state.currentScrollPosition}
-                            min={320} 
-                            max={1500} 
+                            min={1500} 
+                            max={2500} 
                             image={"sisters.jpg"} 
                             position={this.state.currentScrollPosition}
                             side={'right'}
