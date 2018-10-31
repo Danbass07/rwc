@@ -61,13 +61,65 @@ export default class Body extends Component {
             <div className="App" >
 
                 <div className="BackgroundGrid">
-                <div className="column1">
+
+                    <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"backgroundtopr.png"}
+                        left={'0px'}
+                        bottom={'0px'}
+                        points={'0,0 415,0 0,825'}
+                        fill="#e8df96"
+
+
+                                          
+                    />
+                     {/* <BackgroundPicture 
+                        min={10} max={1750} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"backgroundTopCorner.png"}
+                        left={'0px'}
+                        bottom={'0px'}
+                        points={'0,825 415,0 415,825'}
+                        fill="#96e8a5"
+
+
+                                          
+                    /> */}
+
+                     {/* <BackgroundPicture 
+                        min={1300} max={3150} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"backgroundTopCorner.png"}
+                        left={'0px'}
+                        bottom={'0px'}
+                        points={'0,0 415,0 415,825'}
+                        fill="#938585"
+
+
+                                          
+                    />
+                     <BackgroundPicture 
+                        min={1300} max={3150} 
+                        scrollPosition={this.state.currentScrollPosition} 
+                        image={"backgroundTopCorner.png"}
+                        left={'0px'}
+                        bottom={'0px'}
+                        points={'0,0 0,825 415,825'}
+                        fill="#92a5cc"
+
+
+                                          
+                    /> */}
+
+                {/* <div className="column1">
                     <BackgroundPicture 
                         min={10} max={1750} 
                         scrollPosition={this.state.currentScrollPosition} 
                         image={"sisters.jpg"}
                         left={'0px'}
                         bottom={'0px'}
+
 
                                           
                     />
@@ -143,7 +195,7 @@ export default class Body extends Component {
 
                 {/*   2nd layer */}
                     
-                <div className="BackgroundGrid">
+                {/* <div className="BackgroundGrid">
                     <div className="column1">
                         <BackgroundPicture 
                             min={1300} max={3500} 
@@ -220,7 +272,7 @@ export default class Body extends Component {
 
 
                         </div>  
-                    </div>
+                    </div> */} 
                  </div> 
             <Navigation />
           
