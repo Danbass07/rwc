@@ -65,7 +65,7 @@ export default class Body extends Component {
                     <BackgroundPicture 
                         min={10} max={1750} 
                         scrollPosition={this.state.currentScrollPosition} 
-                        image={"backgroundtopr.png"}
+                        image={"merry_christmas__heretic.png"}
                         left={'0px'}
                         bottom={'0px'}
                         points={'0,0 415,0 0,825'}

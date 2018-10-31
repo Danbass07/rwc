@@ -137,7 +137,7 @@ export default class BackgroundPicture extends Component {
        
       const style = { 
         
-        backgroundImage: "url(http://malek.ovh/rwc/resources/Img/"+this.props.image+")",
+        
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%',
         opacity: this.state.opacity,
@@ -150,14 +150,17 @@ export default class BackgroundPicture extends Component {
       if (style.opacity > 0.9 ) {
         style.opacity = 1;
     }
-    
+        const link = "http://malek.ovh/rwc/resources/Img/" + this.props.image;
 
       return (
           
           
                 <div style={style} className="backgroundOne">
                     <svg height="100%" width="100%">
-                        <polygon points={this.props.points} fill="none" stroke="white" strokeWidth="3" />
+                    <pattern id="image" x="0" y="0" height="100%" width="100%" >
+    <image x="0" y="0" width="100%" height="100%" xlinkHref={link}></image>
+   </pattern>
+                        <polygon points={this.props.points} fill="url(#image)" stroke="white" strokeWidth="3" />
                     </svg>
 {/* <svg height="400px" width="600px" >
 

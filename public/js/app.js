@@ -57662,7 +57662,7 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
                         min: 10, max: 1750,
                         scrollPosition: this.state.currentScrollPosition,
-                        image: "backgroundtopr.png",
+                        image: "merry_christmas__heretic.png",
                         left: '0px',
                         bottom: '0px',
                         points: '0,0 415,0 0,825',
@@ -58144,7 +58144,6 @@ var BackgroundPicture = function (_Component) {
 
             var style = {
 
-                backgroundImage: "url(http://malek.ovh/rwc/resources/Img/" + this.props.image + ")",
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '100% 100%',
                 opacity: this.state.opacity,
@@ -58156,6 +58155,7 @@ var BackgroundPicture = function (_Component) {
             if (style.opacity > 0.9) {
                 style.opacity = 1;
             }
+            var link = "http://malek.ovh/rwc/resources/Img/" + this.props.image;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -58163,7 +58163,12 @@ var BackgroundPicture = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'svg',
                     { height: '100%', width: '100%' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('polygon', { points: this.props.points, fill: 'none', stroke: 'white', strokeWidth: '3' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'pattern',
+                        { id: 'image', x: '0', y: '0', height: '100%', width: '100%' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('image', { x: '0', y: '0', width: '100%', height: '100%', xlinkHref: link })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('polygon', { points: this.props.points, fill: 'url(#image)', stroke: 'white', strokeWidth: '3' })
                 )
             );
         }
