@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Rounddiv from './Rounddiv';
 import BackgroundPicture from './BackgroundPicture';
 import Navigation from './Navigation';
+import Footer from './Footer';
 import './Body.css';
 
 export default class Body extends Component {
@@ -59,221 +60,96 @@ export default class Body extends Component {
         return (
             
             <div className="App" >
+                <div className="BackgroundContainer">
+                    <div className="BackgroundGrid">
 
-                <div className="BackgroundGrid">
-
-                    <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"merry_christmas__heretic.png"}
-                        left={'0px'}
-                        bottom={'0px'}
-                        points={'0,0 415,0 0,825'}
-                        fill="#e8df96"
-
-
-                                          
-                    />
-                     {/* <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"backgroundTopCorner.png"}
-                        left={'0px'}
-                        bottom={'0px'}
-                        points={'0,825 415,0 415,825'}
-                        fill="#96e8a5"
-
-
-                                          
-                    /> */}
-
-                     {/* <BackgroundPicture 
-                        min={1300} max={3150} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"backgroundTopCorner.png"}
-                        left={'0px'}
-                        bottom={'0px'}
-                        points={'0,0 415,0 415,825'}
-                        fill="#938585"
-
-
-                                          
-                    />
-                     <BackgroundPicture 
-                        min={1300} max={3150} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"backgroundTopCorner.png"}
-                        left={'0px'}
-                        bottom={'0px'}
-                        points={'0,0 0,825 415,825'}
-                        fill="#92a5cc"
-
-
-                                          
-                    /> */}
-
-                {/* <div className="column1">
-                    <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}
-
-
-                                          
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"hunters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'} 
-                                          
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}                 
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"hunters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}                  
-                    />
                     
+                
+                    
+                        <BackgroundPicture 
+                                min={10} max={1750} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image2"}
+                                image={"hunters.jpg"}
+                                left={'0px'}
+                                bottom={'0px'}
+                                points={'0,0 360,0 0,835'}
+                                align="left"
+                            
 
- 
+                                                    
+                            />
+
+
+                        <BackgroundPicture 
+                                min={10} max={1750} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image1"}
+                                image={"hunters.jpg"}
+                                left={'150px'}
+                                bottom={'0px'}
+                                points={'0,835 360,0 360,835'}
+                                align="right"
+
+
+                                                    
+                            />
+                           {/* end of background first section */} 
+
+                        
+
+
+                
+                            
+                            
+
+                            
+                    </div> 
+                    <div className="BackgroundContainer">
+                     <div className="BackgroundGrid">
+
+                    
+                
+                    
+                    <BackgroundPicture 
+                                min={900} max={2750} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image3"}
+                                image={"sisters.jpg"}
+                                left={'0px'}
+                                bottom={'0px'}
+                                points={'0,0 360,835 0,835'}
+                                align="left"
+                            
+
+                                                    
+                            />
+                    <BackgroundPicture 
+                                min={900} max={2750} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image4"}
+                                image={"sisters.jpg"}
+                                left={'150px'}
+                                bottom={'0px'}
+                                points={'0,0 360,0 360,835'}
+                                align="right"
+
+
+                                                    
+                            />
+   {/* end of background second section */} 
+
+   
+
+
+
+    
+    
+
+    
+</div> 
+                </div> {/* end of BackgroundContainer */}
                 </div>
-                <div className="column1">
-                    <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}
-
-                                          
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'} 
-                                          
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}                 
-                    />
-
-                      <BackgroundPicture 
-                        min={10} max={1750} 
-                        scrollPosition={this.state.currentScrollPosition} 
-                        image={"sisters.jpg"}
-                        left={'0px'}
-                        bottom={'0px'}                  
-                    />
-                    
-
- 
-                </div>
-
-
-                {/*   2nd layer */}
-                    
-                {/* <div className="BackgroundGrid">
-                    <div className="column1">
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'}
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'} 
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'} 
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'}              
-                        />
-
-
-                        </div>  
-                        <div className="column2">
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'}
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'} 
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'} 
-                                        
-                        />
-
-                        <BackgroundPicture 
-                            min={1300} max={3500} 
-                            scrollPosition={this.state.currentScrollPosition} 
-                            image={"hunters.jpg"}
-                            left={'0px'}
-                            bottom={'0px'}              
-                        />
-
-
-                        </div>  
-                    </div> */} 
-                 </div> 
             <Navigation />
           
             
@@ -329,7 +205,7 @@ export default class Body extends Component {
 {/* row nr 2 */}<div className="welcome"> </div>
 <div className="middle"></div>
 <div className="welcome"> </div>
-<div className="floatingDiv"> WELCOME NEW MEMBERS visit us every Tuesday -- DN22 8PT -- SUTTON </div>
+{/* <div className="floatingDiv"> WELCOME NEW MEMBERS visit us every Tuesday -- DN22 8PT -- SUTTON </div> */}
                     <div className="Cell">
                     <a target="_blank" href="https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw">
                         
@@ -371,6 +247,7 @@ export default class Body extends Component {
                         />
                     </div>  
                     
+                    <Footer />
                    
                 </div>  {/* end of content */}
                

@@ -7,9 +7,6 @@ body {
 .App {
     /* background-image: url('../../Img/img1.jpg'); */
     background-color: black;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     height: 3500px;
     width: 100%;
     color: white;
@@ -68,10 +65,15 @@ body {
 }
 .BackgroundGrid {
     padding: 0px;
+    display: flex;
+    height: 100%;
+    
+}
+.BackgroundContainer {
+    position: fixed;
     width: 100%;
     height: 100%;
-    position: fixed;
-   
+    top:0%;
 }
 .column1 {
     display: flex;

@@ -138,56 +138,33 @@ export default class BackgroundPicture extends Component {
       const style = { 
         
         
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%',
         opacity: this.state.opacity,
         boxSizing: 'border-box',
-        marginLeft: '0px',
-       
+        
+              
         
       }
     
       if (style.opacity > 0.9 ) {
         style.opacity = 1;
     }
+        const id = "url(#"+this.props.id+")";
         const link = "http://malek.ovh/rwc/resources/Img/" + this.props.image;
+        const side = "backgroundOne "+ this.props.align;
 
       return (
           
           
-                <div style={style} className="backgroundOne">
-                    <svg height="100%" width="100%">
-                    <pattern id="image" x="0" y="0" height="100%" width="100%" >
-    <image x="0" y="0" width="100%" height="100%" xlinkHref={link}></image>
-   </pattern>
-                        <polygon points={this.props.points} fill="url(#image)" stroke="white" strokeWidth="3" />
+                <div style={style} className={side}>
+                    <svg  height="100%" width="100%">
+                    <defs>
+                        <pattern id={this.props.id} x="0" y="0" height="100%" width="100%" >
+                            <image x="0" y="0"  height="800px"  xlinkHref={link}></image>
+                        </pattern>
+                     </defs>
+                        <polygon points={this.props.points} fill={id} stroke="white" strokeWidth="3" />
                     </svg>
-{/* <svg height="400px" width="600px" >
-
-  <g id="layer1">
-    <path
-       fill="none" stroke="#ffffff" strokeWidth="1.965" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" strokeDasharray="none"
-       d="m 2.8796942,249.37499 v 44.97916"
-       id="path3715"
-       inkscapeConnector-curvature="0" />
-    <path
-       fill="none" stroke="#ffffff" strokeWidth="1.965" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" strokeDasharray="none"
-       d="m 3.96875,253.34374 h 6.614583"
-       id="path4522"
-       inkscapeConnector-curvature="0" />
-    <path
-       fill="none" stroke="#ffffff" strokeWidth="1.796" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" strokeDasharray="none"
-       d="m 3.96875,257.31249 h 6.614583"
-       id="path4524"
-       inkscapeConnector-curvature="0" />
-    <path
-       fill="none" stroke="#ffffff" strokeWidth="4.46500015" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" strokeDasharray="none"
-       d="m 6.6145833,248.05207 c 0,0 14.5520827,3.96875 0,18.52084"
-       id="path4526"
-       inkscapeConnector-curvature="0" />
-  </g>
-</svg> */}
-                </div>
+              </div>
    
           
                     
