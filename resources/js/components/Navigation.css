@@ -36,14 +36,7 @@
     }
      
 
-     @keyframes show {
-       
-        0% {left:0px; top:-300px; opacity:1;}
-       
-        60% {left:0px; top:-30px; opacity:1;}
-       
-        100%   {left:0px; top:0px; opacity:1;}
-    }
+   
     .Logo {
         
         height: 100px;
@@ -64,6 +57,22 @@
         margin: auto auto;
         display: none;
     }
+    .Flames {
+        background-color: darkorange;
+        height: 80px;
+        width: 100%;
+        display: block;
+    }
+
+    @keyframes show {
+       
+        0% {left:0px; top:-300px; opacity:1;}
+       
+        60% {left:0px; top:-30px; opacity:1;}
+       
+        100%   {left:0px; top:0px; opacity:1;}
+    }
+
     @media only screen and (max-width: 1120px) {
         .Header {
             display: none;

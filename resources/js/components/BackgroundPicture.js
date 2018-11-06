@@ -81,7 +81,7 @@ export default class BackgroundPicture extends Component {
                
                
             } else {                                        // going up
-                console.log('up');  
+               // console.log('up');  
                 //1 component has to appear at max with min opacity
                 if (this.props.scrollPosition === this.props.max) {
                     opacity = 0.01;

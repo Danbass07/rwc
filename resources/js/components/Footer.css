@@ -1,5 +1,12 @@
-.FooterContainer {
+.FooterSection{
     position: fixed;
+    width:100%;
+    margin-bottom: 0;
+    bottom:0;
+}
+
+.FooterContainer {
+    
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -26,4 +33,26 @@
     padding-top: 5px;
     box-sizing: border-box;
     
+}
+.FlamesBottom {
+    background-color: darkred;
+    height: 80px;
+    width: 100%;
+    display: block;
+}
+@keyframes show {
+       
+    0% {left:0px; top:-300px; opacity:1;}
+   
+    60% {left:0px; top:-30px; opacity:1;}
+   
+    100%   {left:0px; top:0px; opacity:1;}
+}
+
+@keyframes hidden {
+    0%   {left:0px; top:0px; opacity:1;}
+   
+   
+    60% {left:0px; top:-30px; opacity:1;}
+    100% {left:0px; top:-300px; opacity:1;}
 }

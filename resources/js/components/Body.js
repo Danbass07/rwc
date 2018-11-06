@@ -9,6 +9,7 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
+            displayBottomFlames: 'false',
             currentScrollPosition: 0,
             textOpacity: 0.6,
             boxShadow: '',
@@ -40,6 +41,16 @@ export default class Body extends Component {
     handleScroll()  {
      
     let currentScrollPosition=Math.round($(window).scrollTop());
+
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        this.setState({
+            displayBottomFlames: 'true',
+          });
+    } else {
+        this.setState({
+            displayBottomFlames: 'false',
+          });
+    }
     this.setState({
         currentScrollPosition: currentScrollPosition,
       });
@@ -247,7 +258,7 @@ export default class Body extends Component {
                         />
                     </div>  
                     
-                    <Footer />
+                    <Footer display={this.state.displayBottomFlames}/>
                    
                 </div>  {/* end of content */}
                

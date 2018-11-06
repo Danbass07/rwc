@@ -38,8 +38,8 @@ export default class Body extends Component {
       
         return (
           
-                    <div >
-                        <div className={"TopBar " + this.state.class}>
+                    <div className={ this.state.class}>
+                        <div className={"TopBar " }>
                         <div className="Logo"></div>
                         <div className="Logo"></div>
                         
@@ -49,6 +49,8 @@ export default class Body extends Component {
                         <div className="Logo"></div>
                         <div className="Logo"></div>
                         </div>
+                        <div className="Flames"></div>
+                        
                     </div>
                     
                    

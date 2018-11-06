@@ -17,13 +17,18 @@ export default class Footer extends Component {
     
         return (
 
-            <div className="FooterContainer">
 
-                <button className="Option">Option 1</button>
-                <button className="Option">Option 2</button>
-                <button className="Option">Option 3</button>
-                <button className="Option">Option 4</button>
+            <div className="FooterSection">
+                {this.props.display === 'true' ? <div className="FlamesBottom"></div> : null }
+                <div className="FooterContainer">
+
+                    <button className="Option">Option 1</button>
+                    <button className="Option">Option 2</button>
+                    <button className="Option">Option 3</button>
+                    <button className="Option">Option 4</button>
+                
             
+                </div>
             </div>
 
 
