@@ -224,7 +224,7 @@ export default class Body extends Component {
                             scrollPosition={this.state.currentScrollPosition}
                             min={1250} 
                             max={2500}  
-                            image={"risethebanner.jpg"} 
+                            image={"rtb.jpg"} 
                             position={this.state.currentScrollPosition} 
                             side={'left'}
                         >

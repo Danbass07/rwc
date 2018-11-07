@@ -58,8 +58,11 @@
         display: none;
     }
     .Flames {
-        background-color: darkorange;
-        height: 80px;
+        background-image: url('http://malek.ovh/rwc/resources/Img/firebanner.jpg');
+        background-repeat: no-repeat;
+        margin:auto auto;
+        background-size: auto;
+        height: 40px;
         width: 100%;
         display: block;
     }
