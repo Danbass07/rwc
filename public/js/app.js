@@ -58581,13 +58581,12 @@ if(false) {
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(68);
 exports = module.exports = __webpack_require__(2)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 90%;\r\n    opacity: 0.4;\r\n    margin: 20px auto;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    background-image: url(" + escape(__webpack_require__(70)) + "); \r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n  \r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 90%;\r\n    opacity: 0.4;\r\n    margin: 20px auto;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    background-image: url('http://malek.ovh/rwc/public/Img/backgroundMain.jpg'); \r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n  \r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
 
 // exports
 
@@ -58597,36 +58596,6 @@ exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 67 */,
-/* 68 */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
-}
-
-
-/***/ }),
-/* 69 */,
-/* 70 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/backgroundMain.jpg?4eca1ff3b033ac6a9d4eec0ee0a13c26";
 
 /***/ })
 /******/ ]);
