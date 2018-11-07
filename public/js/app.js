@@ -57641,10 +57641,12 @@ var Body = function (_Component) {
             var currentScrollPosition = Math.round($(window).scrollTop());
 
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                console.log('true');
                 this.setState({
                     displayBottomFlames: 'true'
                 });
             } else {
+                console.log('false');
                 this.setState({
                     displayBottomFlames: 'false'
                 });
@@ -57679,7 +57681,7 @@ var Body = function (_Component) {
                             min: 10, max: 1750,
                             scrollPosition: this.state.currentScrollPosition,
                             id: "image2",
-                            image: "hunters.jpg",
+                            image: "merry_christmas__heretic.png",
                             left: '0px',
                             bottom: '0px',
                             points: '0,0 360,0 0,835',
@@ -57690,7 +57692,7 @@ var Body = function (_Component) {
                             min: 10, max: 1750,
                             scrollPosition: this.state.currentScrollPosition,
                             id: "image1",
-                            image: "hunters.jpg",
+                            image: "backgroundBottomLeft.jpg",
                             left: '150px',
                             bottom: '0px',
                             points: '0,835 360,0 360,835',
@@ -57745,7 +57747,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
                             min: 155, max: 1250,
-                            image: "hunters.jpg",
+                            image: "roundOne.jpg",
                             side: 'left'
                         })
                     ),
@@ -57765,7 +57767,7 @@ var Body = function (_Component) {
                             scrollPosition: this.state.currentScrollPosition,
                             min: 155,
                             max: 1250,
-                            image: "sisters.jpg",
+                            image: "roundTwo.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
                         })
@@ -57813,7 +57815,7 @@ var Body = function (_Component) {
                             scrollPosition: this.state.currentScrollPosition,
                             min: 1250,
                             max: 2500,
-                            image: "sisters.jpg",
+                            image: "roundTwo.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
                         })
@@ -57947,7 +57949,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    \r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 110%;\r\n    margin: 5% auto ;\r\n    margin-top: 50%;\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    margin: 30% auto ;\r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n    margin: 30% auto ;\r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10px auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n    }", ""]);
+exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    \r\n    margin: 10%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 100%;\r\n   \r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    \r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n   \r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10px auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58278,7 +58280,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".backgroundOne {\r\n    z-index: -1;\r\n    height: 100%;\r\n    width: 360px;\r\n    margin: 0 0 0 0;\r\n    \r\n  \r\n   \r\n   \r\n}\r\n.left {\r\n    position: absolute;\r\n  \r\n}\r\n.right {\r\n    position: relative;\r\n    margin-left: auto;\r\n}\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
+exports.push([module.i, ".backgroundOne {\r\n    z-index: 2;\r\n    height: 100%;\r\n    width: 360px;\r\n    margin: 0 0 0 0;\r\n    \r\n  \r\n   \r\n   \r\n}\r\n.left {\r\n    position: absolute;\r\n  \r\n}\r\n.right {\r\n    position: relative;\r\n    margin-left: auto;\r\n}\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
 
 // exports
 
@@ -58416,7 +58418,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%, rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n}   \r\n\r\n   \r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/Whelp.png');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    .Flames {\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/flames.jpg');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n        height: 40px;\r\n        width: 100%;\r\n        display: block;\r\n        opacity: 0.6;\r\n    }\r\n\r\n    @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
+exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n     rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n}   \r\n\r\n   \r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/Whelp.png');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    .Flames {\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/flames.jpg');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n        height: 40px;\r\n        width: 100%;\r\n        display: block;\r\n        opacity: 0.6;\r\n    }\r\n\r\n    @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58539,7 +58541,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:100%;\r\n    margin-bottom: 0;\r\n    bottom:0;\r\n}\r\n\r\n.FooterContainer {\r\n    \r\n    display: flex;\r\n    justify-content: space-around;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    bottom:0;\r\n    background-color:grey;\r\n    height:60px;\r\n    width:100%;\r\n    z-index:1000;\r\n    text-align: center;\r\n    background: -webkit-linear-gradient(270deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n\r\n}\r\n.Option {\r\n    color: silver;\r\n    width: 15%;\r\n    height: 60%;\r\n\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n    border: outset 4px silver;\r\n    padding-top: 5px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.Option:hover {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.Option:active {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.FlamesBottom {\r\n    background-color: darkred;\r\n    height: 80px;\r\n    width: 100%;\r\n    display: block;\r\n}\r\n@keyframes show {\r\n       \r\n    0% {left:0px; top:-300px; opacity:1;}\r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n   \r\n    100%   {left:0px; top:0px; opacity:1;}\r\n}\r\n\r\n@keyframes hidden {\r\n    0%   {left:0px; top:0px; opacity:1;}\r\n   \r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n    100% {left:0px; top:-300px; opacity:1;}\r\n}", ""]);
+exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:100%;\r\n    margin-bottom: 0;\r\n    bottom:0;\r\n}\r\n\r\n.FooterContainer {\r\n    \r\n    display: flex;\r\n    justify-content: space-around;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    bottom:0;\r\n    background-color:grey;\r\n    height:60px;\r\n    width:100%;\r\n    z-index:1000;\r\n    text-align: center;\r\n    background: -webkit-linear-gradient(270deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n\r\n}\r\n.Option {\r\n    color: silver;\r\n    width: 15%;\r\n    height: 60%;\r\n\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n    border: outset 4px silver;\r\n    padding-top: 5px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.Option:hover {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.Option:active {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.FlamesBottom {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/flamesbottom.jpg');\r\n    height: 40px;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    display: block;\r\n}\r\n@keyframes show {\r\n       \r\n    0% {left:0px; top:-300px; opacity:1;}\r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n   \r\n    100%   {left:0px; top:0px; opacity:1;}\r\n}\r\n\r\n@keyframes hidden {\r\n    0%   {left:0px; top:0px; opacity:1;}\r\n   \r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n    100% {left:0px; top:-300px; opacity:1;}\r\n}", ""]);
 
 // exports
 
@@ -58579,12 +58581,13 @@ if(false) {
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(68);
 exports = module.exports = __webpack_require__(2)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    /* background-image: url('../../Img/img1.jpg'); */\r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 100%;\r\n    opacity: 0.4;\r\n    margin-bottom: 80px;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 90%;\r\n    opacity: 0.4;\r\n    margin: 20px auto;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    background-image: url(" + escape(__webpack_require__(70)) + "); \r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n  \r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
 
 // exports
 
@@ -58594,6 +58597,36 @@ exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 67 */,
+/* 68 */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
+}
+
+
+/***/ }),
+/* 69 */,
+/* 70 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/backgroundMain.jpg?4eca1ff3b033ac6a9d4eec0ee0a13c26";
 
 /***/ })
 /******/ ]);

@@ -46,9 +46,10 @@
     
 }
 .FlamesBottom {
-    background-color: darkred;
-    height: 80px;
+    background-image: url('http://malek.ovh/rwc/resources/Img/flamesbottom.jpg');
+    height: 40px;
     width: 100%;
+    opacity: 0.7;
     display: block;
 }
 @keyframes show {

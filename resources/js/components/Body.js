@@ -43,10 +43,12 @@ export default class Body extends Component {
     let currentScrollPosition=Math.round($(window).scrollTop());
 
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        console.log('true');
         this.setState({
             displayBottomFlames: 'true',
           });
     } else {
+        console.log('false');
         this.setState({
             displayBottomFlames: 'false',
           });
@@ -81,7 +83,7 @@ export default class Body extends Component {
                                 min={10} max={1750} 
                                 scrollPosition={this.state.currentScrollPosition} 
                                 id={"image2"}
-                                image={"hunters.jpg"}
+                                image={"merry_christmas__heretic.png"}
                                 left={'0px'}
                                 bottom={'0px'}
                                 points={'0,0 360,0 0,835'}
@@ -96,7 +98,7 @@ export default class Body extends Component {
                                 min={10} max={1750} 
                                 scrollPosition={this.state.currentScrollPosition} 
                                 id={"image1"}
-                                image={"hunters.jpg"}
+                                image={"backgroundBottomLeft.jpg"}
                                 left={'150px'}
                                 bottom={'0px'}
                                 points={'0,835 360,0 360,835'}
@@ -175,7 +177,7 @@ export default class Body extends Component {
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
                             min={155} max={1250} 
-                            image={"hunters.jpg"}  
+                            image={"roundOne.jpg"}  
                             side={'left'} 
                          />
 
@@ -207,7 +209,7 @@ export default class Body extends Component {
                             scrollPosition={this.state.currentScrollPosition}
                             min={155}
                             max={1250}
-                            image={"sisters.jpg"}
+                            image={"roundTwo.jpg"}
                             position={this.state.currentScrollPosition}  
                             side={'right'}
                          />
@@ -252,7 +254,7 @@ export default class Body extends Component {
                             scrollPosition={this.state.currentScrollPosition}
                             min={1250} 
                             max={2500} 
-                            image={"sisters.jpg"} 
+                            image={"roundTwo.jpg"} 
                             position={this.state.currentScrollPosition}
                             side={'right'}
                         />

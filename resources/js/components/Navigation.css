@@ -27,7 +27,8 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%, rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,
+     rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);
 }   
 
    
