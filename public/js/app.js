@@ -57684,7 +57684,7 @@ var Body = function (_Component) {
                             image: "merry_christmas__heretic.png",
                             left: '0px',
                             bottom: '0px',
-                            points: '0,0 360,0 0,835',
+                            points: '0,0 360,0 0,935',
                             align: 'left'
 
                         }),
@@ -57695,43 +57695,76 @@ var Body = function (_Component) {
                             image: "backgroundBottomLeft.jpg",
                             left: '150px',
                             bottom: '0px',
-                            points: '0,835 360,0 360,835',
+                            points: '0,935 360,0 360,935',
+                            align: 'right'
+
+                        })
+                    )
+                ),
+                ' ',
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'BackgroundContainer' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'BackgroundGrid' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 900, max: 2750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            id: "image3",
+                            image: "sisters.jpg",
+                            left: '0px',
+                            bottom: '0px',
+                            points: '0,0 360,935 0,935',
+                            align: 'left'
+
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 900, max: 2750,
+                            scrollPosition: this.state.currentScrollPosition,
+                            id: "image4",
+                            image: "sisters.jpg",
+                            left: '150px',
+                            bottom: '0px',
+                            points: '0,0 360,0 360,935',
                             align: 'right'
 
                         })
                     ),
+                    '  '
+                ),
+                ' ',
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'BackgroundContainer' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
-                        { className: 'BackgroundContainer' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'BackgroundGrid' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 900, max: 2750,
-                                scrollPosition: this.state.currentScrollPosition,
-                                id: "image3",
-                                image: "sisters.jpg",
-                                left: '0px',
-                                bottom: '0px',
-                                points: '0,0 360,835 0,835',
-                                align: 'left'
+                        { className: 'BackgroundGrid' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 2100, max: 3350,
+                            scrollPosition: this.state.currentScrollPosition,
+                            id: "image2",
+                            image: "merry_christmas__heretic.png",
+                            left: '0px',
+                            bottom: '0px',
+                            points: '0,0 360,0 0,935',
+                            align: 'left'
 
-                            }),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
-                                min: 900, max: 2750,
-                                scrollPosition: this.state.currentScrollPosition,
-                                id: "image4",
-                                image: "sisters.jpg",
-                                left: '150px',
-                                bottom: '0px',
-                                points: '0,0 360,0 360,835',
-                                align: 'right'
+                        }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
+                            min: 2100, max: 3350,
+                            scrollPosition: this.state.currentScrollPosition,
+                            id: "image1",
+                            image: "backgroundBottomLeft.jpg",
+                            left: '150px',
+                            bottom: '0px',
+                            points: '0,935 360,0 360,935',
+                            align: 'right'
 
-                            })
-                        )
-                    ),
-                    ' '
+                        })
+                    )
                 ),
+                ' ',
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h3',

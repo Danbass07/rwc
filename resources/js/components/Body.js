@@ -86,7 +86,7 @@ export default class Body extends Component {
                                 image={"merry_christmas__heretic.png"}
                                 left={'0px'}
                                 bottom={'0px'}
-                                points={'0,0 360,0 0,835'}
+                                points={'0,0 360,0 0,935'}
                                 align="left"
                             
 
@@ -101,25 +101,18 @@ export default class Body extends Component {
                                 image={"backgroundBottomLeft.jpg"}
                                 left={'150px'}
                                 bottom={'0px'}
-                                points={'0,835 360,0 360,835'}
+                                points={'0,935 360,0 360,935'}
                                 align="right"
 
 
                                                     
                             />
-                           {/* end of background first section */} 
+                          
+                    </div>   
+                </div> {/* end of background first section */} 
 
-                        
-
-
-                
-                            
-                            
-
-                            
-                    </div> 
-                    <div className="BackgroundContainer">
-                     <div className="BackgroundGrid">
+                <div className="BackgroundContainer">
+                    <div className="BackgroundGrid">
 
                     
                 
@@ -131,7 +124,7 @@ export default class Body extends Component {
                                 image={"sisters.jpg"}
                                 left={'0px'}
                                 bottom={'0px'}
-                                points={'0,0 360,835 0,835'}
+                                points={'0,0 360,935 0,935'}
                                 align="left"
                             
 
@@ -144,25 +137,52 @@ export default class Body extends Component {
                                 image={"sisters.jpg"}
                                 left={'150px'}
                                 bottom={'0px'}
-                                points={'0,0 360,0 360,835'}
+                                points={'0,0 360,0 360,935'}
                                 align="right"
 
 
                                                     
                             />
-   {/* end of background second section */} 
+                </div>  {/* end of background second section */} 
+            </div> {/* end of BackgroundContainer */}
+            <div className="BackgroundContainer">
+                    <div className="BackgroundGrid">
 
-   
+                    
+                
+                    
+                        <BackgroundPicture 
+                                min={2100} max={3350} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image2"}
+                                image={"merry_christmas__heretic.png"}
+                                left={'0px'}
+                                bottom={'0px'}
+                                points={'0,0 360,0 0,935'}
+                                align="left"
+                            
+
+                                                    
+                            />
 
 
+                        <BackgroundPicture 
+                                min={2100} max={3350} 
+                                scrollPosition={this.state.currentScrollPosition} 
+                                id={"image1"}
+                                image={"backgroundBottomLeft.jpg"}
+                                left={'150px'}
+                                bottom={'0px'}
+                                points={'0,935 360,0 360,935'}
+                                align="right"
 
-    
-    
 
-    
-</div> 
-                </div> {/* end of BackgroundContainer */}
-                </div>
+                                                    
+                            />
+                          
+                    </div>   
+                </div> {/* end of background third section */} 
+                
             <Navigation />
           
             
