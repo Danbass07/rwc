@@ -43,7 +43,7 @@ export default class Body extends Component {
                         <div className="Logo"></div>
                         <div className="Logo"></div>
                         
-                        <div className="Header">Retford Wyrven Gaming Club</div>
+                        <div className="Header">Retford Wyvern Gaming Club</div>
                         <div className="ShortHeader">R W G C</div>
                        
                         <div className="Logo"></div>
