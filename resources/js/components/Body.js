@@ -11,8 +11,8 @@ export default class Body extends Component {
         this.state = {
             displayBottomFlames: 'false',
             currentScrollPosition: 0,
-            textOpacity: 0.6,
-            boxShadow: '',
+            textOpacity: 1,
+            boxShadow: '0px 3px 60px 14px rgba(255,255,255,1)',
         }
        
         this.handleScroll = this.handleScroll.bind(this);
@@ -22,14 +22,14 @@ export default class Body extends Component {
     textClickHandler(){
         let opacity = this.state.textOpacity;
         let boxShadow = this.state.boxShadow;
-        if (opacity === 0.6) {
+        if (opacity === 1) {
             
+            
+            opacity = 0.1;
+            boxShadow = '';
+        } else { 
             opacity = 1;
             boxShadow = '0px 3px 60px 14px rgba(255,255,255,1)';
-            
-        } else { 
-            opacity = 0.6;
-            boxShadow = '';
 
         }
         this.setState({
@@ -101,7 +101,7 @@ export default class Body extends Component {
                                 image={"backgroundBottomLeft.jpg"}
                                 left={'150px'}
                                 bottom={'0px'}
-                                points={'0,935 360,0 360,935'}
+                                points={'0,835 360,0 360,835'}
                                 align="right"
 
 
@@ -185,9 +185,10 @@ export default class Body extends Component {
                 
             <Navigation />
           
-            
+                <div className="TopBackground">
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
-
+                </div>
+                <div className="Spacer"></div>
                 <div className="MainContainer"> 
 {/* set of background elements showing and fading in certain points realeted to scroll position */}
                     
@@ -196,7 +197,7 @@ export default class Body extends Component {
 {/* row nr 1 */}
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
-                            min={155} max={1250} 
+                            min={5} max={1250} 
                             image={"roundOne.jpg"}  
                             side={'left'} 
                          />

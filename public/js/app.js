@@ -57607,8 +57607,8 @@ var Body = function (_Component) {
         _this.state = {
             displayBottomFlames: 'false',
             currentScrollPosition: 0,
-            textOpacity: 0.6,
-            boxShadow: ''
+            textOpacity: 1,
+            boxShadow: '0px 3px 60px 14px rgba(255,255,255,1)'
         };
 
         _this.handleScroll = _this.handleScroll.bind(_this);
@@ -57621,13 +57621,13 @@ var Body = function (_Component) {
         value: function textClickHandler() {
             var opacity = this.state.textOpacity;
             var boxShadow = this.state.boxShadow;
-            if (opacity === 0.6) {
+            if (opacity === 1) {
 
+                opacity = 0.1;
+                boxShadow = '';
+            } else {
                 opacity = 1;
                 boxShadow = '0px 3px 60px 14px rgba(255,255,255,1)';
-            } else {
-                opacity = 0.6;
-                boxShadow = '';
             }
             this.setState({
                 textOpacity: opacity,
@@ -57695,7 +57695,7 @@ var Body = function (_Component) {
                             image: "backgroundBottomLeft.jpg",
                             left: '150px',
                             bottom: '0px',
-                            points: '0,935 360,0 360,935',
+                            points: '0,835 360,0 360,835',
                             align: 'right'
 
                         })
@@ -57767,10 +57767,15 @@ var Body = function (_Component) {
                 ' ',
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h3',
-                    { className: 'Title3' },
-                    'Meeting of Tuesday 25th September 2018'
+                    'div',
+                    { className: 'TopBackground' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h3',
+                        { className: 'Title3' },
+                        'Meeting of Tuesday 25th September 2018'
+                    )
                 ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'Spacer' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'MainContainer' },
@@ -57779,7 +57784,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 155, max: 1250,
+                            min: 5, max: 1250,
                             image: "roundOne.jpg",
                             side: 'left'
                         })
@@ -58451,7 +58456,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n     rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n}   \r\n\r\n   \r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/Whelp.png');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    .Flames {\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/flames.jpg');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n        height: 40px;\r\n        width: 100%;\r\n        display: block;\r\n        opacity: 0.6;\r\n    }\r\n\r\n    @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
+exports.push([module.i, ".hidden {\r\n    animation-name: hidden; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    top: -300px; \r\n}\r\n    @keyframes hidden {\r\n        0%   {left:0px; top:0px; opacity:1;}\r\n       \r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n        100% {left:0px; top:-300px; opacity:1;}\r\n    }\r\n.show {\r\n    animation-name: show; \r\n    animation-duration: 1s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    z-index: 5;\r\n}   \r\n\r\n.TopBar {\r\n    display: flex;\r\n    flex-direction: row; \r\n    flex-basis: 33%;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n     rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n}   \r\n\r\n   \r\n    .Logo {\r\n        \r\n        height: 100px;\r\n        width: 100px;\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/Whelp.png');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n    }\r\n    .Header {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n    }\r\n    .ShortHeader {\r\n        font-size: 3em;\r\n        font-family: 'Fahkwang', sans-serif;\r\n        margin: auto auto;\r\n        display: none;\r\n    }\r\n    .Flames {\r\n        background-image: url('http://malek.ovh/rwc/resources/Img/firebanner.jpg');\r\n        background-repeat: no-repeat;\r\n        margin:auto auto;\r\n        background-size: auto;\r\n        height: 40px;\r\n        width: 100%;\r\n        display: block;\r\n        opacity: 0.6;\r\n    }\r\n\r\n    @keyframes show {\r\n       \r\n        0% {left:0px; top:-300px; opacity:1;}\r\n       \r\n        60% {left:0px; top:-30px; opacity:1;}\r\n       \r\n        100%   {left:0px; top:0px; opacity:1;}\r\n    }\r\n\r\n    @media only screen and (max-width: 1120px) {\r\n        .Header {\r\n            display: none;\r\n        }\r\n        .ShortHeader {\r\n            display: inline-block;\r\n        }\r\n    }\r\n    @media only screen and (max-width: 650px) {\r\n       \r\n        .ShortHeader {\r\n            display: none;\r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58574,7 +58579,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:100%;\r\n    margin-bottom: 0;\r\n    bottom:0;\r\n}\r\n\r\n.FooterContainer {\r\n    \r\n    display: flex;\r\n    justify-content: space-around;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    bottom:0;\r\n    background-color:grey;\r\n    height:60px;\r\n    width:100%;\r\n    z-index:1000;\r\n    text-align: center;\r\n    background: -webkit-linear-gradient(270deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n\r\n}\r\n.Option {\r\n    color: silver;\r\n    width: 15%;\r\n    height: 60%;\r\n\r\n    background: -webkit-linear-gradient(90deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n    border: outset 4px silver;\r\n    padding-top: 5px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.Option:hover {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.Option:active {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.FlamesBottom {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/flamesbottom.jpg');\r\n    height: 40px;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    display: block;\r\n}\r\n@keyframes show {\r\n       \r\n    0% {left:0px; top:-300px; opacity:1;}\r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n   \r\n    100%   {left:0px; top:0px; opacity:1;}\r\n}\r\n\r\n@keyframes hidden {\r\n    0%   {left:0px; top:0px; opacity:1;}\r\n   \r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n    100% {left:0px; top:-300px; opacity:1;}\r\n}", ""]);
+exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:100%;\r\n    margin-bottom: 0;\r\n    bottom:0;\r\n}\r\n\r\n.FooterContainer {\r\n    \r\n    display: flex;\r\n    justify-content: space-around;\r\n    flex-wrap: wrap;\r\n    align-items: center;\r\n    bottom:0;\r\n    background-color:grey;\r\n    height:90px;\r\n    width:100%;\r\n    z-index:1000;\r\n    text-align: center;\r\n    background: -webkit-linear-gradient(270deg, rgba(255,187,15,1) 0%, rgba(133,66,11,1) 27%,\r\n    rgba(0,0,0,1) 58%, rgba(0,0,0,1) 100%);\r\n\r\n}\r\n.Option {\r\n    color: darkorange;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 20%;\r\n    height: 60%;\r\n    opacity: 1;\r\n    background-color: rgba(0,0,0,1);\r\n    border: 3px solid rgba(0,0,0,1); \r\n    border-radius: 10% 15% 10% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding-top: 1px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.Option:hover {\r\n  \r\n    font-size: 1.3em;\r\n    \r\n}\r\n.Option:active {\r\n  \r\n    border: inset 4px silver;\r\n    background: black;\r\n    \r\n}\r\n.FlamesBottom {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/flamesbottom.jpg');\r\n    height: 40px;\r\n    width: 100%;\r\n    opacity: 0.7;\r\n    display: block;\r\n}\r\n@keyframes show {\r\n       \r\n    0% {left:0px; top:-300px; opacity:1;}\r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n   \r\n    100%   {left:0px; top:0px; opacity:1;}\r\n}\r\n\r\n@keyframes hidden {\r\n    0%   {left:0px; top:0px; opacity:1;}\r\n   \r\n   \r\n    60% {left:0px; top:-30px; opacity:1;}\r\n    100% {left:0px; top:-300px; opacity:1;}\r\n}", ""]);
 
 // exports
 
@@ -58619,7 +58624,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 2em;\r\n    padding: 0;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 100px;\r\n    z-index: 2;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 90%;\r\n    opacity: 0.4;\r\n    margin: 20px auto;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    background-image: url('http://malek.ovh/rwc/public/Img/backgroundMain.jpg'); \r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n  \r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 3500px;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Title1 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 80px;\r\n}\r\n\r\n.Title2 {\r\n    \r\n    margin: auto;\r\n    padding: 0;\r\n    margin-bottom: 10px;\r\n}\r\n.Title3 {\r\n    position: relative;\r\n    font-size: 3em;\r\n    padding: 10px;\r\n    margin-top: 80px;\r\n    margin-left: 25%;\r\n    margin-right: 10%;\r\n    margin-bottom: 150px;\r\n    z-index: 2;\r\n    background-color: black;\r\n}\r\n.MainContainer {\r\n    overflow: hidden;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr 1fr;\r\n    justify-items: center;\r\n    grid-column-gap: 20px;\r\n    grid-row-gap: 20px;\r\n    justify-items: stretch;\r\n    align-items: stretch;\r\n    position:relative;\r\n    z-index: 1;\r\n  \r\n}\r\n\r\n.Text {\r\n    box-sizing: border-box;\r\n    text-align: center;\r\n    font-size: 1.2em;\r\n    font-family: 'Roboto Slab', serif;\r\n    width: 90%;\r\n    opacity: 0.4;\r\n    margin: 60px auto;\r\n    border: 1px solid white; \r\n    border-radius: 10% 15% 10% 15%;\r\n    padding: 25px 25px 25px 25px;\r\n    background-color: black;\r\n    text-align: center;\r\n}\r\n.TopBackground{\r\n    height: 650px;\r\n    width: 100%;\r\n    position:relative;\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/venue.jpg');\r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border: 40px solid orange;\r\n    padding: 1% 2%;\r\n    margin-top: -40px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.BackgroundGrid {\r\n    padding: 0px;\r\n    display: flex;\r\n    height: 100%;\r\n    \r\n}\r\n.BackgroundContainer {\r\n    background-image: url('http://malek.ovh/rwc/public/Img/backgroundMain.jpg'); \r\n    background-size: auto 100%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top:0%;\r\n  \r\n}\r\n.column1 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.column2 {\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.welcome {\r\n   \r\n    height: 500px;\r\n    width: 100%;\r\n    opacity: 0;\r\n}\r\n.floatingDiv {\r\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\r\n    font-size: 8em;\r\n    text-align: center;\r\n    opacity: 0.5;\r\n    width: 4500px;\r\n    height: 180px;\r\n    margin-top: 1100px;\r\n    padding-top: 20px;\r\n    border: 1px solid white;\r\n    border-radius: 10% 15% 10% 15%;\r\n    position: absolute;\r\n    background-color: black;\r\n    z-index: 99;\r\n    animation-name: animation;\r\n    animation-duration: 10s;\r\n    animation-iteration-count: infinite;\r\n\r\n\r\n}\r\n@media only screen and (max-width: 1120px) {\r\n    .welcome {\r\n        display: none;\r\n    }\r\n    .MainContainer {\r\n    \r\n        display: inline-block;\r\n    }\r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
 
 // exports
 
