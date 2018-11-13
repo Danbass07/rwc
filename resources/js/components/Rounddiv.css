@@ -2,12 +2,12 @@
     
     height: 250px;
     width: 250px;
-    
-    margin: 10%;
+    position:relative;
+    margin: 50% auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-   
+    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);
     border-radius: 50% 50% 50% 50%;
     opacity: 1;
    
@@ -72,19 +72,19 @@
     @media only screen and (max-width: 1120px) {
         .notactive  {
             left: 0px;
-            margin: 10px auto;
+            margin: 10% auto;
         }
         .right {
              left: 0px;
         }
         .Photo.active{
             
-            margin: 10px auto;
+            margin: 10% auto;
             
         }
         .Photo.active.left{
             
-            margin: 10px auto;
+            margin: 10% auto;
             
         }
     }

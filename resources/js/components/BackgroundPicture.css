@@ -8,11 +8,11 @@
    
    
 }
-.left {
+.Onleft {
     position: absolute;
   
 }
-.right {
+.Onright {
     position: relative;
     margin-left: auto;
 }

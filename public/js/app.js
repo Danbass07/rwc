@@ -57685,7 +57685,7 @@ var Body = function (_Component) {
                             left: '0px',
                             bottom: '0px',
                             points: '0,0 360,0 0,935',
-                            align: 'left'
+                            align: 'Onleft'
 
                         }),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
@@ -57696,7 +57696,7 @@ var Body = function (_Component) {
                             left: '150px',
                             bottom: '0px',
                             points: '0,835 360,0 360,835',
-                            align: 'right'
+                            align: 'Onright'
 
                         })
                     )
@@ -57716,7 +57716,7 @@ var Body = function (_Component) {
                             left: '0px',
                             bottom: '0px',
                             points: '0,0 360,935 0,935',
-                            align: 'left'
+                            align: 'Onleft'
 
                         }),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
@@ -57727,7 +57727,7 @@ var Body = function (_Component) {
                             left: '150px',
                             bottom: '0px',
                             points: '0,0 360,0 360,935',
-                            align: 'right'
+                            align: 'Onright'
 
                         })
                     ),
@@ -57748,7 +57748,7 @@ var Body = function (_Component) {
                             left: '0px',
                             bottom: '0px',
                             points: '0,0 360,0 0,935',
-                            align: 'left'
+                            align: 'Onleft'
 
                         }),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__BackgroundPicture__["a" /* default */], {
@@ -57759,7 +57759,7 @@ var Body = function (_Component) {
                             left: '150px',
                             bottom: '0px',
                             points: '0,935 360,0 360,935',
-                            align: 'right'
+                            align: 'Onright'
 
                         })
                     )
@@ -57784,7 +57784,7 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 5, max: 1250,
+                            min: 5, max: 1700,
                             image: "roundOne.jpg",
                             side: 'left'
                         })
@@ -57804,7 +57804,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
                             min: 155,
-                            max: 1250,
+                            max: 1700,
                             image: "roundTwo.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
@@ -57829,8 +57829,8 @@ var Body = function (_Component) {
                             { target: '_blank', href: 'https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                                 scrollPosition: this.state.currentScrollPosition,
-                                min: 1250,
-                                max: 2500,
+                                min: 1900,
+                                max: 2750,
                                 image: "rtb.jpg",
                                 position: this.state.currentScrollPosition,
                                 side: 'left'
@@ -57851,8 +57851,8 @@ var Body = function (_Component) {
                         { className: 'Cell' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Rounddiv__["a" /* default */], {
                             scrollPosition: this.state.currentScrollPosition,
-                            min: 1250,
-                            max: 2500,
+                            min: 1900,
+                            max: 2750,
                             image: "roundTwo.jpg",
                             position: this.state.currentScrollPosition,
                             side: 'right'
@@ -57987,7 +57987,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    \r\n    margin: 10%;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 100%;\r\n   \r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    \r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n   \r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10px auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10px auto;\r\n            \r\n        }\r\n    }", ""]);
+exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    position:relative;\r\n    margin: 50% auto;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 100%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    \r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n   \r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10% auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58318,7 +58318,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".backgroundOne {\r\n    z-index: 2;\r\n    height: 100%;\r\n    width: 360px;\r\n    margin: 0 0 0 0;\r\n    \r\n  \r\n   \r\n   \r\n}\r\n.left {\r\n    position: absolute;\r\n  \r\n}\r\n.right {\r\n    position: relative;\r\n    margin-left: auto;\r\n}\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
+exports.push([module.i, ".backgroundOne {\r\n    z-index: 2;\r\n    height: 100%;\r\n    width: 360px;\r\n    margin: 0 0 0 0;\r\n    \r\n  \r\n   \r\n   \r\n}\r\n.Onleft {\r\n    position: absolute;\r\n  \r\n}\r\n.Onright {\r\n    position: relative;\r\n    margin-left: auto;\r\n}\r\n\r\n@keyframes transition {\r\n       \r\n    0% { opacity:1;}\r\n   \r\n    60% { opacity:0.5;}\r\n   \r\n    100%   { opacity:0;}\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n   \r\n}\r\n@media only screen and (max-width: 900px) {\r\n \r\n}\r\n@media only screen and (max-width: 380px) {\r\n\r\n}", ""]);
 
 // exports
 

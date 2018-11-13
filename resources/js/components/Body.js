@@ -87,7 +87,7 @@ export default class Body extends Component {
                                 left={'0px'}
                                 bottom={'0px'}
                                 points={'0,0 360,0 0,935'}
-                                align="left"
+                                align="Onleft"
                             
 
                                                     
@@ -102,7 +102,7 @@ export default class Body extends Component {
                                 left={'150px'}
                                 bottom={'0px'}
                                 points={'0,835 360,0 360,835'}
-                                align="right"
+                                align="Onright"
 
 
                                                     
@@ -125,7 +125,7 @@ export default class Body extends Component {
                                 left={'0px'}
                                 bottom={'0px'}
                                 points={'0,0 360,935 0,935'}
-                                align="left"
+                                align="Onleft"
                             
 
                                                     
@@ -138,7 +138,7 @@ export default class Body extends Component {
                                 left={'150px'}
                                 bottom={'0px'}
                                 points={'0,0 360,0 360,935'}
-                                align="right"
+                                align="Onright"
 
 
                                                     
@@ -159,7 +159,7 @@ export default class Body extends Component {
                                 left={'0px'}
                                 bottom={'0px'}
                                 points={'0,0 360,0 0,935'}
-                                align="left"
+                                align="Onleft"
                             
 
                                                     
@@ -174,7 +174,7 @@ export default class Body extends Component {
                                 left={'150px'}
                                 bottom={'0px'}
                                 points={'0,935 360,0 360,935'}
-                                align="right"
+                                align="Onright"
 
 
                                                     
@@ -197,7 +197,7 @@ export default class Body extends Component {
 {/* row nr 1 */}
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
-                            min={5} max={1250} 
+                            min={5} max={1700} 
                             image={"roundOne.jpg"}  
                             side={'left'} 
                          />
@@ -229,7 +229,7 @@ export default class Body extends Component {
                          <Rounddiv 
                             scrollPosition={this.state.currentScrollPosition}
                             min={155}
-                            max={1250}
+                            max={1700}
                             image={"roundTwo.jpg"}
                             position={this.state.currentScrollPosition}  
                             side={'right'}
@@ -245,8 +245,8 @@ export default class Body extends Component {
                         
                         <Rounddiv
                             scrollPosition={this.state.currentScrollPosition}
-                            min={1250} 
-                            max={2500}  
+                            min={1900} 
+                            max={2750}  
                             image={"rtb.jpg"} 
                             position={this.state.currentScrollPosition} 
                             side={'left'}
@@ -273,8 +273,8 @@ export default class Body extends Component {
                     
                         <Rounddiv 
                             scrollPosition={this.state.currentScrollPosition}
-                            min={1250} 
-                            max={2500} 
+                            min={1900} 
+                            max={2750} 
                             image={"roundTwo.jpg"} 
                             position={this.state.currentScrollPosition}
                             side={'right'}
