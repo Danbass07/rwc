@@ -3,12 +3,14 @@ import Rounddiv from './Rounddiv';
 import BackgroundPicture from './BackgroundPicture';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import Screen from './Screen';
 import './Body.css';
 
 export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
+            slider: 'true',
             displayBottomFlames: 'false',
             currentScrollPosition: 0,
             textOpacity: 1,
@@ -17,6 +19,19 @@ export default class Body extends Component {
        
         this.handleScroll = this.handleScroll.bind(this);
         this.textClickHandler = this.textClickHandler.bind(this);     
+        this.clickHandler = this.clickHandler.bind(this);  
+    }
+    clickHandler(){
+        if (this.state.slider === 'true') {
+            this.setState({
+                slider: 'false',
+            })
+        } else {
+            this.setState({
+                slider: 'true',
+            })
+        }
+        console.log(this.state.slider);
     }
 
     textClickHandler(){
@@ -43,12 +58,11 @@ export default class Body extends Component {
     let currentScrollPosition=Math.round($(window).scrollTop());
 
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        console.log('true');
+    
         this.setState({
             displayBottomFlames: 'true',
           });
     } else {
-        console.log('false');
         this.setState({
             displayBottomFlames: 'false',
           });
@@ -184,7 +198,8 @@ export default class Body extends Component {
                 </div> {/* end of background third section */} 
                 
             <Navigation />
-          
+                {this.state.slider == 'true' ?  <Screen/> : null }
+            
                 <div className="TopBackground">
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 </div>
@@ -236,10 +251,15 @@ export default class Body extends Component {
                          />
 
                     </div>
-{/* row nr 2 */}<div className="welcome"> </div>
+{/* row nr 2 */}
+
+<div className="welcome"> </div>
 <div className="middle"></div>
 <div className="welcome"> </div>
 {/* <div className="floatingDiv"> WELCOME NEW MEMBERS visit us every Tuesday -- DN22 8PT -- SUTTON </div> */}
+
+
+{/* row nr 3 */}
                     <div className="Cell">
                     <a target="_blank" href="https://www.youtube.com/channel/UC4d_BengHkk8qscyWw8C3uw">
                         
@@ -279,9 +299,9 @@ export default class Body extends Component {
                             position={this.state.currentScrollPosition}
                             side={'right'}
                         />
-                    </div>  
+                    </div>  )}
                     
-                    <Footer display={this.state.displayBottomFlames}/>
+                    <Footer display={this.state.displayBottomFlames} click={() => this.clickHandler()}/>
                    
                 </div>  {/* end of content */}
                

@@ -69,12 +69,12 @@ body {
     height: 650px;
     width: 100%;
     position:relative;
-    background: -moz-radial-gradient(center, ellipse cover, #c17013 0%, #755e23 55%, #000000 100%); 
+    background-color: black;
     background-image: url('http://malek.ovh/rwc/resources/Img/venue.jpg');
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
-    border: 40px solid orange;
+    border: 40px double orange;
     padding: 1% 2%;
     margin-top: -20px;
     box-sizing: border-box;
