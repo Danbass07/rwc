@@ -14,38 +14,55 @@ class Screen extends Component  {
             ],
 
             currentSlide : 0,
+            auto: 'MANUAL',
         
         };
+        this.toggleHandler = this.toggleHandler.bind(this);
     }
       componentDidMount() {
-        this.timerID = setInterval(
-          () => this.slide(),
-          10000
-        );
-        if (this.state.currentSlide > 3) {
-            this.setState({
-                currentSlide: 1,
-            });
-      }
-      }
+       
+            this.timerID = setInterval(
+                () => this.slide(),
+                7000
+                );
+                if (this.state.currentSlide > 3) {
+                    this.setState({
+                        currentSlide: 1,
+                    });
+           
+        }
+    
+    }
     
       componentWillUnmount() {
-        clearInterval(this.timerID);
-
+    
     }
-      slide() {
+
+    toggleHandler() {
+        if (this.state.auto === 'AUTO'){ 
+            this.setState({
+                auto: 'MANUAL'
+            })
+        } else {
+            this.setState({
+                auto: 'AUTO'
+            })
+        }
+    }
+    slide() {
+
         let currentSlide = this.state.currentSlide + 1;
         if (currentSlide > 3) {
             this.setState({
                 currentSlide: 1,
             });
         } else {
-        this.setState({
-            currentSlide: currentSlide,
+            this.setState({
+                currentSlide: currentSlide,
         });
-      
+
+        }
     }
-      }
 
       changeSlideRight(currentSlide) {
         if (currentSlide === this.state.sliderPhotos.length - 1) {
@@ -79,18 +96,21 @@ class Screen extends Component  {
 }
     
         return (
-      
+      <div>
         <div className="Slider">
             
                 <div className="Screen" >
                 <div className="arrow left" onClick={() => this.changeSlideLeft(this.state.currentSlide)}/>          
-                    <img style={style}  src={this.state.sliderPhotos[this.state.currentSlide]} alt="small" height="90%"  />
+                    <img className="Slide" style={style}  src={this.state.sliderPhotos[this.state.currentSlide]} alt="small" height="90%"  />
 
-                <div className="arrow right" onClick={() => this.changeSlideLeft(this.state.currentSlide)}/>
+                  <div className="arrow right" onClick={() => this.changeSlideLeft(this.state.currentSlide)}/>
                 </div>
-            
+                
         </div>
-       
+        <div className="Panel">
+            <button className="toggle" onClick={() => this.toggleHandler()}>{this.state.auto}</button>
+        </div>
+       </div>
         );
     }
 }

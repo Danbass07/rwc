@@ -31,7 +31,7 @@ export default class Body extends Component {
                 slider: 'true',
             })
         }
-        console.log(this.state.slider);
+        
     }
 
     textClickHandler(){
