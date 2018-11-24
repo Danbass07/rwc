@@ -58721,7 +58721,7 @@ var Screen = function (_Component) {
             sliderPhotos: [__webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(78)],
 
             currentSlide: 0,
-            auto: 'MANUAL'
+            auto: 'AUTO'
 
         };
         _this.toggleHandler = _this.toggleHandler.bind(_this);
@@ -58744,7 +58744,10 @@ var Screen = function (_Component) {
         }
     }, {
         key: 'componentWillUnmount',
-        value: function componentWillUnmount() {}
+        value: function componentWillUnmount() {
+
+            clearInterval(this.timerID);
+        }
     }, {
         key: 'toggleHandler',
         value: function toggleHandler() {
@@ -58761,17 +58764,18 @@ var Screen = function (_Component) {
     }, {
         key: 'slide',
         value: function slide() {
-
-            var currentSlide = this.state.currentSlide + 1;
-            if (currentSlide > 3) {
-                this.setState({
-                    currentSlide: 1
-                });
-            } else {
-                this.setState({
-                    currentSlide: currentSlide
-                });
-            }
+            if (this.state.auto === "AUTO") {
+                var currentSlide = this.state.currentSlide + 1;
+                if (currentSlide > 3) {
+                    this.setState({
+                        currentSlide: 1
+                    });
+                } else {
+                    this.setState({
+                        currentSlide: currentSlide
+                    });
+                }
+            } else {}
         }
     }, {
         key: 'changeSlideRight',
@@ -58782,7 +58786,8 @@ var Screen = function (_Component) {
                 currentSlide += 1;
             }
             this.setState({
-                currentSlide: currentSlide
+                currentSlide: currentSlide,
+                auto: 'MANUAL'
             });
         }
     }, {
@@ -58796,7 +58801,8 @@ var Screen = function (_Component) {
             }
 
             this.setState({
-                currentSlide: currentSlide
+                currentSlide: currentSlide,
+                auto: 'MANUAL'
             });
         }
     }, {
@@ -58885,46 +58891,15 @@ if(false) {
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(82);
 exports = module.exports = __webpack_require__(2)(false);
 // imports
 
 
 // module
-exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 2;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('/images/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url(" + escape(__webpack_require__(85)) + "); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 2;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('/images/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('/images/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
 
 // exports
 
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
-}
-
-
-/***/ }),
-/* 83 */,
-/* 84 */,
-/* 85 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/arrow_left.svg?5bf35c0e90c6c12342fae64af2b1b4e8";
 
 /***/ })
 /******/ ]);

@@ -14,29 +14,32 @@ class Screen extends Component  {
             ],
 
             currentSlide : 0,
-            auto: 'MANUAL',
+            auto: 'AUTO',
         
         };
         this.toggleHandler = this.toggleHandler.bind(this);
     }
-      componentDidMount() {
-       
-            this.timerID = setInterval(
-                () => this.slide(),
-                7000
-                );
-                if (this.state.currentSlide > 3) {
-                    this.setState({
-                        currentSlide: 1,
-                    });
-           
-        }
+
+    componentDidMount() {
     
+        this.timerID = setInterval(
+            () => this.slide(),
+            7000
+            );
+            if (this.state.currentSlide > 3) {
+                this.setState({
+                    currentSlide: 1,
+                });
+        
     }
     
-      componentWillUnmount() {
-    
     }
+
+    componentWillUnmount() {
+    
+    clearInterval(this.timerID);
+        
+    }   
 
     toggleHandler() {
         if (this.state.auto === 'AUTO'){ 
@@ -50,18 +53,19 @@ class Screen extends Component  {
         }
     }
     slide() {
-
-        let currentSlide = this.state.currentSlide + 1;
-        if (currentSlide > 3) {
-            this.setState({
-                currentSlide: 1,
+        if (this.state.auto === "AUTO") {
+            let currentSlide = this.state.currentSlide + 1;
+            if (currentSlide > 3) {
+                this.setState({
+                    currentSlide: 1,
+                });
+            } else {
+                this.setState({
+                    currentSlide: currentSlide,
             });
-        } else {
-            this.setState({
-                currentSlide: currentSlide,
-        });
 
-        }
+            } 
+        } else {}
     }
 
       changeSlideRight(currentSlide) {
@@ -72,6 +76,7 @@ class Screen extends Component  {
         }
         this.setState ({
             currentSlide : currentSlide,   
+            auto: 'MANUAL',
     })
 }
     changeSlideLeft(currentSlide) { console.log(currentSlide)
@@ -82,7 +87,8 @@ class Screen extends Component  {
         }
         
         this.setState ({
-            currentSlide : currentSlide,   
+            currentSlide : currentSlide,  
+            auto: 'MANUAL', 
     })  
     }
     
