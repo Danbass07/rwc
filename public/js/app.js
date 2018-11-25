@@ -58635,7 +58635,7 @@ var Screen = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this, props));
 
         _this.state = {
-            sliderPhotos: [__webpack_require__(67), __webpack_require__(68), __webpack_require__(69), __webpack_require__(70)],
+            sliderPhotos: ['http://malek.ovh/rwc/resources/Img/1.jpg', 'http://malek.ovh/rwc/resources/Img/2.jpg', 'http://malek.ovh/rwc/resources/Img/3.jpg', 'http://malek.ovh/rwc/resources/Img/4.jpg'],
 
             currentSlide: 0,
             auto: 'AUTO'
@@ -58814,30 +58814,10 @@ exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8)
 
 
 /***/ }),
-/* 67 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/1.jpg?8b6477f20a1e9b05619661a9c88ee583";
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/2.jpg?f631250897da0420c84d5cb97c7f09b6";
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/3.jpg?d8eaf9441d9c169639a9b856ada71fc6";
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/4.jpg?e950aaf88afacbe3285f6c2c19405df3";
-
-/***/ }),
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 

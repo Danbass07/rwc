@@ -7,10 +7,10 @@ class Screen extends Component  {
         super(props);
         this.state = {
             sliderPhotos: [
-                require('../../Img/1.jpg'),
-                require('../../Img/2.jpg'),
-                require('../../Img/3.jpg'),
-                require('../../Img/4.jpg'),
+                'http://malek.ovh/rwc/resources/Img/1.jpg',
+                'http://malek.ovh/rwc/resources/Img/2.jpg',
+                'http://malek.ovh/rwc/resources/Img/3.jpg',
+                'http://malek.ovh/rwc/resources/Img/4.jpg',
             ],
 
             currentSlide : 0,
