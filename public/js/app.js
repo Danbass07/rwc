@@ -58620,7 +58620,12 @@ exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:10
 module.exports = "/images/1.jpg?8b6477f20a1e9b05619661a9c88ee583";
 
 /***/ }),
-/* 72 */,
+/* 72 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/2.jpg?f631250897da0420c84d5cb97c7f09b6";
+
+/***/ }),
 /* 73 */
 /***/ (function(module, exports) {
 
@@ -58713,7 +58718,7 @@ var Screen = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this, props));
 
         _this.state = {
-            sliderPhotos: [__webpack_require__(71), __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Img/2.jpg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())), __webpack_require__(73), __webpack_require__(78)],
+            sliderPhotos: [__webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(78)],
 
             currentSlide: 0,
             auto: 'AUTO'

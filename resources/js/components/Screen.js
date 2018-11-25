@@ -8,7 +8,7 @@ class Screen extends Component  {
         this.state = {
             sliderPhotos: [
                 require('../../Img/1.jpg'),
-                require('./Img/2.jpg'),
+                require('../../Img/2.jpg'),
                 require('../../Img/3.jpg'),
                 require('../../Img/4.jpg'),
             ],
