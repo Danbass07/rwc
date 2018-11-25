@@ -14339,7 +14339,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(16);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(69);
 
 
 /***/ }),
@@ -57580,7 +57580,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navigation__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Footer__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Screen__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Body_css__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Body_css__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Body_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -58808,23 +58808,19 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('/../images/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('/../images/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(72);
+var content = __webpack_require__(68);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -58849,7 +58845,7 @@ if(false) {
 }
 
 /***/ }),
-/* 72 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -58863,7 +58859,7 @@ exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n
 
 
 /***/ }),
-/* 73 */
+/* 69 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
