@@ -8,7 +8,7 @@ class Screen extends Component  {
         this.state = {
             sliderPhotos: [
                 require('../../Img/1.jpg'),
-                require('../../Img/2.jpg'),
+                require('./Img/2.jpg'),
                 require('../../Img/3.jpg'),
                 require('../../Img/4.jpg'),
             ],
@@ -26,12 +26,9 @@ class Screen extends Component  {
             () => this.slide(),
             7000
             );
-            if (this.state.currentSlide > 3) {
-                this.setState({
-                    currentSlide: 1,
-                });
+
         
-    }
+    
     
     }
 
@@ -57,7 +54,7 @@ class Screen extends Component  {
             let currentSlide = this.state.currentSlide + 1;
             if (currentSlide > 3) {
                 this.setState({
-                    currentSlide: 1,
+                    currentSlide: 0,
                 });
             } else {
                 this.setState({

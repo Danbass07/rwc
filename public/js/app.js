@@ -58009,7 +58009,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    position:relative;\r\n    margin: 50% auto;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 100%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    \r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n   \r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10% auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n    }", ""]);
+exports.push([module.i, ".Photo {\r\n    \r\n    height: 250px;\r\n    width: 250px;\r\n    position:relative;\r\n    margin: 50% auto;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 100%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    border-radius: 50% 50% 50% 50%;\r\n    opacity: 1;\r\n   \r\n    \r\n   \r\n}\r\n.notactive {\r\n    position:relative;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    opacity:0;\r\n    \r\n\r\n}\r\n\r\n\r\n.notactive.left  {\r\n    animation-name: animatedleftout;\r\n    left: -500px;\r\n    \r\n    \r\n}\r\n.notactive.right {\r\n    animation-name: animatedout;\r\n    left: 500px;\r\n   \r\n}\r\n.Photo.active{\r\n    animation-name: animated;\r\n    animation-duration: 2s;\r\n    animation-iteration-count: 1;\r\n    position:relative;\r\n    left: 0;\r\n   \r\n    opacity:1;\r\n    \r\n}\r\n\r\n.Photo.active.left{\r\n    animation-name: animatedleft;\r\n  \r\n}\r\n\r\n    @keyframes animated {\r\n        0%   {left:500px; top:0px;opacity: 0;}\r\n        100% {left:0px; top:0px;opacity: 1;}\r\n    }\r\n    @keyframes animatedleft {\r\n        0%   {left:-500px; top:0px; opacity: 0;}\r\n        100% {left:0px; top:0px; opacity: 1;}\r\n    }\r\n    @keyframes animatedout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:500px; top:0px; opacity: 0;}\r\n    }\r\n    @keyframes animatedleftout {\r\n        0% {left:0px; top:0px; opacity: 1;}\r\n        100%   {left:-500px; top:0px; opacity: 0;}\r\n    \r\n        \r\n    }\r\n    @media only screen and (max-width: 1120px) {\r\n        .notactive  {\r\n            left: 0px;\r\n            margin: 10% auto;\r\n        }\r\n        .right {\r\n             left: 0px;\r\n        }\r\n        .Photo.active{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n        .Photo.active.left{\r\n            \r\n            margin: 10% auto;\r\n            \r\n        }\r\n    }", ""]);
 
 // exports
 
@@ -58736,11 +58736,6 @@ var Screen = function (_Component) {
             this.timerID = setInterval(function () {
                 return _this2.slide();
             }, 7000);
-            if (this.state.currentSlide > 3) {
-                this.setState({
-                    currentSlide: 1
-                });
-            }
         }
     }, {
         key: 'componentWillUnmount',
@@ -58768,7 +58763,7 @@ var Screen = function (_Component) {
                 var currentSlide = this.state.currentSlide + 1;
                 if (currentSlide > 3) {
                     this.setState({
-                        currentSlide: 1
+                        currentSlide: 0
                     });
                 } else {
                     this.setState({

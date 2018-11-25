@@ -59,14 +59,14 @@
 .right {
     /* transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg); */
-    background-image: url('../../Img/arrow_right.svg'); 
+    background-image: url('./Img/arrow_right.svg'); 
 
     
    
     
 }
 .left {
-    background-image: url('../../Img/arrow_left.svg'); 
+    background-image: url('./Img/arrow_left.svg'); 
     
     /* transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
