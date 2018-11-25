@@ -58620,12 +58620,7 @@ exports.push([module.i, ".FooterSection{\r\n    position: fixed;\r\n    width:10
 module.exports = "/images/1.jpg?8b6477f20a1e9b05619661a9c88ee583";
 
 /***/ }),
-/* 72 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/2.jpg?f631250897da0420c84d5cb97c7f09b6";
-
-/***/ }),
+/* 72 */,
 /* 73 */
 /***/ (function(module, exports) {
 
@@ -58718,7 +58713,7 @@ var Screen = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this, props));
 
         _this.state = {
-            sliderPhotos: [__webpack_require__(71), __webpack_require__(72), __webpack_require__(73), __webpack_require__(78)],
+            sliderPhotos: [__webpack_require__(71), __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Img/2.jpg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())), __webpack_require__(73), __webpack_require__(78)],
 
             currentSlide: 0,
             auto: 'AUTO'
@@ -58892,7 +58887,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url(" + escape(__webpack_require__(83)) + "); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url(" + escape(__webpack_require__(85)) + "); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Screen {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    display: flex;\r\n    width: 95%;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    \r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n    \r\n\r\n\r\n}\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url(" + escape(__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Img/arrow_right.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))) + "); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url(" + escape(__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Img/arrow_left.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))) + "); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -58918,19 +58913,6 @@ module.exports = function escape(url) {
     return url
 }
 
-
-/***/ }),
-/* 83 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/arrow_right.svg?5f287c514129bfabbb34c12324e9aa88";
-
-/***/ }),
-/* 84 */,
-/* 85 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/arrow_left.svg?cf7e15f3444161a0d773933e3f63c2b5";
 
 /***/ })
 /******/ ]);
