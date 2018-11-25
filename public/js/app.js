@@ -57580,8 +57580,9 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navigation__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Footer__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Screen__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Body_css__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Body_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Gallery__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Body_css__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Body_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__Body_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57589,6 +57590,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -57607,7 +57609,7 @@ var Body = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
 
         _this.state = {
-            slider: 'true',
+            display: 'Gallery',
             displayBottomFlames: 'false',
             currentScrollPosition: 0,
             textOpacity: 1,
@@ -57622,16 +57624,12 @@ var Body = function (_Component) {
 
     _createClass(Body, [{
         key: 'clickHandler',
-        value: function clickHandler() {
-            if (this.state.slider === 'true') {
-                this.setState({
-                    slider: 'false'
-                });
-            } else {
-                this.setState({
-                    slider: 'true'
-                });
-            }
+        value: function clickHandler(event) {
+            console.log(event);
+            var display = event.target.value;
+            this.setState({
+                display: display
+            });
         }
     }, {
         key: 'textClickHandler',
@@ -57784,7 +57782,8 @@ var Body = function (_Component) {
                 ),
                 ' ',
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Navigation__["a" /* default */], null),
-                this.state.slider == 'true' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Screen__["a" /* default */], null) : null,
+                this.state.display === 'Slider' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Screen__["a" /* default */], null) : null,
+                this.state.display === 'Gallery' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Gallery__["a" /* default */], null) : null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'TopBackground' },
@@ -57878,8 +57877,8 @@ var Body = function (_Component) {
                         })
                     ),
                     '  )}',
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Footer__["a" /* default */], { display: this.state.displayBottomFlames, click: function click() {
-                            return _this2.clickHandler();
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Footer__["a" /* default */], { display: this.state.displayBottomFlames, click: function click(e) {
+                            return _this2.clickHandler(e);
                         } })
                 ),
                 '  '
@@ -58523,6 +58522,7 @@ var Footer = function (_Component) {
     _createClass(Footer, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -58533,13 +58533,17 @@ var Footer = function (_Component) {
                     { className: 'FooterContainer' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
-                        { placeholder: 'slider', className: 'Option', onClick: this.props.click },
+                        { value: 'Slider', className: 'Option', onClick: function onClick(e) {
+                                return _this2.props.click(e);
+                            } },
                         'SLIDER'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
-                        { className: 'Option' },
-                        'Option 2'
+                        { value: 'Gallery', className: 'Option', onClick: function onClick(e) {
+                                return _this2.props.click(e);
+                            } },
+                        'GALLERY'
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
@@ -58863,6 +58867,183 @@ exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */,
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Gallery_css__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Gallery_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Gallery_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Screen = function (_Component) {
+    _inherits(Screen, _Component);
+
+    function Screen(props) {
+        _classCallCheck(this, Screen);
+
+        var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this, props));
+
+        _this.state = {
+            sliderPhotos: ['http://malek.ovh/rwc/resources/Img/1.jpg', 'http://malek.ovh/rwc/resources/Img/2.jpg', 'http://malek.ovh/rwc/resources/Img/3.jpg', 'http://malek.ovh/rwc/resources/Img/4.jpg'],
+
+            currentSlide: 0,
+            auto: 'AUTO'
+
+        };
+        _this.toggleHandler = _this.toggleHandler.bind(_this);
+        return _this;
+    }
+
+    _createClass(Screen, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            this.timerID = setInterval(function () {
+                return _this2.slide();
+            }, 3000);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+
+            clearInterval(this.timerID);
+        }
+    }, {
+        key: 'toggleHandler',
+        value: function toggleHandler() {
+            if (this.state.auto === 'AUTO') {
+                this.setState({
+                    auto: 'MANUAL'
+                });
+            } else {
+                this.setState({
+                    auto: 'AUTO'
+                });
+            }
+        }
+    }, {
+        key: 'slide',
+        value: function slide() {
+            if (this.state.auto === "AUTO") {
+                var currentSlide = this.state.currentSlide + 1;
+                if (currentSlide > 3) {
+                    this.setState({
+                        currentSlide: 0
+                    });
+                } else {
+                    this.setState({
+                        currentSlide: currentSlide
+                    });
+                }
+            } else {}
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            var style = {
+
+                margin: '2% auto',
+                width: '100%',
+                height: '100%'
+
+            };
+            Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'Gallery' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'Grid' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'Slide One', style: style, src: this.state.sliderPhotos[this.state.currentSlide], alt: 'gallery1' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'Slide ', style: style, src: this.state.sliderPhotos[Math.floor(Math.random() * (3 - 1 + 1)) + 1], alt: 'gallery2' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'Slide Two', style: style, src: this.state.sliderPhotos[Math.floor(Math.random() * (3 - 1 + 1)) + 1], alt: 'gallery3' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'Slide ', style: style, src: this.state.sliderPhotos[Math.floor(Math.random() * (3 - 1 + 1)) + 1], alt: 'gallery4' })
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'Panel' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { className: 'toggle', onClick: function onClick() {
+                                return _this3.toggleHandler();
+                            } },
+                        this.state.auto
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Screen;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Screen);
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(73);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./Gallery.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./Gallery.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Gallery {     \r\n    background: radial-gradient(ellipse at center, #000000 32%,#ffbb0f 72%,#752201 85%,#000000 100%);\r\n    position: relative;\r\n    width: 95%;\r\n    margin: 11px auto;\r\n    margin-bottom: 0px;\r\n    border-radius: 15% 15% 15% 15%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    z-index: 1;\r\n  }\r\n\r\n.Grid {\r\n    background-color: rgba(97, 45, 0, 0.8);\r\n    width: 95%;\r\n    height: 350px;\r\n    padding: 45px;\r\n    border: inset 3px rgb(200, 70, 10) ;\r\n    border-radius: 25% 25% 25% 25%;\r\n    margin: 0 auto;\r\n    display: grid;\r\n    grid-gap: 8px;\r\n    box-sizing: border-box;\r\n    \r\n}\r\n.One {\r\n    grid-column: 1 ;\r\n    grid-row: 1 / span 2;\r\n  }\r\n  .Two {\r\n    grid-column: 3;\r\n    grid-row: 1 / span 2;\r\n  }\r\n\r\n\r\n.Slide {\r\n    border: outset 2px #ffbb0f;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n\r\n\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

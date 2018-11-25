@@ -4,13 +4,14 @@ import BackgroundPicture from './BackgroundPicture';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import Screen from './Screen';
+import Gallery from './Gallery';
 import './Body.css';
 
 export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
-            slider: 'true',
+            display: 'Gallery',
             displayBottomFlames: 'false',
             currentScrollPosition: 0,
             textOpacity: 1,
@@ -21,18 +22,15 @@ export default class Body extends Component {
         this.textClickHandler = this.textClickHandler.bind(this);     
         this.clickHandler = this.clickHandler.bind(this);  
     }
-    clickHandler(){
-        if (this.state.slider === 'true') {
+    clickHandler(event){
+        console.log(event);
+            const display = event.target.value ;
             this.setState({
-                slider: 'false',
+                display: display,
             })
-        } else {
-            this.setState({
-                slider: 'true',
-            })
-        }
+        } 
         
-    }
+    
 
     textClickHandler(){
         let opacity = this.state.textOpacity;
@@ -198,8 +196,8 @@ export default class Body extends Component {
                 </div> {/* end of background third section */} 
                 
             <Navigation />
-                {this.state.slider == 'true' ?  <Screen/> : null }
-            
+                {this.state.display === 'Slider'  ?  <Screen/> : null }
+                {this.state.display === 'Gallery'  ?  <Gallery/> : null }
                 <div className="TopBackground">
                 <h3 className="Title3">Meeting of Tuesday 25th September 2018</h3>
                 </div>
@@ -301,7 +299,7 @@ export default class Body extends Component {
                         />
                     </div>  )}
                     
-                    <Footer display={this.state.displayBottomFlames} click={() => this.clickHandler()}/>
+                    <Footer display={this.state.displayBottomFlames} click={(e) => this.clickHandler(e)}/>
                    
                 </div>  {/* end of content */}
                

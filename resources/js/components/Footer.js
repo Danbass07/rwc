@@ -22,8 +22,8 @@ export default class Footer extends Component {
                 {this.props.display === 'true' ? <div className="FlamesBottom"></div> : null }
                 <div className="FooterContainer">
 
-                    <button placeholder="slider" className="Option" onClick={this.props.click}>SLIDER</button>
-                    <button className="Option">Option 2</button>
+                    <button value='Slider'  className="Option" onClick={(e) => this.props.click(e)}>SLIDER</button>
+                    <button value='Gallery'  className="Option" onClick={(e) => this.props.click(e)}>GALLERY</button>
                     <button className="Option">Option 3</button>
                     <button className="Option">Option 4</button>
                 
