@@ -28,7 +28,7 @@ export default class Body extends Component {
 
                 <svg className="SVG" height="100%" width="100%">
                     <defs>
-                        <pattern id={} x="0" y="0" height="100%" width="100%" >
+                        <pattern id={"1"} x="0" y="0" height="100%" width="100%" >
                             
                         </pattern>
                      </defs>
