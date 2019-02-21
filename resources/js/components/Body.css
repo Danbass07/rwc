@@ -21,6 +21,37 @@ body {
 .SVG {
     display: block;
 }
+.Header {
+    z-index: 100;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.Header-item {
+    position: relative;
+    top: -250px;
+    width: 25%;
+    height:100%;
+    background-color: orange;
+    border: solid brown;
+    border-top: none;
+    border-radius: 0 0 25px 25px ;
+   
+}
+.Header-text {
+    position:absolute;
+    bottom:0;
+    color: red;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    margin: 5px auto;
+}
+.active {
+    top:-40px;
+    animation: animation 1s 1;
+}
 
 @media only screen and (max-width: 1120px) {
   
@@ -33,6 +64,7 @@ body {
 }
 
 @keyframes animation {
-    0%   {left:2000px; }
-    100% {left:-4500px; }
+    0%   {top:-250px; }
+    80% {top:-20px;}
+    100% {top:-40px; } 
 }

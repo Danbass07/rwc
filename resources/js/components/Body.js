@@ -5,12 +5,16 @@ export default class Body extends Component {
     constructor(props){
         super(props);
         this.state = {
- 
+            headerActive: false,
         }
 
     }
 
-   
+    clickMeHandler(){
+        this.setState({
+            headerActive: !this.state.headerActive,
+        })
+    }
         
     componentDidMount() {
        
@@ -24,7 +28,7 @@ export default class Body extends Component {
         return (
             
             <div className="App" >
-            <div className="Square">
+            {/* <div className="Square">
 
                 <svg className="SVG" height="100%" width="100%">
                     <defs>
@@ -36,9 +40,15 @@ export default class Body extends Component {
                 </svg>
 
             
-            </div>
+            </div> */}
          
-        
+            <div className="Header">
+                <div className={this.state.headerActive ? "Header-item active" : "Header-item"}><h3 className="Header-text">Guild Ball</h3></div>
+                <div className="Header-item"><h3 className="Header-text">Warhammer</h3></div>
+                <div className="Header-item"><h3 className="Header-text">Blood Bowl</h3></div>
+                <div className="Header-item"><h3 className="Header-text">Painting</h3></div>
+            </div>
+            <div className="ClickMe" onClick={() => this.clickMeHandler()}>Click Me</div>
             </div> // end of App
            
         );

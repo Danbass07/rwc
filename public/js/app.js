@@ -13898,7 +13898,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(14);
-module.exports = __webpack_require__(56);
+module.exports = __webpack_require__(54);
 
 
 /***/ }),
@@ -57155,34 +57155,77 @@ var Body = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            headerActive: false
+        };
 
         return _this;
     }
 
     _createClass(Body, [{
+        key: 'clickMeHandler',
+        value: function clickMeHandler() {
+            this.setState({
+                headerActive: !this.state.headerActive
+            });
+        }
+    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {}
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'App' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'Square' },
+                    { className: 'Header' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'svg',
-                        { className: 'SVG', height: '100%', width: '100%' },
+                        'div',
+                        { className: this.state.headerActive ? "Header-item active" : "Header-item" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'defs',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('pattern', { id: "1", x: '0', y: '0', height: '100%', width: '100%' })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('polygon', { points: '0,0 375,0 0,500', fill: 'white', stroke: 'white', strokeWidth: '3' })
+                            'h3',
+                            { className: 'Header-text' },
+                            'Guild Ball'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'Header-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h3',
+                            { className: 'Header-text' },
+                            'Warhammer'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'Header-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h3',
+                            { className: 'Header-text' },
+                            'Blood Bowl'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'Header-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h3',
+                            { className: 'Header-text' },
+                            'Painting'
+                        )
                     )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'ClickMe', onClick: function onClick() {
+                            return _this2.clickMeHandler();
+                        } },
+                    'Click Me'
                 )
             ) // end of App
 
@@ -57210,7 +57253,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(54)(content, options);
+var update = __webpack_require__(52)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -57230,19 +57273,18 @@ if(false) {
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(52)(false);
+exports = module.exports = __webpack_require__(51)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 100vh;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Square {\r\n    height: 50%;\r\n    width: 80%;\r\n    background-color: red;\r\n}\r\n.SVG {\r\n    display: block;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n  \r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {left:2000px; }\r\n    100% {left:-4500px; }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 100vh;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Square {\r\n    height: 50%;\r\n    width: 80%;\r\n    background-color: red;\r\n}\r\n.SVG {\r\n    display: block;\r\n}\r\n.Header {\r\n    z-index: 100;\r\n    height: 250px;\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n.Header-item {\r\n    position: relative;\r\n    top: -250px;\r\n    width: 25%;\r\n    height:100%;\r\n    background-color: orange;\r\n    border: solid brown;\r\n    border-top: none;\r\n    border-radius: 0 0 25px 25px ;\r\n   \r\n}\r\n.Header-text {\r\n    position:absolute;\r\n    bottom:0;\r\n    color: red;\r\n    writing-mode: vertical-rl;\r\n    text-orientation: upright;\r\n    text-align: center;\r\n    margin: 5px auto;\r\n}\r\n.active {\r\n    top:-40px;\r\n    animation: animation 1s 1;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n  \r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {top:-250px; }\r\n    80% {top:-20px;}\r\n    100% {top:-40px; } \r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 51 */,
-/* 52 */
+/* 51 */
 /***/ (function(module, exports) {
 
 /*
@@ -57324,8 +57366,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 53 */,
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -57371,7 +57412,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(55);
+var	fixUrls = __webpack_require__(53);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -57684,7 +57725,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports) {
 
 
@@ -57779,7 +57820,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
