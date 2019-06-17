@@ -28,6 +28,9 @@ body {
     display: flex;
     flex-direction: row;
 }
+.active:nth-child(1){
+    animation-delay: 2s
+}
 .Header-item {
     position: relative;
     top: -250px;
@@ -40,7 +43,6 @@ body {
    
 }
 .Header-text {
-    position:absolute;
     bottom:0;
     color: red;
     writing-mode: vertical-rl;
@@ -49,8 +51,9 @@ body {
     margin: 5px auto;
 }
 .active {
+    
     top:-40px;
-    animation: animation 1s 1;
+    animation: animation 0.5s 1;
 }
 
 @media only screen and (max-width: 1120px) {
@@ -65,6 +68,9 @@ body {
 
 @keyframes animation {
     0%   {top:-250px; }
-    80% {top:-20px;}
+    70% {top:-20px;}
+    85% {top:-60px;}
+    90% {top:-20px;}
+    95% {top:-50px;}
     100% {top:-40px; } 
 }

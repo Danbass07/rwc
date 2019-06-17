@@ -57156,7 +57156,11 @@ var Body = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
 
         _this.state = {
-            headerActive: false
+            headerActive: false,
+            group: {
+                name: 'empty'
+            },
+            types: []
         };
 
         return _this;
@@ -57171,61 +57175,42 @@ var Body = function (_Component) {
         }
     }, {
         key: 'componentDidMount',
-        value: function componentDidMount() {}
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            axios.get("http://localhost:8000/api/hypenotizer/2").then(function (response) {
+                return _this2.setState({
+                    group: response.data.group,
+                    types: response.data.types
+                });
+            });
+        }
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'App' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'Header' },
+                    null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: this.state.headerActive ? "Header-item active" : "Header-item" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h3',
-                            { className: 'Header-text' },
-                            'Guild Ball'
-                        )
+                        'h2',
+                        null,
+                        this.state.group.name
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'Header-item' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h3',
-                            { className: 'Header-text' },
-                            'Warhammer'
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'Header-item' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h3',
-                            { className: 'Header-text' },
-                            'Blood Bowl'
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'Header-item' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h3',
-                            { className: 'Header-text' },
-                            'Painting'
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'ClickMe', onClick: function onClick() {
-                            return _this2.clickMeHandler();
-                        } },
-                    'Click Me'
+                    this.state.types.map(function (type) {
+                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { key: type.id },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h3',
+                                null,
+                                type.type
+                            )
+                        );
+                    })
                 )
             ) // end of App
 
@@ -57278,7 +57263,7 @@ exports = module.exports = __webpack_require__(51)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 100vh;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Square {\r\n    height: 50%;\r\n    width: 80%;\r\n    background-color: red;\r\n}\r\n.SVG {\r\n    display: block;\r\n}\r\n.Header {\r\n    z-index: 100;\r\n    height: 250px;\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n.Header-item {\r\n    position: relative;\r\n    top: -250px;\r\n    width: 25%;\r\n    height:100%;\r\n    background-color: orange;\r\n    border: solid brown;\r\n    border-top: none;\r\n    border-radius: 0 0 25px 25px ;\r\n   \r\n}\r\n.Header-text {\r\n    position:absolute;\r\n    bottom:0;\r\n    color: red;\r\n    writing-mode: vertical-rl;\r\n    text-orientation: upright;\r\n    text-align: center;\r\n    margin: 5px auto;\r\n}\r\n.active {\r\n    top:-40px;\r\n    animation: animation 1s 1;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n  \r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {top:-250px; }\r\n    80% {top:-20px;}\r\n    100% {top:-40px; } \r\n}", ""]);
+exports.push([module.i, "body {\r\n    \r\n    margin: 0;\r\n    padding: 0;\r\n \r\n}\r\n.App {\r\n    \r\n    background-color: black;\r\n    height: 100vh;\r\n    width: 100%;\r\n    color: white;\r\n    padding: 0;\r\n    \r\n}\r\n.Square {\r\n    height: 50%;\r\n    width: 80%;\r\n    background-color: red;\r\n}\r\n.SVG {\r\n    display: block;\r\n}\r\n.Header {\r\n    z-index: 100;\r\n    height: 250px;\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n.active:nth-child(1){\r\n    animation-delay: 2s\r\n}\r\n.Header-item {\r\n    position: relative;\r\n    top: -250px;\r\n    width: 25%;\r\n    height:100%;\r\n    background-color: orange;\r\n    border: solid brown;\r\n    border-top: none;\r\n    border-radius: 0 0 25px 25px ;\r\n   \r\n}\r\n.Header-text {\r\n    bottom:0;\r\n    color: red;\r\n    writing-mode: vertical-rl;\r\n    text-orientation: upright;\r\n    text-align: center;\r\n    margin: 5px auto;\r\n}\r\n.active {\r\n    \r\n    top:-40px;\r\n    animation: animation 0.5s 1;\r\n}\r\n\r\n@media only screen and (max-width: 1120px) {\r\n  \r\n}\r\n@media only screen and (max-width: 900px) {\r\n    \r\n}\r\n@media only screen and (max-width: 380px) {\r\n \r\n}\r\n\r\n@keyframes animation {\r\n    0%   {top:-250px; }\r\n    70% {top:-20px;}\r\n    85% {top:-60px;}\r\n    90% {top:-20px;}\r\n    95% {top:-50px;}\r\n    100% {top:-40px; } \r\n}", ""]);
 
 // exports
 
