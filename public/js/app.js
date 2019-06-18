@@ -57319,9 +57319,7 @@ var Body = function (_Component) {
                             "##"
                         )
                     )
-                ),
-                " ",
-                "// end of App"
+                )
             );
         }
     }]);

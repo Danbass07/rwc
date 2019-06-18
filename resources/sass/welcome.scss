@@ -17,6 +17,7 @@
     grid-template-columns: auto auto auto;
     flex-direction: column;
     color: wheat;
+    overflow: hidden;
 }
 .welcome-small {
   background: linear-gradient(
@@ -38,6 +39,7 @@
   grid-template-rows: auto auto auto;
   flex-direction: column;
   color: wheat;
+  overflow: hidden;
 }
 .screen{
     height: 70vh;
@@ -136,6 +138,7 @@
     }
 }
 .animated3 {
+  background-image: url(http://malek.ovh/rwc/public/images/40K.png);
     animation-name: animation3;
     animation-duration: 9s;
     animation-iteration-count: infinite;

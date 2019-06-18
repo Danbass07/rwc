@@ -88,8 +88,7 @@ export default class Body extends Component {
                     <div className="grid-element">
                         <div className="round-div animated9">##</div>
                     </div>
-                </div>{" "}
-                // end of App
+                </div>
             </React.Fragment>
         );
     }
