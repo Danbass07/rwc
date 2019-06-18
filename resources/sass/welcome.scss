@@ -1,3 +1,334 @@
-.background {
-    background-image: url('http://malek.ovh/rwc/public/images/wyvrenLogo.png');
+.welcome-big {
+    background: linear-gradient(
+        to bottom,
+        #4c4c4c 0%,
+        #595959 12%,
+        #666666 25%,
+        #474747 39%,
+        #2c2c2c 50%,
+        #000000 51%,
+        #111111 60%,
+        #2b2b2b 76%,
+        #1c1c1c 91%,
+        #131313 100%
+    );
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-direction: column;
+    color: wheat;
+}
+.welcome-small {
+  background: linear-gradient(
+      to bottom,
+      #4c4c4c 0%,
+      #595959 12%,
+      #666666 25%,
+      #474747 39%,
+      #2c2c2c 50%,
+      #000000 51%,
+      #111111 60%,
+      #2b2b2b 76%,
+      #1c1c1c 91%,
+      #131313 100%
+  );
+  height: 30vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  flex-direction: column;
+  color: wheat;
+}
+.screen{
+    height: 70vh;
+    background-color: #7c0404;
+    color: wheat;
+    font-size: 20px;
+    padding-top: 20%;
+}
+.logo {
+    background-image: url(http://malek.ovh/rwc/public/images/wyvrenLogo.png);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.group-info {
+    width: 95%;
+    margin-left: auto;
+}
+.grid-element {
+    height: 100%;
+    width: 100%;
+    // border: 1px solid yellow;
+}
+.round-div {
+    position: relative;
+    top: 35%;
+    left: 0;
+    transform: $rotate;
+    height: 50px;
+    width: 50px;
+    background-color: #efe6e6;
+    color: #ff0000;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 1000;
+    margin: auto auto;
+    text-align: center;
+    padding-top: 13px;
+}
+.animated1 {
+    animation-name: animation1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation1 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 25%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 55%;
+        left: 45%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated2 {
+    animation-name: animation2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation2 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 15%;
+        left: 15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 55%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated3 {
+    animation-name: animation3;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation3 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 25%;
+        left: 25%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 45%;
+        left: 35%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated4 {
+    animation-name: animation4;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation4 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 5%;
+        left: 5%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: -25%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated5 {
+    animation-name: animation5;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation5 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 60%;
+        left: 15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 55%;
+        left: -45%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated6 {
+    animation-name: animation6;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation6 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 5%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 25%;
+        left: 5%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated7 {
+    animation-name: animation7;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation7 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 25%;
+        left: 15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 55%;
+        left: -35%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+
+.animated8 {
+    animation-name: animation8;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation8 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 40%;
+        left: 20%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 10%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+}
+.animated9 {
+    animation-name: animation9;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation9 {
+    0% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
+    20% {
+        top: 15%;
+        left: -15%;
+        transform: rotate(random(100) + deg);
+    }
+    70% {
+        top: 55%;
+        left: 15%;
+        transform: rotate(random(100) + deg);
+    }
+    100% {
+        top: 35%;
+        left: 0;
+        transform: $rotate;
+    }
 }
