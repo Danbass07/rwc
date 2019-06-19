@@ -48,7 +48,13 @@
     font-size: 20px;
     padding-top: 20%;
 }
-.logo {
+.logo-type{
+  height:40px;
+  position:relative;
+  left:-70px;
+  
+}
+.logo-group {
     background-image: url(http://malek.ovh/rwc/public/images/wyvrenLogo.png);
     height: 100%;
     background-size: contain;
@@ -63,7 +69,7 @@
 .grid-element {
     height: 100%;
     width: 100%;
-    // border: 1px solid yellow;
+    border: 1px solid yellow;
 }
 .round-div {
     position: relative;
@@ -138,7 +144,7 @@
     }
 }
 .animated3 {
-  background-image: url(http://malek.ovh/rwc/public/images/40K.png);
+  background-color: transparent;
     animation-name: animation3;
     animation-duration: 9s;
     animation-iteration-count: infinite;

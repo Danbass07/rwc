@@ -57266,7 +57266,7 @@ var Body = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "div",
                             { className: "round-div animated3" },
-                            "WH"
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type", src: "http://malek.ovh/rwc/public/images/40K.png" })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57281,7 +57281,7 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "logo animated5" })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "logo-group animated5" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",

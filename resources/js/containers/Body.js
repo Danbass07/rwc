@@ -66,14 +66,14 @@ export default class Body extends Component {
                         <div className="round-div animated2">mTg</div>
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated3">WH</div>
+                        <div className="round-div animated3"><img className="logo-type" src="http://malek.ovh/rwc/public/images/40K.png"/></div>
                     </div>
 
                     <div className="grid-element">
                         <div className="round-div animated4">BB</div>
                     </div>
                     <div className="grid-element">
-                        <div className="logo animated5" />
+                        <div className="logo-group animated5" />
                     </div>
                     <div className="grid-element">
                         <div className="round-div animated6">P</div>
