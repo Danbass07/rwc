@@ -57230,7 +57230,7 @@ var Body = function (_Component) {
                     { className: "screen", onClick: function onClick() {
                             return _this3.screenOff();
                         } },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_GroupInfo__["a" /* default */], { group: this.state.group.name })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_GroupGames__["a" /* default */], { group: this.state.types })
                 ) : null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
@@ -57245,38 +57245,22 @@ var Body = function (_Component) {
                                 return _this3.gridChanger();
                             }
                         },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated1" },
-                            "GB"
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated1", src: "http://malek.ovh/rwc/public/images/gb.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated2" },
-                            "mTg"
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated2", src: "http://malek.ovh/rwc/public/images/mtg.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated3" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type", src: "http://malek.ovh/rwc/public/images/40K.png" })
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type-wide animated3", src: "http://malek.ovh/rwc/public/images/40K.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated4" },
-                            "BB"
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated4", src: "http://malek.ovh/rwc/public/images/bb.jpg" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
@@ -57286,39 +57270,15 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated6" },
-                            "P"
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated5", src: "http://malek.ovh/rwc/public/images/brush.jpg" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated7" },
-                            "AoS"
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated6", src: "http://malek.ovh/rwc/public/images/lotr.png" })
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated8" },
-                            "!!!"
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "round-div animated9" },
-                            "##"
-                        )
-                    )
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" })
                 )
             );
         }
@@ -57413,7 +57373,7 @@ var GroupInfo = function (_Component) {
     return GroupInfo;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["a"] = (GroupInfo);
+/* unused harmony default export */ var _unused_webpack_default_export = (GroupInfo);
 
 /***/ }),
 /* 58 */
@@ -57512,64 +57472,56 @@ var GroupGames = function (_Component) {
     }
 
     _createClass(GroupGames, [{
-        key: "render",
+        key: 'render',
         value: function render() {
+            var style = {
+                backgroundImage: 'url(http://malek.ovh/rwc/public/images/gb.jpg)',
+                color: 'wheat',
+                fontSize: '20px'
+            };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "group-games" },
+                'div',
+                { style: style },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h1",
+                    'h1',
                     null,
-                    "GROUP GAMES"
+                    'GROUP GAMES'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "table",
+                    'table',
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "tbody",
+                        'tbody',
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "tr",
+                            'tr',
                             null,
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
+                                'td',
                                 null,
-                                "Games Played"
+                                'Games Played'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
+                                'td',
                                 null,
-                                "100"
+                                '100'
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "tr",
+                            'tr',
                             null,
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
+                                'td',
                                 null,
-                                "Number Of Campaigns Running"
+                                'Number Of Campaigns Running'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
+                                'td',
                                 null,
-                                "2"
+                                '2'
                             )
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "tr",
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
-                                null,
-                                "People painting on last meeting"
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "td",
-                                null,
-                                "4"
-                            )
-                        )
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('tr', null)
                     )
                 )
             );
@@ -57579,7 +57531,7 @@ var GroupGames = function (_Component) {
     return GroupGames;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* unused harmony default export */ var _unused_webpack_default_export = (GroupGames);
+/* harmony default export */ __webpack_exports__["a"] = (GroupGames);
 
 /***/ }),
 /* 60 */

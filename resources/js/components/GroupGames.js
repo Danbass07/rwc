@@ -6,8 +6,13 @@ export default class GroupGames extends Component {
     }
 
     render() {
+        const style = {
+            backgroundImage: 'url(http://malek.ovh/rwc/public/images/gb.jpg)',
+            color: 'wheat',
+            fontSize: '20px',
+        }
         return (
-            <div className="group-games">
+            <div style={style}>
                 <h1>GROUP GAMES</h1>
                 <table>
                     <tbody>
@@ -20,8 +25,7 @@ export default class GroupGames extends Component {
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td>People painting on last meeting</td>
-                            <td>4</td>
+                          
                         </tr>
                     </tbody>
                 </table>

@@ -48,10 +48,27 @@
     font-size: 20px;
     padding-top: 20%;
 }
-.logo-type{
-  height:40px;
+.logo-type-wide{
   position:relative;
-  left:-70px;
+  display: block;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 150%;
+  min-height: 1%;
+  min-width: 1%;
+  transform: translate(-50%, -50%);
+}
+.grid-element > img{
+  display: block;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  min-height: 1%;
+  min-width: 1%;
+  transform: translate(-30%, -30%);
   
 }
 .logo-group {
@@ -67,6 +84,7 @@
     margin-left: auto;
 }
 .grid-element {
+  position: relative;
     height: 100%;
     width: 100%;
     border: 1px solid yellow;
@@ -78,9 +96,8 @@
     transform: $rotate;
     height: 50px;
     width: 50px;
-    background-color: #efe6e6;
+    background-color: wheat;
     color: #ff0000;
-    border-radius: 50%;
     font-size: 20px;
     font-weight: 1000;
     margin: auto auto;
@@ -190,8 +207,8 @@
         transform: rotate(random(100) + deg);
     }
     70% {
-        top: -25%;
-        left: -15%;
+        top: 55%;
+        left: 15%;
         transform: rotate(random(100) + deg);
     }
     100% {
@@ -214,12 +231,12 @@
     }
     20% {
         top: 60%;
-        left: 15%;
+        left: 55%;
         transform: rotate(random(100) + deg);
     }
     70% {
         top: 55%;
-        left: -45%;
+        left: -5%;
         transform: rotate(random(100) + deg);
     }
     100% {
@@ -242,7 +259,7 @@
     }
     20% {
         top: 5%;
-        left: -15%;
+        left: 55%;
         transform: rotate(random(100) + deg);
     }
     70% {

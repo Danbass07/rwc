@@ -46,7 +46,7 @@ export default class Body extends Component {
         return (
             <React.Fragment>
                 {this.state.grid === "welcome-small" ? (
-                    <div className="screen" onClick={() => this.screenOff()}><GroupInfo group={this.state.group.name}/></div>
+                    <div className="screen" onClick={() => this.screenOff()}><GroupGames group={this.state.types}/></div>
                 ) : null}
                 <div className={this.state.grid} onClick={() => this.gridChanger()}>
                     {/* 
@@ -60,33 +60,33 @@ export default class Body extends Component {
                         className="grid-element"
                         onClick={() => this.gridChanger()}
                     >
-                        <div className="round-div animated1">GB</div>
+                        <img className="logo-type animated1" src="http://malek.ovh/rwc/public/images/gb.png"/>
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated2">mTg</div>
+                        <img className="logo-type animated2" src="http://malek.ovh/rwc/public/images/mtg.png"/>
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated3"><img className="logo-type" src="http://malek.ovh/rwc/public/images/40K.png"/></div>
+                       <img className="logo-type-wide animated3" src="http://malek.ovh/rwc/public/images/40K.png"/>
                     </div>
 
                     <div className="grid-element">
-                        <div className="round-div animated4">BB</div>
+                        <img className="logo-type animated4" src="http://malek.ovh/rwc/public/images/bb.jpg"/>
                     </div>
                     <div className="grid-element">
                         <div className="logo-group animated5" />
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated6">P</div>
+                        <img className="logo-type animated5" src="http://malek.ovh/rwc/public/images/brush.jpg"/>
                     </div>
 
                     <div className="grid-element">
-                        <div className="round-div animated7">AoS</div>
+                        <img className="logo-type animated6" src="http://malek.ovh/rwc/public/images/lotr.png"/>
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated8">!!!</div>
+                      
                     </div>
                     <div className="grid-element">
-                        <div className="round-div animated9">##</div>
+                       
                     </div>
                 </div>
             </React.Fragment>
