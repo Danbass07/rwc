@@ -57205,9 +57205,10 @@ var Body = function (_Component) {
         }
     }, {
         key: "gridChanger",
-        value: function gridChanger() {
+        value: function gridChanger(type) {
             this.setState({
-                grid: "welcome-small"
+                grid: "welcome-small",
+                type: type
             });
         }
     }, {
@@ -57227,29 +57228,33 @@ var Body = function (_Component) {
                 null,
                 this.state.grid === "welcome-small" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: "screen", onClick: function onClick() {
+                    { className: "screen",
+                        onClick: function onClick() {
                             return _this3.screenOff();
-                        } },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_GroupGames__["a" /* default */], { group: this.state.types })
+                        }
+
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_GroupGames__["a" /* default */], { type: this.state.type, group: this.state.types })
                 ) : null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
-                    { className: this.state.grid, onClick: function onClick() {
-                            return _this3.gridChanger();
-                        } },
+                    { className: this.state.grid },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         {
                             className: "grid-element",
                             onClick: function onClick() {
-                                return _this3.gridChanger();
+                                return _this3.gridChanger('gb');
                             }
                         },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated1", src: "http://malek.ovh/rwc/public/images/gb.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "grid-element" },
+                        { className: "grid-element",
+                            onClick: function onClick() {
+                                return _this3.gridChanger('mtg');
+                            } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated2", src: "http://malek.ovh/rwc/public/images/mtg.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57475,9 +57480,13 @@ var GroupGames = function (_Component) {
         key: 'render',
         value: function render() {
             var style = {
-                backgroundImage: 'url(http://malek.ovh/rwc/public/images/gb.jpg)',
+                height: '100%',
+                backgroundImage: 'url(http://malek.ovh/rwc/public/images/' + this.props.type + '.jpg)',
+                backgroundPosition: 'center bottom',
                 color: 'wheat',
-                fontSize: '20px'
+                fontSize: '20px',
+                paddingTop: '10%'
+
             };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',

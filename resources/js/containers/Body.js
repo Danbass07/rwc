@@ -31,9 +31,10 @@ export default class Body extends Component {
             })
         );
     }
-    gridChanger() {
+    gridChanger(type) {
         this.setState({
-            grid: "welcome-small"
+            grid: "welcome-small",
+            type: type,
         });
     }
     screenOff() {
@@ -46,9 +47,12 @@ export default class Body extends Component {
         return (
             <React.Fragment>
                 {this.state.grid === "welcome-small" ? (
-                    <div className="screen" onClick={() => this.screenOff()}><GroupGames group={this.state.types}/></div>
+                    <div className="screen" 
+                        onClick={() => this.screenOff()}
+                        
+                    ><GroupGames type={this.state.type} group={this.state.types}/></div>
                 ) : null}
-                <div className={this.state.grid} onClick={() => this.gridChanger()}>
+                <div  className={this.state.grid} >
                     {/* 
             <div className={screen}>
             
@@ -58,11 +62,12 @@ export default class Body extends Component {
 
                     <div
                         className="grid-element"
-                        onClick={() => this.gridChanger()}
+                        onClick={() => this.gridChanger('gb')}
                     >
                         <img className="logo-type animated1" src="http://malek.ovh/rwc/public/images/gb.png"/>
                     </div>
-                    <div className="grid-element">
+                    <div className="grid-element"
+                    onClick={() => this.gridChanger('mtg')}>
                         <img className="logo-type animated2" src="http://malek.ovh/rwc/public/images/mtg.png"/>
                     </div>
                     <div className="grid-element">

@@ -7,9 +7,13 @@ export default class GroupGames extends Component {
 
     render() {
         const style = {
-            backgroundImage: 'url(http://malek.ovh/rwc/public/images/gb.jpg)',
+            height: '100%',
+            backgroundImage: 'url(http://malek.ovh/rwc/public/images/'+this.props.type+'.jpg)',
+            backgroundPosition: 'center bottom',
             color: 'wheat',
             fontSize: '20px',
+            paddingTop: '10%',
+            
         }
         return (
             <div style={style}>
