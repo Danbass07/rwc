@@ -9,7 +9,7 @@ export default class GroupGames extends Component {
         const style = {
             height: '100%',
             backgroundImage: 'url(http://malek.ovh/rwc/public/images/'+this.props.type+'.jpg)',
-            backgroundPosition: 'center bottom',
+            backgroundPosition: this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : 'center bottom',
             color: 'wheat',
             fontSize: '20px',
             paddingTop: '10%',

@@ -57259,23 +57259,29 @@ var Body = function (_Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "grid-element" },
+                        { className: "grid-element", onClick: function onClick() {
+                                return _this3.gridChanger('40K');
+                            } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type-wide animated3", src: "http://malek.ovh/rwc/public/images/40K.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "grid-element" },
+                        { className: "grid-element", onClick: function onClick() {
+                                return _this3.gridChanger('bb');
+                            } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated4", src: "http://malek.ovh/rwc/public/images/bb.jpg" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "grid-element" },
+                        { className: "grid-element", onClick: function onClick() {
+                                return _this3.gridChanger('venue');
+                            } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "logo-group animated5" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated5", src: "http://malek.ovh/rwc/public/images/brush.jpg" })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated5", src: "http://malek.ovh/rwc/public/images/gallery.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
@@ -57482,7 +57488,7 @@ var GroupGames = function (_Component) {
             var style = {
                 height: '100%',
                 backgroundImage: 'url(http://malek.ovh/rwc/public/images/' + this.props.type + '.jpg)',
-                backgroundPosition: 'center bottom',
+                backgroundPosition: this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : 'center bottom',
                 color: 'wheat',
                 fontSize: '20px',
                 paddingTop: '10%'
