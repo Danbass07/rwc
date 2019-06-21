@@ -57269,12 +57269,12 @@ var Body = function (_Component) {
                         { className: "grid-element", onClick: function onClick() {
                                 return _this3.gridChanger('bb');
                             } },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated4", src: "http://malek.ovh/rwc/public/images/bb.jpg" })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated4", src: "http://malek.ovh/rwc/public/images/bb.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element", onClick: function onClick() {
-                                return _this3.gridChanger('venue');
+                                return _this3.gridChanger('venuesmall');
                             } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "logo-group animated5" })
                     ),
@@ -57286,7 +57286,9 @@ var Body = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated6", src: "http://malek.ovh/rwc/public/images/lotr.png" })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated6", onClick: function onClick() {
+                                return _this3.gridChanger('lotr');
+                            }, src: "http://malek.ovh/rwc/public/images/lotr.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" })

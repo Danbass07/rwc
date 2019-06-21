@@ -75,9 +75,9 @@ export default class Body extends Component {
                     </div>
 
                     <div className="grid-element" onClick={() => this.gridChanger('bb')}>
-                        <img className="logo-type animated4" src="http://malek.ovh/rwc/public/images/bb.jpg"/>
+                        <img className="logo-type animated4" src="http://malek.ovh/rwc/public/images/bb.png"/>
                     </div>
-                    <div className="grid-element" onClick={() => this.gridChanger('venue')}>
+                    <div className="grid-element" onClick={() => this.gridChanger('venuesmall')}>
                         <div className="logo-group animated5" />
                     </div>
                     <div className="grid-element">
@@ -85,7 +85,7 @@ export default class Body extends Component {
                     </div>
 
                     <div className="grid-element">
-                        <img className="logo-type animated6" src="http://malek.ovh/rwc/public/images/lotr.png"/>
+                        <img className="logo-type animated6" onClick={() => this.gridChanger('lotr')} src="http://malek.ovh/rwc/public/images/lotr.png"/>
                     </div>
                     <div className="grid-element">
                       
