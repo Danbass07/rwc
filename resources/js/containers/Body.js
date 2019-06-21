@@ -39,7 +39,7 @@ export default class Body extends Component {
     }
     screenOff() {
         this.setState({
-            grid: "welcome-big"
+            grid: "welcome-big expand"
         });
     }
 
@@ -51,8 +51,8 @@ export default class Body extends Component {
                         onClick={() => this.screenOff()}
                         
                     ><GroupGames type={this.state.type} group={this.state.types}/></div>
-                ) : null}
-                <div  className={this.state.grid} >
+                ) : <div className="screen goup"/>}
+                <div  className={this.state.grid}   onClick={this.state.grid === "welcome-small" ? () => this.screenOff(): null} >
                     {/* 
             <div className={screen}>
             

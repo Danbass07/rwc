@@ -45,11 +45,18 @@ animation-duration: 1s;
 }
 .screen{
     height: 70vh;
-    background-color: #7c0404;
+    background-color: black;
     color: wheat;
     font-size: 20px;
     animation-name: dropdown;
     animation-duration: 1s;
+    align-content: center;
+}
+.info-screen{
+    width: 70%;
+    height: 90%;
+    background-color: rgba(114, 25, 25, 0.5);
+    margin: 0 auto;
 }
 .logo-type-wide{
   position:relative;
@@ -92,21 +99,22 @@ animation-duration: 1s;
     width: 100%;
    // border: 1px solid yellow;
 }
-.round-div {
-    position: relative;
-    top: 35%;
-    left: 0;
-    transform: $rotate;
-    height: 50px;
-    width: 50px;
-    background-color: wheat;
-    color: #ff0000;
-    font-size: 20px;
-    font-weight: 1000;
-    margin: auto auto;
-    text-align: center;
-    padding-top: 13px;
-}
+// .round-div {
+//     position: relative;
+//     top: 35%;
+//     left: 0;
+//     transform: $rotate;
+//     height: 50px;
+//     width: 50px;
+//     background-color: wheat;
+//     color: #ff0000;
+//     font-size: 20px;
+//     font-weight: 1000;
+//     margin: auto auto;
+//     text-align: center;
+//     padding-top: 13px;
+// }
+
 .animated1 {
     animation-name: animation1;
     animation-duration: 7s;
@@ -372,6 +380,21 @@ animation-duration: 1s;
         height: 70vh;
     }
 }
+.goup {
+    height: 0vh;
+    animation-name: goup;
+    animation-duration: 1s;
+}
+@keyframes goup {
+    0% {
+        height: 70vh;
+    }
+   
+   
+    100% {
+        height: 0vh;
+    }
+}
 @keyframes shrink {
         0% {
             height: 100vh;
@@ -381,4 +404,19 @@ animation-duration: 1s;
         100% {
             height: 30vh;
         }
+}
+
+.expand {
+    animation-name: expand;
+    animation-duration: 1s;
+}
+@keyframes expand {
+    0% {
+        height: 30vh;
+    }
+   
+   
+    100% {
+        height: 100vh;
+    }
 }
