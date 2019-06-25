@@ -57183,8 +57183,10 @@ var Body = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get("http://localhost:8000/api/hypenotizer/2").then(function (response) {
-                return _this2.setState({
+            axios.get("http://localhost:8000/api/hypenotizer/1").then(function (response) {
+
+                console.log(response);
+                _this2.setState({
                     group: response.data.group,
                     types: response.data.types
                 });
@@ -57192,10 +57194,11 @@ var Body = function (_Component) {
         }
     }, {
         key: "gridChanger",
-        value: function gridChanger(type) {
+        value: function gridChanger(type, id) {
             this.setState({
                 grid: "welcome-small",
-                type: type
+                type: type,
+                typeId: id
             });
         }
     }, {
@@ -57221,7 +57224,7 @@ var Body = function (_Component) {
                         }
 
                     },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_GroupGames__["a" /* default */], { type: this.state.type, group: this.state.types })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_GroupGames__["a" /* default */], { type: this.state.type, typeId: this.state.typeId, group: this.state.group })
                 ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "screen goup" }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
@@ -57233,7 +57236,7 @@ var Body = function (_Component) {
                         {
                             className: "grid-element",
                             onClick: function onClick() {
-                                return _this3.gridChanger('gb');
+                                return _this3.gridChanger('gb', 4);
                             }
                         },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated1", src: "http://malek.ovh/rwc/public/images/gb.png" })
@@ -57276,7 +57279,7 @@ var Body = function (_Component) {
                         "div",
                         { className: "grid-element" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated6", onClick: function onClick() {
-                                return _this3.gridChanger('lotr');
+                                return _this3.gridChanger('lotr', 36);
                             }, src: "http://malek.ovh/rwc/public/images/lotr.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
@@ -57470,10 +57473,33 @@ var GroupGames = function (_Component) {
     function GroupGames(props) {
         _classCallCheck(this, GroupGames);
 
-        return _possibleConstructorReturn(this, (GroupGames.__proto__ || Object.getPrototypeOf(GroupGames)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (GroupGames.__proto__ || Object.getPrototypeOf(GroupGames)).call(this, props));
+
+        _this.state = {
+            group: {},
+            type: {
+                type: 'loading'
+            }
+        };
+        return _this;
     }
 
     _createClass(GroupGames, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            axios.get('http://localhost:8000/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
+
+                _this2.setState({
+                    group: response.data.group,
+                    type: response.data.type,
+                    totalHype: response.data.totalHype,
+                    numberOfPlayers: response.data.numberOfPlayers
+                });
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var style = {
@@ -57494,7 +57520,7 @@ var GroupGames = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'h1',
                         null,
-                        'GROUP GAMES'
+                        this.state.type.type
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'table',
@@ -57508,12 +57534,12 @@ var GroupGames = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'td',
                                     null,
-                                    'Games Played'
+                                    'Number of Players'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'td',
                                     null,
-                                    '100'
+                                    this.state.numberOfPlayers
                                 )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57522,12 +57548,12 @@ var GroupGames = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'td',
                                     null,
-                                    'Number Of Campaigns Running'
+                                    'Hype Level'
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'td',
                                     null,
-                                    '2'
+                                    this.state.totalHype
                                 )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('tr', null)

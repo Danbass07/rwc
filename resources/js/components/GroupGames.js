@@ -3,6 +3,26 @@ import React, { Component } from "react";
 export default class GroupGames extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            group: {},
+            type: {
+                type: 'loading',
+            },
+        }
+    }
+    componentDidMount() {
+        axios.get(`http://localhost:8000/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
+
+          
+        this.setState({
+                group: response.data.group,
+                type: response.data.type,
+                totalHype: response.data.totalHype,
+                numberOfPlayers: response.data.numberOfPlayers,
+            })
+        }
+        
+        );
     }
 
     render() {
@@ -20,16 +40,16 @@ export default class GroupGames extends Component {
         return (
             <div style={style}>
                 <div className='info-screen'>
-                    <h1>GROUP GAMES</h1>
+                    <h1>{this.state.type.type}</h1>
                     <table>
                         <tbody>
                             <tr>
-                                <td>Games Played</td>
-                                <td>100</td>
+                                <td>Number of Players</td>
+                                <td>{this.state.numberOfPlayers}</td>
                             </tr>
                             <tr>
-                                <td>Number Of Campaigns Running</td>
-                                <td>2</td>
+                                <td>Hype Level</td>
+                                <td>{this.state.totalHype}</td>
                             </tr>
                             <tr>
                             

@@ -24,17 +24,22 @@ export default class Body extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:8000/api/hypenotizer/2").then(response =>
-            this.setState({
+        axios.get("http://localhost:8000/api/hypenotizer/1").then(response => {
+
+        console.log(response);    
+        this.setState({
                 group: response.data.group,
                 types: response.data.types
             })
+        }
+        
         );
     }
-    gridChanger(type) {
+    gridChanger(type, id) {
         this.setState({
             grid: "welcome-small",
             type: type,
+            typeId: id,
         });
     }
     screenOff() {
@@ -50,7 +55,7 @@ export default class Body extends Component {
                     <div className="screen" 
                         onClick={() => this.screenOff()}
                         
-                    ><GroupGames type={this.state.type} group={this.state.types}/></div>
+                    ><GroupGames type={this.state.type} typeId={this.state.typeId} group={this.state.group}/></div>
                 ) : <div className="screen goup"/>}
                 <div  className={this.state.grid}   onClick={this.state.grid === "welcome-small" ? () => this.screenOff(): null} >
                     {/* 
@@ -62,7 +67,7 @@ export default class Body extends Component {
 
                     <div
                         className="grid-element"
-                        onClick={() => this.gridChanger('gb')}
+                        onClick={() => this.gridChanger('gb', 4)}
                     >
                         <img className="logo-type animated1" src="http://malek.ovh/rwc/public/images/gb.png"/>
                     </div>
@@ -85,7 +90,7 @@ export default class Body extends Component {
                     </div>
 
                     <div className="grid-element">
-                        <img className="logo-type animated6" onClick={() => this.gridChanger('lotr')} src="http://malek.ovh/rwc/public/images/lotr.png"/>
+                        <img className="logo-type animated6" onClick={() => this.gridChanger('lotr', 36)} src="http://malek.ovh/rwc/public/images/lotr.png"/>
                     </div>
                     <div className="grid-element">
                       
