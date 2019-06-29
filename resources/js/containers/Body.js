@@ -24,7 +24,7 @@ export default class Body extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://malek.ovh/api/hypenotizer/1").then(response => {
+        axios.get("http://battlemind.malek.ovh/api/hypenotizer/1").then(response => {
 
         console.log(response);    
         this.setState({

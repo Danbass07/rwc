@@ -57183,7 +57183,7 @@ var Body = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get("http://malek.ovh/api/hypenotizer/1").then(function (response) {
+            axios.get("http://battlemind.malek.ovh/api/hypenotizer/1").then(function (response) {
 
                 console.log(response);
                 _this2.setState({
@@ -57489,7 +57489,7 @@ var GroupGames = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get('http://malek.ovh/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
+            axios.get('http://localhost:8000/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
 
                 _this2.setState({
                     group: response.data.group,
