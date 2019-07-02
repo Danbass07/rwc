@@ -28,7 +28,7 @@ export default class GroupGames extends Component {
     render() {
         const style = {
             height: '100%',
-            backgroundImage: 'url(http://rwc.malek.ovh/rwc/public/images/'+this.props.type+'.jpg)',
+            backgroundImage: 'url(http://malek.ovh/rwc/public/images/'+this.props.type+'.jpg)',
             backgroundPosition: 
                 this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : 
                 this.props.type === 'gb' ? 'center bottom' :'center ',
