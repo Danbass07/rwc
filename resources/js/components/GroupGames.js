@@ -19,7 +19,7 @@ export default class GroupGames extends Component {
                 type: response.data.type,
                 totalHype: response.data.totalHype,
                 numberOfPlayers: response.data.numberOfPlayers,
-            }, console.log())
+            }, console.log(response))
         }
         
         );
@@ -28,7 +28,7 @@ export default class GroupGames extends Component {
     render() {
         const style = {
             height: '100%',
-            // backgroundImage: 'url(http://localhost:3000/rwc/public/images/'+this.props.type+'.jpg)',
+            backgroundImage: 'url(http://rwc.malekovh/rwc/public/images/'+this.props.type+'.jpg)',
             backgroundPosition: 
                 this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : 
                 this.props.type === 'gb' ? 'center bottom' :'center ',
