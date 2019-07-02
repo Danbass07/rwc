@@ -11,7 +11,7 @@ export default class GroupGames extends Component {
         }
     }
     componentDidMount() {
-        axios.get(`http://localhost:3000/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
+        axios.get(`http://rwc.malek.ovh/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
 
           
         this.setState({
@@ -28,7 +28,7 @@ export default class GroupGames extends Component {
     render() {
         const style = {
             height: '100%',
-            backgroundImage: 'url(http://rwc.malekovh/rwc/public/images/'+this.props.type+'.jpg)',
+            backgroundImage: 'url(http://rwc.malek.ovh/rwc/public/images/'+this.props.type+'.jpg)',
             backgroundPosition: 
                 this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : 
                 this.props.type === 'gb' ? 'center bottom' :'center ',
