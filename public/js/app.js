@@ -57489,14 +57489,14 @@ var GroupGames = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get('http://battlemind.malek.ovh/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
+            axios.get('http://localhost:3000/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
 
                 _this2.setState({
                     group: response.data.group,
                     type: response.data.type,
                     totalHype: response.data.totalHype,
                     numberOfPlayers: response.data.numberOfPlayers
-                });
+                }, console.log(response));
             });
         }
     }, {
@@ -57504,7 +57504,7 @@ var GroupGames = function (_Component) {
         value: function render() {
             var style = {
                 height: '100%',
-                backgroundImage: 'url(http://malek.ovh/rwc/public/images/' + this.props.type + '.jpg)',
+                // backgroundImage: 'url(http://localhost:3000/rwc/public/images/'+this.props.type+'.jpg)',
                 backgroundPosition: this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : this.props.type === 'gb' ? 'center bottom' : 'center ',
                 color: 'wheat',
                 fontSize: '20px',

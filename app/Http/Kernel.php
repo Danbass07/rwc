@@ -78,3 +78,4 @@ class Kernel extends HttpKernel
         \Illuminate\Auth\Middleware\Authorize::class,
     ];
 }
+p
