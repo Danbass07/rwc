@@ -23,6 +23,7 @@ export default class GroupGames extends Component {
                 type: response.data.type,
                 totalHype: response.data.totalHype,
                 numberOfPlayers: response.data.numberOfPlayers,
+                numberOfGames: response.data.numberOfGames,
             })
         }
         
@@ -56,7 +57,8 @@ export default class GroupGames extends Component {
                                 <td>{this.state.totalHype}</td>
                             </tr>
                             <tr>
-                            
+                                <td>Total number of games</td>
+                                <td>{this.state.numberOfGames}</td>
                             </tr>
                         </tbody>
                     </table>

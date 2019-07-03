@@ -57506,7 +57506,8 @@ var GroupGames = function (_Component) {
                     group: response.data.group,
                     type: response.data.type,
                     totalHype: response.data.totalHype,
-                    numberOfPlayers: response.data.numberOfPlayers
+                    numberOfPlayers: response.data.numberOfPlayers,
+                    numberOfGames: response.data.numberOfGames
                 });
             });
         }
@@ -57567,7 +57568,20 @@ var GroupGames = function (_Component) {
                                     this.state.totalHype
                                 )
                             ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('tr', null)
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'tr',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'td',
+                                    null,
+                                    'Total number of games'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'td',
+                                    null,
+                                    this.state.numberOfGames
+                                )
+                            )
                         )
                     )
                 )
