@@ -36,11 +36,14 @@ export default class Body extends Component {
         );
     }
     gridChanger(type, id) {
-        this.setState({
-            grid: "welcome-small",
-            type: type,
-            typeId: id,
-        });
+        if (id){
+            this.setState({
+                grid: "welcome-small",
+                type: type,
+                typeId: id,
+            });
+        } else { console.log(type)}
+ 
     }
     screenOff() {
         this.setState({
@@ -72,20 +75,20 @@ export default class Body extends Component {
                         <img className="logo-type animated1" src="http://malek.ovh/rwc/public/images/gb.png"/>
                     </div>
                     <div className="grid-element"
-                    onClick={() => this.gridChanger('mtg')}>
+                    onClick={() => this.gridChanger('mtg', 37)}>
                         <img className="logo-type animated2" src="http://malek.ovh/rwc/public/images/mtg.png"/>
                     </div>
-                    <div className="grid-element" onClick={() => this.gridChanger('40K')}>
+                    <div className="grid-element" onClick={() => this.gridChanger('40K', 39)}>
                        <img className="logo-type-wide animated3" src="http://malek.ovh/rwc/public/images/40K.png"/>
                     </div>
 
-                    <div className="grid-element" onClick={() => this.gridChanger('bb')}>
+                    <div className="grid-element" onClick={() => this.gridChanger('bb', 38)}>
                         <img className="logo-type animated4" src="http://malek.ovh/rwc/public/images/bb.png"/>
                     </div>
                     <div className="grid-element" onClick={() => this.gridChanger('venuesmall')}>
                         <div className="logo-group animated5" />
                     </div>
-                    <div className="grid-element">
+                    <div className="grid-element" onClick={() => this.gridChanger('gallery')}>
                         <img className="logo-type animated5" src="http://malek.ovh/rwc/public/images/gallery.png"/>
                     </div>
 

@@ -11,7 +11,7 @@ export default class GroupGames extends Component {
         }
     }
     componentDidMount() {
-        axios.get(`http://rwc.malek.ovh/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
+        axios.get(`http://battlemind.malek.ovh/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
 
           
         this.setState({

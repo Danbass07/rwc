@@ -57195,11 +57195,15 @@ var Body = function (_Component) {
     }, {
         key: "gridChanger",
         value: function gridChanger(type, id) {
-            this.setState({
-                grid: "welcome-small",
-                type: type,
-                typeId: id
-            });
+            if (id) {
+                this.setState({
+                    grid: "welcome-small",
+                    type: type,
+                    typeId: id
+                });
+            } else {
+                console.log(type);
+            }
         }
     }, {
         key: "screenOff",
@@ -57245,21 +57249,21 @@ var Body = function (_Component) {
                         "div",
                         { className: "grid-element",
                             onClick: function onClick() {
-                                return _this3.gridChanger('mtg');
+                                return _this3.gridChanger('mtg', 37);
                             } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated2", src: "http://malek.ovh/rwc/public/images/mtg.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element", onClick: function onClick() {
-                                return _this3.gridChanger('40K');
+                                return _this3.gridChanger('40K', 39);
                             } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type-wide animated3", src: "http://malek.ovh/rwc/public/images/40K.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
                         { className: "grid-element", onClick: function onClick() {
-                                return _this3.gridChanger('bb');
+                                return _this3.gridChanger('bb', 38);
                             } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated4", src: "http://malek.ovh/rwc/public/images/bb.png" })
                     ),
@@ -57272,7 +57276,9 @@ var Body = function (_Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "div",
-                        { className: "grid-element" },
+                        { className: "grid-element", onClick: function onClick() {
+                                return _this3.gridChanger('gallery');
+                            } },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { className: "logo-type animated5", src: "http://malek.ovh/rwc/public/images/gallery.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57489,7 +57495,7 @@ var GroupGames = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get('http://localhost:3000/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
+            axios.get('http://battlemind.malek.ovh/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
 
                 _this2.setState({
                     group: response.data.group,
@@ -57504,7 +57510,7 @@ var GroupGames = function (_Component) {
         value: function render() {
             var style = {
                 height: '100%',
-                // backgroundImage: 'url(http://localhost:3000/rwc/public/images/'+this.props.type+'.jpg)',
+                backgroundImage: 'url(http://malek.ovh/rwc/public/images/' + this.props.type + '.jpg)',
                 backgroundPosition: this.props.type === 'mtg' || this.props.type === 'venue' ? 'center top' : this.props.type === 'gb' ? 'center bottom' : 'center ',
                 color: 'wheat',
                 fontSize: '20px',
