@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-
+// import path from '../path.js';
+//const path = 'battlemind.malek.ovh';
+const path = 'localhost:3000';
+console.log(path);
 export default class GroupGames extends Component {
     constructor(props) {
         super(props);
@@ -9,9 +12,10 @@ export default class GroupGames extends Component {
                 type: 'loading',
             },
         }
+        
     }
     componentDidMount() {
-        axios.get(`http://battlemind.malek.ovh/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
+        axios.get(`http://${path}/api/hypenotizer/${this.props.group.id}/typedetail/${this.props.typeId}`).then(response => {
 
           
         this.setState({
@@ -19,7 +23,7 @@ export default class GroupGames extends Component {
                 type: response.data.type,
                 totalHype: response.data.totalHype,
                 numberOfPlayers: response.data.numberOfPlayers,
-            }, console.log(response))
+            })
         }
         
         );

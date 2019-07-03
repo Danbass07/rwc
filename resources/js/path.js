@@ -1,0 +1,1 @@
+export  const path = 'battlemind.malek.ovh';

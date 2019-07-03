@@ -57472,6 +57472,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
+// import path from '../path.js';
+//const path = 'battlemind.malek.ovh';
+var path = 'localhost:3000';
+console.log(path);
 
 var GroupGames = function (_Component) {
     _inherits(GroupGames, _Component);
@@ -57487,6 +57491,7 @@ var GroupGames = function (_Component) {
                 type: 'loading'
             }
         };
+
         return _this;
     }
 
@@ -57495,14 +57500,14 @@ var GroupGames = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get('http://battlemind.malek.ovh/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
+            axios.get('http://' + path + '/api/hypenotizer/' + this.props.group.id + '/typedetail/' + this.props.typeId).then(function (response) {
 
                 _this2.setState({
                     group: response.data.group,
                     type: response.data.type,
                     totalHype: response.data.totalHype,
                     numberOfPlayers: response.data.numberOfPlayers
-                }, console.log(response));
+                });
             });
         }
     }, {
