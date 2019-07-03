@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import path from '../path.js';
-//const path = 'battlemind.malek.ovh';
-const path = 'localhost:3000';
+const path = 'battlemind.malek.ovh';
+//const path = 'localhost:3000';
 console.log(path);
 export default class GroupGames extends Component {
     constructor(props) {

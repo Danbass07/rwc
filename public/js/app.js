@@ -57473,8 +57473,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 // import path from '../path.js';
-//const path = 'battlemind.malek.ovh';
-var path = 'localhost:3000';
+var path = 'battlemind.malek.ovh';
+//const path = 'localhost:3000';
 console.log(path);
 
 var GroupGames = function (_Component) {
