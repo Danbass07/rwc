@@ -94,7 +94,7 @@ class Screen extends Component  {
      
         margin: '5% auto',
         display: 'block',
-        height: '55vh',
+        height: '45vh',
         width: 'auto',
         border: 'solid white 10px',
         boxShadow: 'wheat 10px 10px 40px',
