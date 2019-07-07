@@ -7,10 +7,10 @@ class Screen extends Component  {
         super(props);
         this.state = {
             sliderPhotos: [
-                '../Img/1.jpg',
-                '../Img/2.jpg',
-                '../Img/3.jpg',
-                '../Img/4.jpg',
+                'http://malek.ovh/rwc/resources/Img/1.jpg',
+                'http://malek.ovh/rwc/resources/Img/2.jpg',
+                'http://malek.ovh/rwc/resources/Img/3.jpg',
+                'http://malek.ovh/rwc/resources/Img/4.jpg',
             ],
 
             currentSlide : 0,
@@ -92,9 +92,10 @@ class Screen extends Component  {
  render() {
     const style = {
      
-        margin: '2% auto',
+        margin: '20% auto',
         display: 'block',
-        width: '60%',
+        height: '60%',
+        width: 'auto',
         
 }
     
