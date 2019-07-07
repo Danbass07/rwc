@@ -57286,7 +57286,7 @@ var Body = function (_Component) {
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
-                    this.state.grid === "welcome-small" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Advert__["a" /* default */], null) : null
+                    this.state.grid === "welcome-small" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Advert__["a" /* default */], { subject: this.state.type }) : null
                 )
             );
         }
@@ -58392,7 +58392,7 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".Screen {\r\n    display: flex;\r\n    width: 100%;\r\n    height: 70vh;\r\n    background-image: url(http://malek.ovh/rwc/resources/Img/equipment.jpg);\r\n    overflow: hidden;\r\n}\r\n\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    position: relative;\r\n    height: 90%;\r\n}\r\n.Slide {\r\n    border: none;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Screen {\r\n    display: flex;\r\n    width: 100%;\r\n    height: 70vh;\r\n    background-image: url(http://malek.ovh/rwc/resources/Img/equipment.jpg);\r\n    overflow: hidden;\r\n    animation-name: dropdown;\r\n    animation-duration: 1s;\r\n}\r\n\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    position: relative;\r\n    height: 90%;\r\n}\r\n.Slide {\r\n    border: none;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 2% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -58429,7 +58429,102 @@ var Advert = function (_Component) {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                this.props.subject === "gb" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "Guild Ball Offer"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "AMAZING Team"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "20.99"
+                    )
+                ) : null,
+                this.props.subject === "mtg" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "Magic Offers"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "AMAZING Deck"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "20999.99"
+                    )
+                ) : null,
+                this.props.subject === "40K" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "BOOKWORM"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "AMAZING ARMY"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "210.99"
+                    )
+                ) : null,
+                this.props.subject === "bb" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "Blood Bowl Offers"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "ORC vs HUMANS"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "!!!20.99!!!"
+                    )
+                ) : null,
+                this.props.subject === "venuesmall" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "Information About the club"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "BLe ble ble ble"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "terms & conditions"
+                    )
+                ) : null,
+                this.props.subject === "gallery" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
                     { className: "advert" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58446,8 +58541,32 @@ var Advert = function (_Component) {
                         "p",
                         null,
                         "20.99"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "a",
+                        { href: "https://bookwormretford.co.uk" },
+                        "Vist Bookworm"
                     )
-                )
+                ) : null,
+                this.props.subject === "lotr" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "Hobbit Is Fun"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "Starter Pack"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "11.99"
+                    )
+                ) : null
             );
         }
     }]);

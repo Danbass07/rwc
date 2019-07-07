@@ -94,7 +94,7 @@ export default class Body extends Component {
                         <div className="grid-element">
 
                         </div>
-                        {this.state.grid === "welcome-small" ? <Advert /> : null}
+                        {this.state.grid === "welcome-small" ? <Advert subject={this.state.type} /> : null}
                     </div>
             </React.Fragment>
         );

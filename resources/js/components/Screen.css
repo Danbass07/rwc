@@ -4,6 +4,8 @@
     height: 70vh;
     background-image: url(http://malek.ovh/rwc/resources/Img/equipment.jpg);
     overflow: hidden;
+    animation-name: dropdown;
+    animation-duration: 1s;
 }
 
 
@@ -42,7 +44,7 @@
     height: 100px;
     width: 100px;
     border-width: 0 3px 3px 0;
-    margin: 20% auto;
+    margin: 2% auto;
     z-index: 5000;
 }
 .right {
