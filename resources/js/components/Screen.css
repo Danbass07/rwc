@@ -1,9 +1,11 @@
 .Screen {
     display: flex;
-    width: 95%; 
-    background-image: url('http://malek.ovh/rwc/resources/Img/equipment.jpg');
-    margin-top: 20px;
+    width: 100%;
+    height: 70vh;
+    background-image: url(http://malek.ovh/rwc/resources/Img/equipment.jpg);
+    overflow: hidden;
 }
+
 
 .Slider {
         

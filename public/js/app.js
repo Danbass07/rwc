@@ -57139,6 +57139,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_GroupGames__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RoundDiv__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Screen__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Advert__ = __webpack_require__(61);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57146,6 +57147,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -57283,7 +57285,8 @@ var Body = function (_Component) {
                             }, src: "http://malek.ovh/rwc/public/images/lotr.png" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "grid-element" }),
+                    this.state.grid === "welcome-small" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Advert__["a" /* default */], null) : null
                 )
             );
         }
@@ -58313,10 +58316,12 @@ var Screen = function (_Component) {
 
             var style = {
 
-                margin: '20% auto',
+                margin: '5% auto',
                 display: 'block',
-                height: '60%',
-                width: 'auto'
+                height: '55vh',
+                width: 'auto',
+                border: 'solid white 10px',
+                boxShadow: 'wheat 10px 10px 40px'
 
             };
 
@@ -58387,10 +58392,70 @@ exports = module.exports = __webpack_require__(55)(false);
 
 
 // module
-exports.push([module.i, ".Screen {\r\n    display: flex;\r\n    width: 95%; \r\n    background-image: url('http://malek.ovh/rwc/resources/Img/equipment.jpg');\r\n    margin-top: 20px;\r\n}\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    position: relative;\r\n    height: 90%;\r\n}\r\n.Slide {\r\n    border: none;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".Screen {\r\n    display: flex;\r\n    width: 100%;\r\n    height: 70vh;\r\n    background-image: url(http://malek.ovh/rwc/resources/Img/equipment.jpg);\r\n    overflow: hidden;\r\n}\r\n\r\n\r\n.Slider {\r\n        \r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    position: relative;\r\n    height: 90%;\r\n}\r\n.Slide {\r\n    border: none;\r\n}\r\n.Panel {\r\n    position:relative;\r\n    display: flex;\r\n    width: 60%;\r\n    height: 30px;\r\n    background-color: #752201;\r\n    margin: 0 auto;\r\n    z-index: 1;\r\n    margin-bottom: 50px;\r\n    border-radius: 0% 0% 25% 25%;\r\n    box-shadow: 0px 1px 30px 1px rgba(255,255,255,1);\r\n    justify-content: center;\r\n}\r\n.toggle {\r\n    height: 90%;\r\n    width: 30%;\r\n    background-color: #ffbb0f;\r\n    color: #752201;\r\n    \r\n}\r\n.arrow {\r\n    /* border: solid rgb(0, 0, 0); */\r\n    height: 100px;\r\n    width: 100px;\r\n    border-width: 0 3px 3px 0;\r\n    margin: 20% auto;\r\n    z-index: 5000;\r\n}\r\n.right {\r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg); */\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_right.svg'); \r\n\r\n    \r\n   \r\n    \r\n}\r\n.left {\r\n    background-image: url('http://malek.ovh/rwc/resources/Img/arrow_left.svg'); \r\n    \r\n    /* transform: rotate(-45deg);\r\n    -webkit-transform: rotate(-45deg);\r\n    transform: rotate(135deg);\r\n    -webkit-transform: rotate(135deg); */\r\n     \r\n}\r\n\r\n@media only screen\r\nand (max-width : 600px) {\r\n    .arrow{\r\n        display: none;\r\n    }\r\n  \r\n\r\n}\r\n\r\n", ""]);
 
 // exports
 
+
+/***/ }),
+/* 61 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var Advert = function (_Component) {
+    _inherits(Advert, _Component);
+
+    function Advert(props) {
+        _classCallCheck(this, Advert);
+
+        return _possibleConstructorReturn(this, (Advert.__proto__ || Object.getPrototypeOf(Advert)).call(this, props));
+    }
+
+    _createClass(Advert, [{
+        key: "render",
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { className: "advert" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h1",
+                        null,
+                        "BOOKWORM"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "h3",
+                        null,
+                        "AMAZING BOOK"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "p",
+                        null,
+                        "20.99"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Advert;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Advert);
 
 /***/ })
 /******/ ]);

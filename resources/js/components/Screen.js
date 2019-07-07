@@ -92,10 +92,13 @@ class Screen extends Component  {
  render() {
     const style = {
      
-        margin: '20% auto',
+        margin: '5% auto',
         display: 'block',
-        height: '60%',
+        height: '55vh',
         width: 'auto',
+        border: 'solid white 10px',
+        boxShadow: 'wheat 10px 10px 40px',
+        
         
 }
     

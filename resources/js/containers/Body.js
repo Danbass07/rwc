@@ -4,6 +4,7 @@ import GroupHype from "../components/GroupHype";
 import GroupGames from "../components/GroupGames";
 import RoundDiv from "../components/RoundDiv";
 import Screen from "../components/Screen";
+import Advert from "../components/Advert";
 
 export default class Body extends Component {
     constructor(props) {
@@ -93,6 +94,7 @@ export default class Body extends Component {
                         <div className="grid-element">
 
                         </div>
+                        {this.state.grid === "welcome-small" ? <Advert /> : null}
                     </div>
             </React.Fragment>
         );
