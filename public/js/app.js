@@ -58525,27 +58525,31 @@ var Advert = function (_Component) {
                     )
                 ) : null,
                 this.props.subject === "gallery" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "advert" },
+                    "a",
+                    { href: "https://bookwormretford.co.uk" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "h1",
-                        null,
-                        "BOOKWORM"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "h3",
-                        null,
-                        "AMAZING BOOK"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "p",
-                        null,
-                        "20.99"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "a",
-                        { href: "https://bookwormretford.co.uk" },
-                        "Vist Bookworm"
+                        "div",
+                        { className: "advert" },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "h1",
+                            null,
+                            "BOOKWORM"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "h3",
+                            null,
+                            "AMAZING BOOK"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "p",
+                            null,
+                            "20.99"
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "a",
+                            { href: "https://bookwormretford.co.uk" },
+                            "Vist Bookworm"
+                        )
                     )
                 ) : null,
                 this.props.subject === "lotr" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

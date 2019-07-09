@@ -54,13 +54,13 @@ export default class Advert extends Component {
                 ) : null}
 
                 {this.props.subject === "gallery" ? (
-                    <div className="advert">
+                    <a href="https://bookwormretford.co.uk"><div className="advert">
                     
                     <h1>BOOKWORM</h1>
                         <h3>AMAZING BOOK</h3>
                         <p>20.99</p>
                         <a href="https://bookwormretford.co.uk">Vist Bookworm</a>
-                    </div>
+                    </div></a>
                 ) : null}
 
                 {this.props.subject === "lotr" ? (
